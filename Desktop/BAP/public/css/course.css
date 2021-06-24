@@ -1,0 +1,376 @@
+/* Bestand grote error */
+#course-content-size-error {
+  color: #cb0000;
+}
+
+/* Overview inhoud */
+div.course-overview-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.course-overview-content a {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #afafaf;
+  max-width: 1000px;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  margin: 1rem 0rem;
+}
+div.course-overview-content a div.course-div {
+  display: flex;
+}
+div.course-overview-content a div.course-div div.logo {
+  font-size: 3rem;
+  color: #cb0000;
+  margin-right: 1rem;
+}
+div.course-overview-content a div.course-div div.title {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  div.course-overview-content a div.course-div div.title h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Detail div */
+div#course-detail-container {
+  margin-top: 2rem;
+  min-height: 60vh;
+  /* Cursus detail container */
+}
+div#course-detail-container div#course-detail-container-content {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Cursus side menu */
+  /* Cursus main div*/
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side {
+  flex: 1;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li {
+  list-style: none;
+  padding: 0.25rem 0rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li {
+    flex: 1;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a {
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a {
+    padding: 1rem 0rem;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div {
+    display: flex;
+    justify-content: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div a#close_course_menu_button {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0rem;
+  background-color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div a#open_course_menu_button {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0rem;
+  background-color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side {
+  flex: 9;
+  width: 75%;
+  margin-left: 12.5%;
+  /* Bestand overzicht */
+  /* Upload lijst */
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side {
+    margin-top: 3rem;
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.title-div-detail-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+  flex: 8;
+  font-style: italic;
+  color: #afafaf;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+    font-size: 1.5em;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div a {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info {
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info h4 {
+  padding-bottom: 0.5rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content h4 {
+  padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list {
+    border-top: 1px solid #afafaf;
+    border-left: none;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div {
+  padding: 1rem 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div {
+    flex-direction: column;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display img {
+  width: 50px;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div i, div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display {
+  flex: 1;
+  width: 100%;
+  font-size: 3em;
+  margin-left: 3rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div i, div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display {
+    text-align: center;
+    margin-left: 0rem;
+    padding-bottom: 1rem;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename {
+  flex: 10;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename {
+    text-align: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download {
+  flex: 1;
+  color: blue;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download:hover {
+  color: blue;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download i {
+  font-size: 1em;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
+  flex: 1;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file:hover {
+  color: #cb0000;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file i {
+  font-size: 1em;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.no-upload-div {
+  color: #afafaf;
+  margin-top: 2rem;
+  font-style: italic;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.no-upload-div {
+    font-size: 2em;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list {
+  min-height: 50vh;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list {
+    border-top: 1px solid #afafaf;
+    border-left: none;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item i {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item i {
+    flex: 3;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a#upload-detail-button {
+  flex: 9;
+  margin-left: 5%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a#upload-detail-button:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.delete-button {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.delete-button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 0rem;
+  border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.edit-button {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  color: orange;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.edit-button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 0rem;
+  border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-upload-detail-container-content {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-upload-detail-container-content h1 {
+  font-style: italic;
+  color: #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding-bottom: 0.5rem;
+}
+
+/* Video preview */
+iframe#show-video-file-iframe {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 999999;
+  height: 100%;
+}

@@ -1,0 +1,285 @@
+/* Notitie div */
+div#notes-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @media screen and (max-width: 1000px    ) {
+       flex-direction: column-reverse;
+    }
+    /* Delete notities modal */
+    div#notes-delete-all-modal-div{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0,0,0,0.5);
+        top:0;
+        left:0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        div#delete-all-modal-content{
+            position: relative;
+            background-color: #fff;
+            height: 400px;
+            width:400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @media screen and (max-width: 1000px    ) {
+                height: 300px;
+                width:300px;             
+            }
+            div#delete-all-modal-links{
+                display: flex;
+                a{
+                    flex:1;
+                    color:#fff;
+                    background-color: rgb(203,0,0);
+                    padding: .5rem;
+                    text-decoration: none;
+                }
+                a+a{
+                    margin-left:2rem;
+                   
+                }
+                a#confirm-delete-all{
+                    background-color: green;
+                }
+            }
+            div{
+                width:90%;
+                text-align: center;
+                h1{
+                    font-size:1.5em;
+                }
+            }
+        }
+    }
+    /* Notitie div */ 
+    div#show-notes-container{
+        flex:1.5;
+        margin-right:2rem;
+        display: flex;
+        flex-direction: column;
+        div#notes-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 600px    ) {
+                flex-direction: column;
+                width:100%;
+                align-items: flex-start;
+             }
+            h3{
+                flex:3;
+                width:40%;  
+                @media screen and (max-width: 600px    ) {width:100%;  }         
+                &:after{
+                    display: block;
+                    content: '';
+                    width: 3rem;
+                    height: 2px;
+                    background: rgba(203,0,0);
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            a{
+                flex:2;
+                max-width:200px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding:1rem 0rem;
+                color:#fff;
+                text-decoration: none;
+                background:rgb(203,0,0);
+                @media screen and (max-width: 600px    ) {
+                   margin-top:1rem;
+                    padding:.3rem .3rem;
+                 }
+            }
+        }
+       
+        div#display-notes-container{
+           flex:1;
+           textarea#notes-field{
+               width:100%;
+               min-height: 500px;
+               border:1px solid grey;
+               resize:none;
+               &:focus{
+                   outline:none;
+               }
+           }
+            // div.note-div{
+            //     flex:1;
+            //     margin:2rem 0rem;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     @media screen and (max-width: 600px    ) {
+            //         flex-direction: column;
+            //      }
+            //     div.note-content{
+            //        flex:3;
+            //     }
+            //     div.note-buttons{
+            //         flex:1;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         width:100%;
+            //         @media screen and (max-width: 600px    ) {
+            //             margin-top:1rem;
+            //          }
+            //         a{
+            //             flex:1;
+            //             display: flex;
+            //                 justify-content: center;
+            //                 align-items: center;
+            //             padding:1rem 0rem;
+            //             color:#fff;
+            //             &:hover{
+            //                 text-decoration: none;
+            //             }
+            //         }
+            //         a+a{
+            //             margin-left:20px;
+            //         }
+            //         a.edit-note-button{
+            //             background:orange;
+            //         }
+            //         a.delete-note-button{
+            //             background:rgb(203,0,0);
+            //         }
+            //     }
+            // }
+        }
+    }
+    /* Voeg notitie toe div */
+    div#add-notes-container{
+        flex:1;
+        
+        h3{
+            margin-left:5%;
+            &:after{
+                display: block;
+                content: '';
+                width: 3rem;
+                height: 2px;
+                background: rgba(203,0,0);
+                bottom: 0;
+                left: 0;
+            }
+        }
+        form{
+            width:100%;
+            textarea{
+                width:90%;
+                margin:5%;
+                resize:none;
+                height: 30rem;
+                @media screen and (max-width: 1000px    ) {
+                    height: 15rem;
+                 }
+                &:focus{
+                    outline:none;
+                }
+            }
+            button{
+                width: 90%;
+                margin-left:5%;
+                margin-bottom: 5%;
+                height: 3rem;
+                border:2px solid rgb(203,0,0);
+                display: block;
+                text-align: center;
+                background: linear-gradient(to right, rgb(203,0,0) 50%, rgba(0,0,0,0) 50%);
+                background-size: 300% 100%;
+                background-position: right ;
+                transition: all .6s ease-in-out;
+                text-decoration: none;
+                color:rgb(203,0,0);
+                &:hover{
+                    background-position: left ;
+                    text-decoration: none;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
+/* Notitie edit modal*/
+#notes-modal-div{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+
+    div#modal{
+        position: relative;
+        background-color:#fff;
+        max-width:600px;
+        width:100%;
+        height: 600px;
+        text-align: center;
+        @media screen and (max-width: 600px    ) {
+            max-width:350px;
+         }
+        div#modal-close-button{
+            position: absolute;
+            right:15px;
+            top:10px;
+           a{
+                color:rgb(0,0,0);
+               &:hover{
+                   text-decoration: none;
+                   color:rgb(0,0,0);
+               }
+                i{
+                    font-size:1.5rem;
+                }
+           }
+            
+        }
+        h3{
+            margin:2rem;
+        }
+       
+            textarea{
+                width:500px;
+                height:400px;
+                margin-left:50px;
+                resize:none;
+                display: block;
+                @media screen and (max-width: 600px    ) {
+                    max-width:300px;
+                    margin-left:25px;
+                }
+            }
+            a#note-edit-submit{
+                margin-top:30px;
+                display: block;
+                background-color: orange;
+                width: 500px;
+                margin-left:50px;
+                padding:.5rem;
+                color:#fff;
+                border:none;
+                @media screen and (max-width: 600px    ) {
+                    max-width:300px;
+                    margin-left:25px;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    
+}

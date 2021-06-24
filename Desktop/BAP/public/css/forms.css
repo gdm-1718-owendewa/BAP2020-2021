@@ -1,0 +1,452 @@
+div#auth-form-container {
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#auth-form-container {
+    max-width: 300px;
+  }
+}
+div#auth-form-container div#top-form-div {
+  border-radius: 30px 30px 0px 0px;
+  background: #cb0000;
+  background: linear-gradient(135deg, #cb0000 0%, #ffce00 100%);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#auth-form-container div#top-form-div #top-form-image-div {
+  margin-top: 2rem;
+  flex: 1;
+}
+div#auth-form-container div#top-form-div #top-form-image-div img {
+  width: 80%;
+  margin-left: 10%;
+}
+div#auth-form-container div#top-form-div p {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+div#auth-form-container div#lower-form-div {
+  padding-top: 3rem;
+  width: 100%;
+  flex: 1;
+  border-radius: 0px 0px 30px 30px;
+}
+div#auth-form-container div#lower-form-div form div input {
+  margin-bottom: 2rem;
+}
+div#auth-form-container div#lower-form-div form div input.effect-input {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#auth-form-container div#lower-form-div form div input.effect-input:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#auth-form-container div#lower-form-div form div.control-div {
+  width: 80%;
+  margin-left: 10%;
+}
+div#auth-form-container div#lower-form-div form div#submit-button-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#submit-button-div button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#auth-form-container div#lower-form-div form div#forgot-pass-div {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#forgot-pass-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#auth-form-container div#lower-form-div form div#sign-up-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#sign-up-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#auth-form-container div#lower-form-div form div.option-div {
+  margin-bottom: 3rem;
+}
+div#auth-form-container div#lower-form-div form div.option-div label {
+  margin-bottom: 1rem;
+}
+div#auth-form-container div#lower-form-div form div.option-div div {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+div#crud-form-div {
+  width: 1000px;
+  margin: 2rem auto;
+  margin-bottom: 10rem;
+  position: relative;
+  /* Background div */
+}
+@media screen and (max-width: 1000px) {
+  div#crud-form-div {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+div#crud-form-div div#form-div {
+  top: 5rem;
+  left: 3rem;
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#crud-form-div div#form-div {
+    left: 1rem;
+    width: 100%;
+  }
+}
+div#crud-form-div div#form-div form {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  div#crud-form-div div#form-div form {
+    padding: 0.5rem;
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  div#crud-form-div div#form-div form {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+div#crud-form-div div#form-div form div#tutorial-date-div {
+  display: block;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+div#crud-form-div div#form-div form div#tutorial-date-div div {
+  float: left;
+  max-width: 45%;
+  margin: 0% 2.5%;
+}
+div#crud-form-div div#form-div form div#tutorial-date-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#tutorial-file-div {
+  display: none;
+}
+div#crud-form-div div#form-div form div#tutorial-written-div {
+  display: none;
+}
+div#crud-form-div div#form-div form div label {
+  display: block;
+}
+div#crud-form-div div#form-div form div textarea:focus {
+  outline: none;
+}
+div#crud-form-div div#form-div form div input[type=text], div#crud-form-div div#form-div form div input[type=number] {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#crud-form-div div#form-div form div input[type=text]:focus, div#crud-form-div div#form-div form div input[type=number]:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#crud-form-div div#form-div form div input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+div#crud-form-div div#form-div form div .file-label {
+  font-size: 1em;
+  color: white;
+  background-color: #cb0000;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+div#crud-form-div div#form-div form div .file-label i {
+  margin-right: 0.5rem;
+}
+div#crud-form-div div#form-div form div button#submit {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#crud-form-div div#form-div form div#date-div div {
+  float: left;
+  width: 45%;
+}
+div#crud-form-div div#form-div form div#date-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#date-div div + div {
+  margin-left: 10%;
+}
+div#crud-form-div div#form-div form div#time-div {
+  /* CAUTION: Internet Explorer hackery ahead */
+}
+div#crud-form-div div#form-div form div#time-div div {
+  float: left;
+  width: 45%;
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div div#form-div form div#time-div div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+div#crud-form-div div#form-div form div#time-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#time-div div + div {
+  margin-left: 10%;
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div div#form-div form div#time-div div + div {
+    margin-left: 0%;
+  }
+}
+div#crud-form-div div#form-div form div#time-div select.time-select {
+  width: 100px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: none;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #cb0000;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#crud-form-div div#form-div form div#time-div select.time-select {
+    width: 75px;
+  }
+}
+div#crud-form-div div#form-div form div#time-div select.time-select::-ms-expand {
+  display: none;
+  /* Remove default arrow in Internet Explorer 10 and 11 */
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div {
+  margin-bottom: 0rem;
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div div {
+  float: left;
+  width: 33%;
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div div label {
+  display: inline;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div {
+  margin-bottom: 0rem;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div div {
+  float: left;
+  width: 33%;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div div label {
+  display: inline;
+}
+div#crud-form-div div#background-div {
+  width: 100%;
+  background: #cb0000;
+  background: linear-gradient(135deg, #ffbb00 0%, #cb0000 75%);
+  height: 100%;
+  position: absolute;
+  border-radius: 30px;
+}
+div#crud-form-div div#background-div h3 {
+  margin-left: 50px;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+div#user-edit-form-div {
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#user-edit-form-div {
+    width: 300px;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+  }
+}
+div#user-edit-form-div div#top-form-div {
+  border-radius: 30px 30px 0px 0px;
+  background: #cb0000;
+  background: linear-gradient(135deg, #cb0000 0%, #ffce00 100%);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div {
+  margin-top: 2rem;
+  flex: 1;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div img#no-pic {
+  width: 150px;
+  height: 150px;
+  margin-left: 10%;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div img#pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div#user-edit-form-div div#top-form-div p {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+div#user-edit-form-div div#lower-form-div {
+  padding-top: 3rem;
+  width: 100%;
+  flex: 1;
+  border-radius: 0px 0px 30px 30px;
+}
+div#user-edit-form-div div#lower-form-div form div input {
+  margin-bottom: 2rem;
+}
+div#user-edit-form-div div#lower-form-div form div input.effect-input {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#user-edit-form-div div#lower-form-div form div input.effect-input:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div {
+  width: 80%;
+  margin-left: 10%;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  margin-bottom: 1rem;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div .file-label {
+  font-size: 1em;
+  color: white;
+  background-color: #cb0000;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div .file-label i {
+  margin-right: 0.5rem;
+}
+div#user-edit-form-div div#lower-form-div form div#submit-button-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#submit-button-div button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#user-edit-form-div div#lower-form-div form div#forgot-pass-div {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#forgot-pass-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div#sign-up-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#sign-up-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div {
+  margin-bottom: 3rem;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div label {
+  margin-bottom: 1rem;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div div {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+#edit-event-image {
+  width: 100%;
+}

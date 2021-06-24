@@ -1,0 +1,112 @@
+/* Contact inhoud*/
+#contact-content {
+  width: 90%;
+  margin: 0px auto;
+  /* Contact formulier */
+}
+#contact-content #contact-info {
+  text-align: center;
+  margin-top: 3rem;
+}
+#contact-content #contact-form-container {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /* Bedrijf info */
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container {
+    flex-direction: column;
+  }
+}
+#contact-content #contact-form-container #form-info {
+  flex: 2;
+}
+#contact-content #contact-form-container #form-info form label {
+  margin-top: 1rem;
+  display: block;
+}
+#contact-content #contact-form-container #form-info form input {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#contact-content #contact-form-container #form-info form input:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #form-info form #first-name-div,
+#contact-content #contact-form-container #form-info form #last-name-div {
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: left;
+}
+#contact-content #contact-form-container #form-info form #subject-div, #contact-content #contact-form-container #form-info form #button-div {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1rem;
+}
+#contact-content #contact-form-container #form-info form #subject-div button, #contact-content #contact-form-container #form-info form #button-div button {
+  width: 20%;
+  height: 40px;
+  border: 1px solid #cb0000;
+  color: #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #form-info form #subject-div button, #contact-content #contact-form-container #form-info form #button-div button {
+    width: 100%;
+  }
+}
+#contact-content #contact-form-container #form-info form #subject-div button:hover, #contact-content #contact-form-container #form-info form #button-div button:hover {
+  color: #fff;
+  background-position: left;
+  text-decoration: none;
+}
+#contact-content #contact-form-container #form-info form #subject-div button:focus, #contact-content #contact-form-container #form-info form #button-div button:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #form-info form #message-div {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1rem;
+}
+#contact-content #contact-form-container #form-info form #message-div textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+#contact-content #contact-form-container #form-info form #message-div textarea:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #busines-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #busines-info {
+    margin-top: 3rem;
+  }
+}
+#contact-content #contact-form-container #busines-info div {
+  text-align: center;
+  flex: 1;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #busines-info div {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+#contact-content #contact-form-container #busines-info div i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

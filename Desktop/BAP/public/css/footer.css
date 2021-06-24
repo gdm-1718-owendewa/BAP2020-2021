@@ -1,0 +1,87 @@
+/* Footer */
+footer {
+  width: 100%;
+  /* main footer div*/
+  /* Sub footer */
+}
+footer #main-footer-div {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+footer #main-footer-div #content-main-footer-div {
+  width: 80%;
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  footer #main-footer-div #content-main-footer-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+footer #main-footer-div #content-main-footer-div div {
+  flex: 1;
+}
+@media screen and (max-width: 600px) {
+  footer #main-footer-div #content-main-footer-div div {
+    margin-top: -10%;
+  }
+}
+footer #main-footer-div #content-main-footer-div div h2 {
+  font-weight: normal;
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+}
+footer #main-footer-div #content-main-footer-div div ul li {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+}
+footer #main-footer-div #content-main-footer-div div ul li a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer #main-footer-div #content-main-footer-div div p {
+  padding-bottom: 2rem;
+  display: block;
+}
+footer #main-footer-div #content-main-footer-div div a#sign-button-main-footer-div {
+  color: #fff;
+  font-size: 1rem;
+  border: 2px solid #cb0000;
+  box-sizing: border-box;
+  padding: 1rem 0rem;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+}
+footer #main-footer-div #content-main-footer-div div a#sign-button-main-footer-div:hover {
+  background-position: left;
+  text-decoration: none;
+}
+footer #sub-footer-div {
+  display: flex;
+}
+footer #sub-footer-div #image-sub-footer-div {
+  flex: 1;
+}
+footer #sub-footer-div #image-sub-footer-div img {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+footer #sub-footer-div #copyright-sub-footer-div {
+  display: flex;
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+}

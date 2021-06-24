@@ -1,0 +1,6238 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
+/* Over ons container*/
+div#about-us-container {
+  /* content */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 90%;
+  margin-left: 5%;
+}
+@media screen and (max-width: 1000px) {
+  div#about-us-container {
+    margin-top: 30px;
+  }
+}
+div#about-us-container div#content-about-us-container {
+  display: flex;
+}
+@media screen and (max-width: 1000px) {
+  div#about-us-container div#content-about-us-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+div#about-us-container div#content-about-us-container div#image-content-about-us-container {
+  flex: 1;
+}
+@media screen and (max-width: 1000px) {
+  div#about-us-container div#content-about-us-container div#image-content-about-us-container {
+    margin-top: 30px;
+  }
+}
+div#about-us-container div#content-about-us-container div#image-content-about-us-container img {
+  width: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div#about-us-container div#content-about-us-container div#image-content-about-us-container img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 850px) {
+  div#about-us-container div#content-about-us-container div#image-content-about-us-container img {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  div#about-us-container div#content-about-us-container div#image-content-about-us-container img {
+    margin-bottom: 3rem;
+    max-width: 200px;
+    width: 100%;
+  }
+}
+div#about-us-container div#content-about-us-container div#text-content-about-us-container {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#about-us-container div#content-about-us-container div#text-content-about-us-container h3, div#about-us-container div#content-about-us-container div#text-content-about-us-container h1, div#about-us-container div#content-about-us-container div#text-content-about-us-container p {
+  width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  div#about-us-container div#content-about-us-container div#text-content-about-us-container h3, div#about-us-container div#content-about-us-container div#text-content-about-us-container h1, div#about-us-container div#content-about-us-container div#text-content-about-us-container p {
+    width: 80%;
+    text-align: center;
+  }
+}
+div#about-us-container div#content-about-us-container div#text-content-about-us-container h3 {
+  font-size: 1rem;
+}
+div#about-us-container div#content-about-us-container div#text-content-about-us-container h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+div#about-us-container div#content-about-us-container div#text-content-about-us-container p {
+  margin-top: 1rem;
+}
+
+/* Onze Doelen */
+div#content-our-goals-container {
+  margin-top: 5rem;
+  /* content */
+}
+div#content-our-goals-container h1:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#content-our-goals-container #divs-content-our-goals-container {
+  margin-top: 3rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
+}
+@media screen and (max-width: 1000px) {
+  div#content-our-goals-container #divs-content-our-goals-container {
+    flex-direction: column;
+  }
+}
+div#content-our-goals-container #divs-content-our-goals-container div {
+  flex: 1;
+}
+div#content-our-goals-container #divs-content-our-goals-container div h2 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+}
+div#content-our-goals-container #divs-content-our-goals-container div h2 img {
+  width: 20%;
+  margin: 0px auto;
+  display: block;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  div#content-our-goals-container #divs-content-our-goals-container div h2 img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#content-our-goals-container #divs-content-our-goals-container div h2 {
+    font-size: 1.5rem;
+  }
+}
+div#content-our-goals-container #divs-content-our-goals-container div div.divs-text-content-our-goals-container {
+  border: none;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+div#content-our-goals-container #divs-content-our-goals-container div + div {
+  margin-left: 1rem;
+}
+
+/* Overview container */
+div.article-overview-content {
+  padding-top: 3rem;
+  min-height: 60vh;
+  width: 100%;
+  /* Artikel div */
+}
+div.article-overview-content a {
+  color: #000;
+}
+div.article-overview-content div.article-div {
+  float: left;
+  width: 30%;
+  margin: 20px 1%;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  div.article-overview-content div.article-div {
+    width: 40%;
+    margin: 0% 5%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.article-overview-content div.article-div {
+    width: 80%;
+    margin: 0px 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.article-overview-content div.article-div {
+    width: 90%;
+    margin: 0px 5%;
+  }
+}
+div.article-overview-content div.article-div div.image-div img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div.article-overview-content div.article-div div.info-div {
+  width: 100%;
+}
+div.article-overview-content div.article-div div.info-div h5 {
+  color: #cb0000;
+  margin-top: 1rem;
+}
+div.article-overview-content div.article-div div.info-div p {
+  padding-bottom: 0.5rem;
+  width: 80%;
+  word-break: break-all;
+  margin: 0px auto;
+}
+@media screen and (max-width: 600px) {
+  div.article-overview-content div.article-div div.info-div p {
+    width: 100%;
+  }
+}
+div.article-overview-content div.article-div div.extra-div {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 10px auto;
+}
+@media screen and (max-width: 600px) {
+  div.article-overview-content div.article-div div.extra-div {
+    width: 100%;
+  }
+}
+div.article-overview-content div.article-div div.extra-div p, div.article-overview-content div.article-div div.extra-div a {
+  flex: 1;
+}
+div.article-overview-content div.article-div div.extra-div a {
+  text-decoration: none;
+}
+div.article-overview-content div.article-div div.extra-div a:hover {
+  color: #cb0000;
+}
+
+/* Artikel detail heading */
+div#article-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cb0000;
+  padding: 1.5rem 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 15px 22px 9px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  div#article-heading {
+    flex-direction: column;
+  }
+}
+div#article-heading div#user-image {
+  flex: 1;
+}
+div#article-heading div#user-image img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (max-width: 800px) {
+  div#article-heading div#user-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#article-heading div#user-image img {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#article-heading div#user-image i {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  border-radius: 50%;
+  color: #cb0000;
+}
+@media screen and (max-width: 800px) {
+  div#article-heading div#user-image i {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#article-heading div#user-image i {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#article-heading div#small-info {
+  flex: 6;
+  color: #fff;
+  padding-left: 12.5%;
+}
+@media screen and (max-width: 600px) {
+  div#article-heading div#small-info {
+    padding-left: 0%;
+  }
+}
+div#article-heading div#small-info h1 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  div#article-heading div#small-info h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+div#article-heading div#small-info p {
+  font-size: 1rem;
+  text-align: left;
+}
+div#article-heading div#like {
+  flex: 1;
+}
+div#article-heading div#like i {
+  font-size: 5rem;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#article-heading div#like i {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#article-heading div#like i {
+    margin-top: 2rem;
+  }
+}
+
+/* Artikel detail content*/
+div#article-detail-content-div {
+  max-width: 60%;
+  margin: 0px auto;
+}
+@media screen and (max-width: 800px) {
+  div#article-detail-content-div {
+    max-width: 80%;
+  }
+}
+div#article-detail-content-div div#detail-main-content img#main-image {
+  width: 50%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1100px) {
+  div#article-detail-content-div div#detail-main-content img#main-image {
+    float: none;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+div#article-detail-content-div div#detail-main-content div#article-text {
+  text-align: justify;
+  word-break: break-all;
+}
+div#article-detail-content-div div#support-file-div {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+div#article-detail-content-div div#support-file-div img {
+  float: left;
+  width: 30%;
+  min-height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  div#article-detail-content-div div#support-file-div img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  div#article-detail-content-div div#support-file-div img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Artikel edit div */
+div#article-edit-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  div#article-edit-div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+div#article-edit-div div {
+  flex: 1;
+}
+div#article-edit-div div#crud-form-div {
+  padding-left: 20px;
+}
+@media screen and (max-width: 1200px) {
+  div#article-edit-div div#crud-form-div {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  div#article-edit-div div#crud-form-div {
+    width: 80%;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#article-edit-div div#crud-form-div {
+    width: 90%;
+    margin-left: 2.5%;
+  }
+}
+div#article-edit-div div#supporting-files-div {
+  margin-left: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  div#article-edit-div div#supporting-files-div {
+    max-width: 300px;
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+div#article-edit-div div#supporting-files-div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+div#article-edit-div div#supporting-files-div div.article-support-image-form-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+div#article-edit-div div#supporting-files-div div.article-support-image-form-div img.edit-support-image {
+  width: 300px;
+  margin: 0px auto;
+}
+div#article-edit-div div#supporting-files-div div.article-support-image-form-div h1, div#article-edit-div div#supporting-files-div div.article-support-image-form-div form {
+  flex: 1;
+}
+div#article-edit-div div#supporting-files-div div.article-support-image-form-div a.edit-support-image-delete {
+  background-color: #cb0000;
+  width: 300px;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+div.calendar-full-blackout {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: none;
+}
+
+/* Kalender aanpassen taak Modal*/
+div#calendar-task-edit-div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+div#calendar-task-edit-div div#calendar-blackout {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+div#calendar-task-edit-div div#calendar-modal {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-edit-div div#calendar-modal {
+    width: 300px;
+  }
+}
+div#calendar-task-edit-div div#calendar-modal a#close_calendar_modal_edit_button {
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-edit-div div#calendar-modal a#close_calendar_modal_edit_button {
+    font-size: 1.5em;
+  }
+}
+div#calendar-task-edit-div div#calendar-modal h4 {
+  color: #000;
+}
+div#calendar-task-edit-div div#calendar-modal form {
+  width: 400px;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-edit-div div#calendar-modal form {
+    width: 300px;
+  }
+}
+div#calendar-task-edit-div div#calendar-modal form label {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+  color: #000;
+}
+div#calendar-task-edit-div div#calendar-modal form input {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+div#calendar-task-edit-div div#calendar-modal form input[type=submit] {
+  background-color: #cb0000;
+  color: #fff;
+  border: none;
+  padding: 1rem 0rem;
+  border-radius: 30px;
+}
+div#calendar-task-edit-div div#calendar-modal div#time-div {
+  color: #000;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+div#calendar-task-edit-div div#calendar-modal div#time-div select.time-select {
+  width: 100px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: none;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #cb0000;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#calendar-task-edit-div div#calendar-modal div#time-div select.time-select {
+    width: 75px;
+  }
+}
+
+/* Kalender toevoegen taak Modal*/
+div#calendar-task-add-div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+div#calendar-task-add-div div#calendar-blackout {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+div#calendar-task-add-div div#calendar-modal {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-add-div div#calendar-modal {
+    width: 300px;
+  }
+}
+div#calendar-task-add-div div#calendar-modal a#close_calendar_modal_button {
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-add-div div#calendar-modal a#close_calendar_modal_button {
+    font-size: 1.5em;
+  }
+}
+div#calendar-task-add-div div#calendar-modal h4 {
+  color: #000;
+}
+div#calendar-task-add-div div#calendar-modal form {
+  width: 400px;
+}
+@media screen and (max-width: 400px) {
+  div#calendar-task-add-div div#calendar-modal form {
+    width: 300px;
+  }
+}
+div#calendar-task-add-div div#calendar-modal form label {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+  color: #000;
+}
+div#calendar-task-add-div div#calendar-modal form input {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+div#calendar-task-add-div div#calendar-modal form input[type=submit] {
+  background-color: #cb0000;
+  color: #fff;
+  border: none;
+  padding: 1rem 0rem;
+  border-radius: 30px;
+}
+div#calendar-task-add-div div#calendar-modal div#time-div {
+  color: #000;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+div#calendar-task-add-div div#calendar-modal div#time-div select.time-select {
+  width: 100px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: none;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #cb0000;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#calendar-task-add-div div#calendar-modal div#time-div select.time-select {
+    width: 75px;
+  }
+}
+
+/* Kalender div */
+div#calender-div {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1rem;
+  /* Toon Taak div*/
+  /* Toon dagen div*/
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div {
+    flex-direction: column;
+  }
+}
+div#calender-div div#calender-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#calender-div div#calender-left h3 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 100px;
+  width: 100%;
+  background-color: #cb0000;
+}
+div#calender-div div#calender-left div#tasks-div {
+  width: 100%;
+  flex: 4;
+  display: none;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-left div#tasks-div {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#calender-div div#calender-left div#tasks-div {
+    min-height: 200px;
+  }
+}
+div#calender-div div#calender-left div#tasks-div .task-div {
+  display: flex;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-title-div {
+  flex: 2;
+  margin-right: 5px;
+  word-break: break-all;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a {
+  flex: 1;
+  background-color: green;
+  text-align: center;
+  color: #fff;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a + a {
+  margin-left: 5px;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a.edit-task {
+  background-color: orange;
+}
+div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a.delete-task {
+  background-color: #cb0000;
+}
+div#calender-div div#calender-left div#add-div {
+  width: 100%;
+  flex: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-left div#add-div {
+    margin-top: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+div#calender-div div#calender-left div#add-div a {
+  width: 100%;
+  background-color: #cb0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-left div#add-div a {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#calender-div div#calender-left div#add-div a {
+    width: 80%;
+  }
+}
+div#calender-div div#calender-left div#add-div a i {
+  margin-left: 5px;
+}
+div#calender-div div#calender-right {
+  flex: 3;
+  margin-left: 50px;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-right {
+    margin-top: 3rem;
+    margin-left: 0px;
+  }
+}
+div#calender-div div#calender-right div.calender {
+  display: flex;
+  flex-direction: column;
+}
+div#calender-div div#calender-right div.calender h3 {
+  margin-bottom: 2rem;
+  background-color: #cb0000;
+  color: #fff;
+}
+div#calender-div div#calender-right div.calender div#day-div a div.day-of-month {
+  width: 14.28%;
+  height: auto;
+  min-height: 100px;
+  display: inline-block;
+  border: 1px solid #cb0000;
+  padding: 10px;
+  color: #000;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-right div.calender div#day-div a div.day-of-month {
+    width: 25%;
+  }
+}
+div#calender-div div#calender-right div.calender div#day-div a div.day-of-month:hover {
+  color: #cb0000;
+}
+div#calender-div div#calender-right div.calender div#day-div a div.day-of-month .task-indicator {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+div#calender-div div#calender-right div.calendar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-right div.calendar-buttons {
+    margin-top: 1rem;
+  }
+}
+div#calender-div div#calender-right div.calendar-buttons button {
+  width: 45%;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+div#calender-div div#calender-right div.calendar-buttons button:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+div#calender-div div#calender-right div.calendar-buttons button + button {
+  margin-left: 5%;
+}
+
+div.delete-task-modal {
+  width: 400px;
+  height: 400px;
+  margin: 0px auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 11;
+}
+@media screen and (max-width: 1000px) {
+  div.delete-task-modal {
+    width: 300px;
+    height: 300px;
+  }
+}
+div.delete-task-modal a#task-delete-modal-close-button {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+div.delete-task-modal div#task-delete-modal-content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div.delete-task-modal div#task-delete-modal-content-div {
+    height: 300px;
+  }
+}
+div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-message-div {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+}
+div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div a {
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div a {
+    width: 100px;
+  }
+}
+div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div a#task-delete-decline {
+  background-color: #cb0000;
+}
+
+/* Commentaar edit form*/
+div#comment-edit-form {
+  width: 60%;
+  margin: 5rem auto;
+}
+@media screen and (max-width: 800px) {
+  div#comment-edit-form {
+    width: 95%;
+  }
+}
+div#comment-edit-form button#commenteditsubmit {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #cb0000;
+  color: #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+div#comment-edit-form button#commenteditsubmit:hover {
+  color: #fff;
+  background-position: left;
+  text-decoration: none;
+}
+div#comment-edit-form button#commenteditsubmit:focus {
+  outline: none;
+}
+
+div#prev-page-div a {
+  color: #fff;
+  padding: 0.5rem;
+  background-color: #cb0000;
+  width: 100px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Contact inhoud*/
+#contact-content {
+  width: 90%;
+  margin: 0px auto;
+  /* Contact formulier */
+}
+#contact-content #contact-info {
+  text-align: center;
+  margin-top: 3rem;
+}
+#contact-content #contact-form-container {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /* Bedrijf info */
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container {
+    flex-direction: column;
+  }
+}
+#contact-content #contact-form-container #form-info {
+  flex: 2;
+}
+#contact-content #contact-form-container #form-info form label {
+  margin-top: 1rem;
+  display: block;
+}
+#contact-content #contact-form-container #form-info form input {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#contact-content #contact-form-container #form-info form input:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #form-info form #first-name-div,
+#contact-content #contact-form-container #form-info form #last-name-div {
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: left;
+}
+#contact-content #contact-form-container #form-info form #subject-div, #contact-content #contact-form-container #form-info form #button-div {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1rem;
+}
+#contact-content #contact-form-container #form-info form #subject-div button, #contact-content #contact-form-container #form-info form #button-div button {
+  width: 20%;
+  height: 40px;
+  border: 1px solid #cb0000;
+  color: #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #form-info form #subject-div button, #contact-content #contact-form-container #form-info form #button-div button {
+    width: 100%;
+  }
+}
+#contact-content #contact-form-container #form-info form #subject-div button:hover, #contact-content #contact-form-container #form-info form #button-div button:hover {
+  color: #fff;
+  background-position: left;
+  text-decoration: none;
+}
+#contact-content #contact-form-container #form-info form #subject-div button:focus, #contact-content #contact-form-container #form-info form #button-div button:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #form-info form #message-div {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1rem;
+}
+#contact-content #contact-form-container #form-info form #message-div textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+#contact-content #contact-form-container #form-info form #message-div textarea:focus {
+  outline: none;
+}
+#contact-content #contact-form-container #busines-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #busines-info {
+    margin-top: 3rem;
+  }
+}
+#contact-content #contact-form-container #busines-info div {
+  text-align: center;
+  flex: 1;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 750px) {
+  #contact-content #contact-form-container #busines-info div {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+#contact-content #contact-form-container #busines-info div i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Bestand grote error */
+#course-content-size-error {
+  color: #cb0000;
+}
+
+/* Overview inhoud */
+div.course-overview-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.course-overview-content a {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #afafaf;
+  max-width: 1000px;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  margin: 1rem 0rem;
+}
+div.course-overview-content a div.course-div {
+  display: flex;
+}
+div.course-overview-content a div.course-div div.logo {
+  font-size: 3rem;
+  color: #cb0000;
+  margin-right: 1rem;
+}
+div.course-overview-content a div.course-div div.title {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  div.course-overview-content a div.course-div div.title h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Detail div */
+div#course-detail-container {
+  margin-top: 2rem;
+  min-height: 60vh;
+  /* Cursus detail container */
+}
+div#course-detail-container div#course-detail-container-content {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Cursus side menu */
+  /* Cursus main div*/
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side {
+  flex: 1;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li {
+  list-style: none;
+  padding: 0.25rem 0rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li {
+    flex: 1;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a {
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a {
+    padding: 1rem 0rem;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side ul li a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div {
+    display: flex;
+    justify-content: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div a#close_course_menu_button {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0rem;
+  background-color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#left-side div#open-close-course-menu-div a#open_course_menu_button {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0rem;
+  background-color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side {
+  flex: 9;
+  width: 75%;
+  margin-left: 12.5%;
+  /* Bestand overzicht */
+  /* Upload lijst */
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side {
+    margin-top: 3rem;
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.title-div-detail-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+  flex: 8;
+  font-style: italic;
+  color: #afafaf;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div h1 {
+    font-size: 1.5em;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div a {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#title-div a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info {
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info h4 {
+  padding-bottom: 0.5rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content h4 {
+  padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list {
+    border-top: 1px solid #afafaf;
+    border-left: none;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div {
+  padding: 1rem 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div {
+    flex-direction: column;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display img {
+  width: 50px;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div i, div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display {
+  flex: 1;
+  width: 100%;
+  font-size: 3em;
+  margin-left: 3rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div i, div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div div.file-image-display {
+    text-align: center;
+    margin-left: 0rem;
+    padding-bottom: 1rem;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename {
+  flex: 10;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename {
+    text-align: center;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.filename:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download {
+  flex: 1;
+  color: blue;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download:hover {
+  color: blue;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download i {
+  font-size: 1em;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
+  flex: 1;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file:hover {
+  color: #cb0000;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file i {
+  font-size: 1em;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.no-upload-div {
+  color: #afafaf;
+  margin-top: 2rem;
+  font-style: italic;
+}
+@media screen and (max-width: 850px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.no-upload-div {
+    font-size: 2em;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list {
+  min-height: 50vh;
+}
+@media screen and (max-width: 1000px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list {
+    border-top: 1px solid #afafaf;
+    border-left: none;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item i {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+@media screen and (max-width: 500px) {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item i {
+    flex: 3;
+  }
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a#upload-detail-button {
+  flex: 9;
+  margin-left: 5%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a#upload-detail-button:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.delete-button {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  text-decoration: none;
+  color: #cb0000;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.delete-button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 0rem;
+  border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.edit-button {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  color: orange;
+  text-decoration: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.edit-button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 0rem;
+  border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-upload-detail-container-content {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2rem;
+}
+div#course-detail-container div#course-upload-detail-container-content h1 {
+  font-style: italic;
+  color: #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding-bottom: 0.5rem;
+}
+
+/* Video preview */
+iframe#show-video-file-iframe {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 999999;
+  height: 100%;
+}
+
+input.datepicker-input {
+  width: 100%;
+}
+
+div#datepicker-blackout {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+div#datepicker-container {
+  position: fixed;
+  height: 90%;
+  width: 80%;
+  margin: 2.5% 10%;
+  z-index: 11;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  background-color: #fff;
+  padding-top: 30px;
+}
+div#datepicker-container a#date-picker-close-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+}
+div#datepicker-container div#datepicker {
+  min-width: 100%;
+}
+div#datepicker-container div#datepicker h4 {
+  width: 100%;
+  text-align: center;
+}
+div#datepicker-container div#datepicker div#year-div {
+  text-align: center;
+  min-width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem !important;
+}
+div#datepicker-container div#datepicker div#year-div div {
+  flex: 1;
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#year-div div i {
+  color: #cb0000;
+}
+div#datepicker-container div#datepicker #dt-able {
+  min-width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+}
+div#datepicker-container div#datepicker #dt-able tr td {
+  padding: 2%;
+}
+div#datepicker-container div#datepicker #dt-able tr td input {
+  color: #cb0000;
+  border: none;
+  background: none;
+}
+div#datepicker-container div#datepicker div#month-div {
+  text-align: center;
+  min-width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div {
+  flex: 1;
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div p {
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div i {
+  color: #cb0000;
+}
+
+/* Event detail container */
+div#event-detail-container p#event-author {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #afafaf;
+}
+div#event-detail-container div#event-detail-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Event Info */
+  /* Event kaart */
+}
+@media screen and (max-width: 1000px) {
+  div#event-detail-container div#event-detail-content {
+    flex-direction: column;
+  }
+}
+div#event-detail-container div#event-detail-content div {
+  flex: 1;
+}
+div#event-detail-container div#event-detail-content div#left-side {
+  width: 50%;
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  div#event-detail-container div#event-detail-content div#left-side {
+    width: 100%;
+  }
+}
+div#event-detail-container div#event-detail-content div#left-side span#event-description {
+  max-width: 80%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+@media screen and (max-width: 1000px) {
+  div#event-detail-container div#event-detail-content div#left-side span#event-description {
+    width: 100%;
+    overflow-wrap: none;
+    word-wrap: none;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+  }
+}
+div#event-detail-container div#event-detail-content div#left-side div {
+  margin-top: 1.5rem;
+}
+div#event-detail-container div#event-detail-content div#left-side div p:first-of-type:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  margin-top: 0.3rem;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#event-detail-container div#event-detail-content div#right-side {
+  width: 100%;
+}
+div#event-detail-container div#event-detail-content div#right-side iframe {
+  width: 100%;
+}
+div#event-detail-container div#signed-in-people {
+  margin-top: 30px;
+}
+@media screen and (max-width: 700px) {
+  div#event-detail-container div#signed-in-people {
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  div#event-detail-container div#signed-in-people h1 {
+    font-size: 24px;
+  }
+}
+div#event-detail-container div#signed-in-people table {
+  max-width: 750%;
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: scroll;
+}
+div#event-detail-container div#signed-in-people table thead th {
+  padding: 10px 5px;
+  border: 1px solid black;
+}
+div#event-detail-container div#signed-in-people table tbody td {
+  padding: 10px 5px;
+}
+
+/* Event overview container*/
+div.event-overview-div {
+  width: 100%;
+  background-color: red;
+  margin-top: 2rem;
+}
+div.event-overview-div a {
+  text-decoration: none;
+  color: #000;
+}
+div.event-overview-div a div.event-card {
+  width: 30%;
+  margin-right: 1.665%;
+  margin-left: 1.665%;
+  margin-top: 1rem;
+  float: left;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div.event-overview-div a div.event-card {
+    width: 80%;
+    margin: 0px 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.event-overview-div a div.event-card {
+    width: 90%;
+    margin: 0px 5%;
+  }
+}
+div.event-overview-div a div.event-card div.event-card-image-div img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div.event-overview-div a div.event-card div.event-card-info-div h4 {
+  color: #cb0000;
+  margin-top: 1rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+div.event-overview-div a div.event-card div.event-card-info-div p {
+  padding-bottom: 0.5rem;
+  width: 80%;
+  margin: 0px auto;
+}
+@media screen and (max-width: 600px) {
+  div.event-overview-div a div.event-card div.event-card-info-div p {
+    width: 100%;
+  }
+}
+
+/* Create form time fields*/
+div#event-from-hour-div {
+  margin-left: 0% !important;
+}
+div#event-from-hour-div div#from-hour-button {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100px !important;
+  padding: 10px 20px !important;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 0px !important;
+}
+div#event-from-hour-div div#from-hour-button p {
+  margin-right: 10px;
+  margin-bottom: 0px !important;
+}
+div#event-from-hour-div div#from-hour-button i {
+  font-size: 1.3em;
+}
+div#event-from-hour-div div#from-hour-dropdown {
+  color: red;
+  display: none !important;
+}
+div#event-from-hour-div div#from-hour-dropdown div#hour-options div {
+  width: 100% !important;
+  display: block;
+  text-align: center;
+}
+div#event-from-hour-div div#from-hour-dropdown div#hour-options div + div {
+  margin-left: 0% !important;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  /* main footer div*/
+  /* Sub footer */
+}
+footer #main-footer-div {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+footer #main-footer-div #content-main-footer-div {
+  width: 80%;
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  footer #main-footer-div #content-main-footer-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+footer #main-footer-div #content-main-footer-div div {
+  flex: 1;
+}
+@media screen and (max-width: 600px) {
+  footer #main-footer-div #content-main-footer-div div {
+    margin-top: -10%;
+  }
+}
+footer #main-footer-div #content-main-footer-div div h2 {
+  font-weight: normal;
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+}
+footer #main-footer-div #content-main-footer-div div ul li {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+}
+footer #main-footer-div #content-main-footer-div div ul li a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer #main-footer-div #content-main-footer-div div p {
+  padding-bottom: 2rem;
+  display: block;
+}
+footer #main-footer-div #content-main-footer-div div a#sign-button-main-footer-div {
+  color: #fff;
+  font-size: 1rem;
+  border: 2px solid #cb0000;
+  box-sizing: border-box;
+  padding: 1rem 0rem;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+}
+footer #main-footer-div #content-main-footer-div div a#sign-button-main-footer-div:hover {
+  background-position: left;
+  text-decoration: none;
+}
+footer #sub-footer-div {
+  display: flex;
+}
+footer #sub-footer-div #image-sub-footer-div {
+  flex: 1;
+}
+footer #sub-footer-div #image-sub-footer-div img {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+footer #sub-footer-div #copyright-sub-footer-div {
+  display: flex;
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+}
+
+div#auth-form-container {
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#auth-form-container {
+    max-width: 300px;
+  }
+}
+div#auth-form-container div#top-form-div {
+  border-radius: 30px 30px 0px 0px;
+  background: #cb0000;
+  background: linear-gradient(135deg, #cb0000 0%, #ffce00 100%);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#auth-form-container div#top-form-div #top-form-image-div {
+  margin-top: 2rem;
+  flex: 1;
+}
+div#auth-form-container div#top-form-div #top-form-image-div img {
+  width: 80%;
+  margin-left: 10%;
+}
+div#auth-form-container div#top-form-div p {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+div#auth-form-container div#lower-form-div {
+  padding-top: 3rem;
+  width: 100%;
+  flex: 1;
+  border-radius: 0px 0px 30px 30px;
+}
+div#auth-form-container div#lower-form-div form div input {
+  margin-bottom: 2rem;
+}
+div#auth-form-container div#lower-form-div form div input.effect-input {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#auth-form-container div#lower-form-div form div input.effect-input:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#auth-form-container div#lower-form-div form div.control-div {
+  width: 80%;
+  margin-left: 10%;
+}
+div#auth-form-container div#lower-form-div form div#submit-button-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#submit-button-div button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#auth-form-container div#lower-form-div form div#forgot-pass-div {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#forgot-pass-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#auth-form-container div#lower-form-div form div#sign-up-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#auth-form-container div#lower-form-div form div#sign-up-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#auth-form-container div#lower-form-div form div.option-div {
+  margin-bottom: 3rem;
+}
+div#auth-form-container div#lower-form-div form div.option-div label {
+  margin-bottom: 1rem;
+}
+div#auth-form-container div#lower-form-div form div.option-div div {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+div#crud-form-div {
+  width: 1000px;
+  margin: 2rem auto;
+  margin-bottom: 10rem;
+  position: relative;
+  /* Background div */
+}
+@media screen and (max-width: 1000px) {
+  div#crud-form-div {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+div#crud-form-div div#form-div {
+  top: 5rem;
+  left: 3rem;
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#crud-form-div div#form-div {
+    left: 1rem;
+    width: 100%;
+  }
+}
+div#crud-form-div div#form-div form {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  div#crud-form-div div#form-div form {
+    padding: 0.5rem;
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  div#crud-form-div div#form-div form {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+div#crud-form-div div#form-div form div#tutorial-date-div {
+  display: block;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+div#crud-form-div div#form-div form div#tutorial-date-div div {
+  float: left;
+  max-width: 45%;
+  margin: 0% 2.5%;
+}
+div#crud-form-div div#form-div form div#tutorial-date-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#tutorial-file-div {
+  display: none;
+}
+div#crud-form-div div#form-div form div#tutorial-written-div {
+  display: none;
+}
+div#crud-form-div div#form-div form div label {
+  display: block;
+}
+div#crud-form-div div#form-div form div textarea:focus {
+  outline: none;
+}
+div#crud-form-div div#form-div form div input[type=text], div#crud-form-div div#form-div form div input[type=number] {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#crud-form-div div#form-div form div input[type=text]:focus, div#crud-form-div div#form-div form div input[type=number]:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#crud-form-div div#form-div form div input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+div#crud-form-div div#form-div form div .file-label {
+  font-size: 1em;
+  color: white;
+  background-color: #cb0000;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+div#crud-form-div div#form-div form div .file-label i {
+  margin-right: 0.5rem;
+}
+div#crud-form-div div#form-div form div button#submit {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#crud-form-div div#form-div form div#date-div div {
+  float: left;
+  width: 45%;
+}
+div#crud-form-div div#form-div form div#date-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#date-div div + div {
+  margin-left: 10%;
+}
+div#crud-form-div div#form-div form div#time-div {
+  /* CAUTION: Internet Explorer hackery ahead */
+}
+div#crud-form-div div#form-div form div#time-div div {
+  float: left;
+  width: 45%;
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div div#form-div form div#time-div div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+div#crud-form-div div#form-div form div#time-div div input {
+  width: 100%;
+}
+div#crud-form-div div#form-div form div#time-div div + div {
+  margin-left: 10%;
+}
+@media screen and (max-width: 600px) {
+  div#crud-form-div div#form-div form div#time-div div + div {
+    margin-left: 0%;
+  }
+}
+div#crud-form-div div#form-div form div#time-div select.time-select {
+  width: 100px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: none;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #cb0000;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#crud-form-div div#form-div form div#time-div select.time-select {
+    width: 75px;
+  }
+}
+div#crud-form-div div#form-div form div#time-div select.time-select::-ms-expand {
+  display: none;
+  /* Remove default arrow in Internet Explorer 10 and 11 */
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div {
+  margin-bottom: 0rem;
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div div {
+  float: left;
+  width: 33%;
+}
+div#crud-form-div div#form-div form div#tutorial-content-type-div div label {
+  display: inline;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div {
+  margin-bottom: 0rem;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div div {
+  float: left;
+  width: 33%;
+}
+div#crud-form-div div#form-div form div#tutorial-type-div div label {
+  display: inline;
+}
+div#crud-form-div div#background-div {
+  width: 100%;
+  background: #cb0000;
+  background: linear-gradient(135deg, #ffbb00 0%, #cb0000 75%);
+  height: 100%;
+  position: absolute;
+  border-radius: 30px;
+}
+div#crud-form-div div#background-div h3 {
+  margin-left: 50px;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+div#user-edit-form-div {
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 20px 47px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+@media screen and (max-width: 400px) {
+  div#user-edit-form-div {
+    width: 300px;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+  }
+}
+div#user-edit-form-div div#top-form-div {
+  border-radius: 30px 30px 0px 0px;
+  background: #cb0000;
+  background: linear-gradient(135deg, #cb0000 0%, #ffce00 100%);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div {
+  margin-top: 2rem;
+  flex: 1;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div img#no-pic {
+  width: 150px;
+  height: 150px;
+  margin-left: 10%;
+}
+div#user-edit-form-div div#top-form-div #top-form-image-div img#pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div#user-edit-form-div div#top-form-div p {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+div#user-edit-form-div div#lower-form-div {
+  padding-top: 3rem;
+  width: 100%;
+  flex: 1;
+  border-radius: 0px 0px 30px 30px;
+}
+div#user-edit-form-div div#lower-form-div form div input {
+  margin-bottom: 2rem;
+}
+div#user-edit-form-div div#lower-form-div form div input.effect-input {
+  width: 100%;
+  height: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out;
+}
+div#user-edit-form-div div#lower-form-div form div input.effect-input:focus {
+  outline: none;
+  border-bottom: 2px solid #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div {
+  width: 80%;
+  margin-left: 10%;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  margin-bottom: 1rem;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div .file-label {
+  font-size: 1em;
+  color: white;
+  background-color: #cb0000;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div.control-div .file-label i {
+  margin-right: 0.5rem;
+}
+div#user-edit-form-div div#lower-form-div form div#submit-button-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#submit-button-div button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 30px;
+}
+div#user-edit-form-div div#lower-form-div form div#forgot-pass-div {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#forgot-pass-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div#sign-up-div {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+div#user-edit-form-div div#lower-form-div form div#sign-up-div a:hover {
+  text-decoration: none;
+  color: #cb0000;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div {
+  margin-bottom: 3rem;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div label {
+  margin-bottom: 1rem;
+}
+div#user-edit-form-div div#lower-form-div form div.option-div div {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+#edit-event-image {
+  width: 100%;
+}
+
+/* Guide container */
+#guide-content-container h1 {
+  margin-bottom: 1.5rem;
+}
+#guide-content-container h1:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+#guide-content-container div {
+  width: 90%;
+  margin-left: 10%;
+}
+#guide-content-container div h2, #guide-content-container div h3, #guide-content-container div h4 {
+  margin: 1rem 0rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* SMALL HEADER*/
+  /*SMALL HEADER MENU*/
+}
+header div.search-bar-result-div {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#tutorials-results div#tutorials-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#tutorials-results div#tutorials-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#threads-results div#threads-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#threads-results div#threads-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#threads-results div#threads-results-content-div a div.threads-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#threads-results div#threads-results-content-div a div.threads-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#threads-results div#threads-results-content-div a div.threads-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#threads-results div#threads-results-content-div a div.threads-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#courses-results div#courses-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#courses-results div#courses-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#courses-results div#courses-results-content-div a div.courses-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#courses-results div#courses-results-content-div a div.courses-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#courses-results div#courses-results-content-div a div.courses-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#courses-results div#courses-results-content-div a div.courses-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#events-results div#events-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#events-results div#events-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#events-results div#events-results-content-div a div.events-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#events-results div#events-results-content-div a div.events-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#events-results div#events-results-content-div a div.events-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#events-results div#events-results-content-div a div.events-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#articles-results div#articles-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#articles-results div#articles-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#articles-results div#articles-results-content-div a div.articles-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#articles-results div#articles-results-content-div a div.articles-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#articles-results div#articles-results-content-div a div.articles-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#articles-results div#articles-results-content-div a div.articles-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#users-results div#users-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+header div#users-results div#users-results-content-div a:hover {
+  text-decoration: none;
+}
+header div#users-results div#users-results-content-div a div.users-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header div#users-results div#users-results-content-div a div.users-results-item:hover {
+  background-color: #e5e4e4;
+}
+header div#users-results div#users-results-content-div a div.users-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+header div#users-results div#users-results-content-div a div.users-results-item div#user-info {
+  flex: 3;
+  margin-left: 5%;
+}
+header div#no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 2em;
+  text-align: center;
+  color: lightgray;
+}
+header div#headerblackout-big, header div#headerblackout-small {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  display: none;
+}
+header #header-content-big {
+  width: 100%;
+  margin: 0px auto;
+}
+@media screen and (max-width: 1000px) {
+  header #header-content-big {
+    display: none;
+  }
+}
+header #header-content-big #header-top-div {
+  background-color: #222;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #header-content-big #header-top-div div#header-logo {
+  margin-left: 50px;
+  flex: 1;
+}
+header #header-content-big #header-top-div div#header-logo a img {
+  min-width: 125px;
+  margin-top: 20px;
+}
+header #header-content-big #header-top-div div#searchbar {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+header #header-content-big #header-top-div div#searchbar div.header-search-results-big {
+  background-color: #fff;
+  width: 90%;
+  top: 110%;
+  height: 300px;
+  position: absolute;
+  z-index: 4;
+  display: none;
+  overflow-y: auto;
+}
+header #header-content-big #header-top-div div#searchbar input {
+  width: 90%;
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  padding-left: 30px;
+  position: relative;
+  z-index: 4;
+  outline: none;
+}
+header #header-content-big #header-top-div div#links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 70px;
+  width: 100%;
+}
+header #header-content-big #header-top-div div#links a {
+  text-decoration: none;
+  color: #fff;
+}
+header #header-content-big #header-top-div div#links p {
+  text-align: right;
+  margin-right: 30px;
+  font-size: 12px;
+  color: #fff;
+}
+header #header-content-big #header-top-div div#links p span {
+  font-weight: bold;
+}
+header #header-content-big #header-top-div div#links div.dropdown {
+  position: relative;
+  display: inline-block;
+}
+header #header-content-big #header-top-div div#links div.dropdown:hover > .dropdown-content {
+  display: block;
+}
+header #header-content-big #header-top-div div#links div.dropdown button.dropbtn {
+  background: none;
+  color: white;
+  border: none;
+}
+header #header-content-big #header-top-div div#links div.dropdown button.dropbtn:focus {
+  outline: none;
+}
+header #header-content-big #header-top-div div#links div.dropdown button.dropbtn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #header-content-big #header-top-div div#links div.dropdown button.dropbtn i {
+  font-size: 2em;
+}
+header #header-content-big #header-top-div div#links div.dropdown div.dropdown-content {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header #header-content-big #header-top-div div#links div.dropdown div.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header #header-content-big #header-top-div div#links div.dropdown div.dropdown-content a:hover {
+  background-color: #ddd;
+}
+header #header-content-big #header-lower-div {
+  background-color: #b70000;
+}
+header #header-content-big #header-lower-div #header-lower-div-content {
+  display: flex;
+  width: 100%;
+  padding: 2rem 0rem;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#auth-functions {
+  flex: 4;
+  display: flex;
+  margin-left: 55px;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#auth-functions a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#auth-functions a + a {
+  margin-left: 15px;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links {
+  flex: 1;
+  margin-right: 70px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div + div {
+  margin-left: 30px;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown {
+  position: relative;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown:hover > .dropdown-content {
+  display: block;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown button.dropbtn {
+  background: none;
+  color: white;
+  border: none;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown button.dropbtn:focus {
+  outline: none;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown button.dropbtn i {
+  font-size: 1em;
+  margin-left: 2px;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown div.dropdown-content {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown div.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header #header-content-big #header-lower-div #header-lower-div-content div#dropdown-links div.dropdown div.dropdown-content a:hover {
+  background-color: #ddd;
+}
+header #header-content-small {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  header #header-content-small {
+    display: block;
+  }
+}
+header #header-content-small #header-top-div {
+  display: flex;
+  color: #222;
+  padding: 20px 0px;
+}
+header #header-content-small #header-top-div div#header-logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+header #header-content-small #header-top-div div#header-logo button {
+  background: none;
+  border: none;
+  font-size: 2em;
+}
+header #header-content-small #header-top-div div#header-logo button:focus {
+  outline: none;
+}
+header #header-content-small #header-top-div div#header-logo a {
+  margin-left: 20px;
+}
+header #header-content-small #header-top-div div#header-logo a img {
+  max-width: 200px;
+  width: 100%;
+  margin-top: 20px;
+}
+header #header-content-small #header-top-div div#links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 30px;
+}
+header #header-content-small #header-top-div div#links a {
+  text-decoration: none;
+  color: #222;
+}
+header #header-content-small #header-top-div div#links p {
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #222;
+}
+header #header-content-small #header-top-div div#links p span {
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  header #header-content-small #header-top-div div#links p {
+    display: none;
+  }
+}
+header #header-content-small #header-top-div div#links div.dropdown {
+  position: relative;
+  display: inline-block;
+}
+header #header-content-small #header-top-div div#links div.dropdown:hover > .dropdown-content {
+  display: block;
+}
+header #header-content-small #header-top-div div#links div.dropdown button.dropbtn {
+  background-color: #fff;
+  color: #222;
+  padding: 16px;
+  border: none;
+}
+header #header-content-small #header-top-div div#links div.dropdown button.dropbtn:focus {
+  outline: none;
+}
+header #header-content-small #header-top-div div#links div.dropdown button.dropbtn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #header-content-small #header-top-div div#links div.dropdown button.dropbtn i {
+  font-size: 2em;
+}
+header #header-content-small #header-top-div div#links div.dropdown div.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header #header-content-small #header-top-div div#links div.dropdown div.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header #header-content-small #header-top-div div#links div.dropdown div.dropdown-content a:hover {
+  background-color: #ddd;
+}
+header #header-content-small #header-lower-div {
+  background-color: #222;
+  padding: 20px 0px;
+}
+header #header-content-small #header-lower-div div#searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-size: 16px;
+}
+header #header-content-small #header-lower-div div#searchbar input {
+  width: 90%;
+  height: 50px;
+  border-radius: 20px;
+  padding-left: 30px;
+}
+header #header-content-small #header-lower-div div#searchbar input:focus {
+  outline: none;
+  position: relative;
+  z-index: 4;
+}
+header #header-content-small #header-lower-div div#searchbar div.header-search-results-small {
+  background-color: #fff;
+  width: 90%;
+  top: 110%;
+  height: 300px;
+  position: absolute;
+  z-index: 4;
+  display: none;
+  overflow-y: auto;
+}
+@media screen and (max-width: 600px) {
+  header #header-content-small #header-lower-div div#searchbar div.header-search-results-small {
+    height: 200px;
+  }
+}
+header #small-menu-blackout {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header #small-header-menu {
+  position: fixed;
+  z-index: 10;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: #fff;
+}
+header #small-header-menu div#close-menu-div {
+  text-align: right;
+  padding: 1rem;
+}
+header #small-header-menu div#close-menu-div button#close-small-header-menu {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  transition: 0.3s;
+}
+header #small-header-menu div#close-menu-div button#close-small-header-menu:focus {
+  outline: none;
+}
+header #small-header-menu div#close-menu-div button#close-small-header-menu:hover {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: rotate(90deg);
+}
+header #small-header-menu ul {
+  list-style-type: none;
+  width: 80%;
+  margin-left: 10%;
+}
+header #small-header-menu ul li h2 {
+  position: relative;
+  margin: 1rem 0rem;
+}
+header #small-header-menu ul li a {
+  text-decoration: none;
+  color: #cb0000;
+  position: relative;
+}
+header #small-header-menu ul li a:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background: #cb0000;
+  transition: 0.5s;
+}
+header #small-header-menu ul li a:hover:after {
+  width: 20px;
+  transition: 0.5s;
+}
+header #small-header-menu ul li.menu-link {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+/* Home container*/
+div#home-container {
+  width: 100%;
+  /* Home banner */
+  /* What we do div*/
+  /* Video div*/
+  /* Quote div */
+  /* Event-tut div */
+  /* Event-tut small div */
+}
+div#home-container div#home-banner-div {
+  background-image: url(/images/background-banner2.png?87ed4aa0d8a600a4a48d602196a6c7ed);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 75vh;
+  top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#home-banner-div {
+    height: 85vh;
+    background-image: url(/images/background-banner2_uitgesneden.png?9ade6bca4a9fadaf430966f83d54f2d7);
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#home-banner-div {
+    background-image: url(/images/background-banner2_uitgesneden2.png?cca061ab2bab918491b8b328afe6f2d0);
+    background-size: 100% auto;
+    height: 80vh;
+  }
+}
+div#home-container div#home-banner-div div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+@media screen and (max-width: 1100px) {
+  div#home-container div#home-banner-div div {
+    align-items: start;
+  }
+}
+div#home-container div#home-banner-div div h1 {
+  color: white;
+  font-size: 4em;
+  width: 50%;
+  text-align: center;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #000;
+  margin-top: 8rem;
+}
+@media screen and (max-width: 1400px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 1.5em;
+    margin-top: 4rem;
+  }
+}
+div#home-container div#home-banner-div div button {
+  color: #fff;
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#home-banner-div div button {
+    margin-top: 3rem;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#home-banner-div div button {
+    margin-top: 3rem;
+    width: 80%;
+  }
+}
+div#home-container div#home-banner-div div button:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#home-banner-div div button:focus {
+  outline: none;
+}
+div#home-container div#what-we-do-div {
+  background-color: #fff;
+}
+div#home-container div#what-we-do-div div#what-we-do-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container {
+    flex-direction: column;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1 .content {
+  background-image: url(/images/our-goals-1.jpg?ef115cde19d270c56f7480a9d72409fe);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1 .content .our-goals-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2 .content {
+  background-image: url(/images/our-goals-2.jpg?74932c0c75070e4a7874b3983880442d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2 .content .our-goals-background {
+  background-color: rgba(203, 0, 0, 0.5);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3 .content {
+  background-image: url(/images/our-goals-3.jpg?ed848fe572be87650fa3d525f3b67145);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3 .content .our-goals-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  z-index: 1;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div {
+    min-height: 200px;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content {
+  color: #fff;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content i {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content i {
+    margin-left: 12.5%;
+    margin-top: 5%;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container {
+  width: 75%;
+  margin-left: 12.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container h2 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 700px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container h2 {
+    font-size: 2em;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container p {
+  margin-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container p {
+    margin-bottom: 20px;
+  }
+}
+div#home-container div#home-video-div {
+  background-color: #000;
+  height: 90vh;
+}
+div#home-container div#home-video-div video {
+  width: 100%;
+  height: 100%;
+}
+div#home-container div#quote-div {
+  position: relative;
+}
+div#home-container div#quote-div div#quote {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 50px;
+  padding-bottom: 40px;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#quote-div div#quote {
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#quote {
+    font-size: 1rem;
+  }
+}
+div#home-container div#quote-div div#quote span {
+  color: red;
+}
+div#home-container div#quote-div div#image {
+  width: 50%;
+  margin: 0px auto;
+}
+div#home-container div#quote-div div#image img {
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 50%;
+  border: 10px solid #cb0000;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#quote-div div#image img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+div#home-container div#quote-div div#image p {
+  text-align: center;
+}
+div#home-container div#quote-div div#image #artist-name {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#image #artist-name {
+    font-size: 1.5rem;
+  }
+}
+div#home-container div#quote-div div#image #shop-name {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#image #shop-name {
+    font-size: 1rem;
+  }
+}
+div#home-container div#event-tut-div {
+  z-index: 0;
+  position: relative;
+}
+div#home-container div#event-tut-div div#event-tut-text-div {
+  -webkit-clip-path: polygon(100% 0, 100% 39%, 10% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 39%, 10% 100%, 0 100%, 0 0);
+  background-image: url(/images/home-banner-greyscale-blur2.jpg?9e9b2079e7e0b281ddab89c2078e985c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 90vh;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div {
+    display: none;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div {
+  color: #fff;
+  width: 50vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div {
+    width: 100vw;
+    height: 40vh;
+    justify-content: start;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+  margin-left: 50px;
+  margin-top: 9vh;
+  width: 25vw;
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+    margin-top: 8vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 1vh;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div h1 {
+  font-size: 3em;
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div h1 {
+    font-size: 2em;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div {
+  margin-left: 50px;
+  width: 25vw;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 1vh;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a {
+  display: block;
+  float: left;
+  width: 45%;
+  text-align: center;
+  padding: 1rem 0rem;
+  color: #fff;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  border: 3px solid #cb0000;
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a + a {
+  margin-left: 5%;
+}
+div#home-container div#event-tut-div div#event-tut-show-div {
+  height: 10vh;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  height: 90vh;
+  left: 47vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-show-div {
+    display: none;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-show-div div {
+  flex: 1;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div img {
+  max-width: 97.5%;
+  margin-left: 1.25%;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#event-image-1 {
+  margin-top: 8rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#event-image-2 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#tut-image-1 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#tut-image-2 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div-small {
+  background-image: url(/images/home-banner-greyscale.jpg?3bd26ad162016eb8ca5414642076603c);
+  padding-bottom: 5rem;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div-small {
+    display: block;
+  }
+}
+div#home-container div#event-tut-div-small div {
+  width: 100%;
+  display: block;
+}
+div#home-container div#event-tut-div-small div h1 {
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #000;
+  padding-top: 3rem;
+  text-align: center;
+  color: #fff;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 3em;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div h1 {
+    width: 100%;
+    font-size: 2em;
+    margin-left: 0%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div {
+  width: 60%;
+  margin-left: 20%;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 3rem;
+    padding-left: 18%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div div#button-div {
+    padding-left: 2%;
+    padding-right: 5%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div a {
+  display: inline-block;
+  width: 45%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div a {
+    width: 33.5%;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div div#button-div a {
+    width: 45%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#event-tut-div-small div div#button-div a + a {
+  margin-left: 9%;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div a + a {
+    margin-left: 5%;
+  }
+}
+div#home-container div#event-tut-div-small div img {
+  max-width: 100%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  float: right;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div img {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  overflow-anchor: none;
+}
+
+.resetpass-container #reset-form-div {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+#url-route-button a:hover, #url-create-route-button a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+
+button#wachtwoord-reset-button {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+button#wachtwoord-reset-button:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+
+/* to top button */
+div#mytotopbutton {
+  position: fixed;
+  display: none;
+  z-index: 10;
+  bottom: 0px;
+  right: -35px;
+  background: #cb0000;
+  border-radius: 5px 0px 0px 5px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: 0.7s;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  div#mytotopbutton {
+    right: -15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+div#mytotopbutton:hover {
+  right: 0px;
+}
+div#mytotopbutton:hover > #to-top-button {
+  margin-left: 0px;
+  pointer-events: auto;
+}
+@media screen and (max-width: 500px) {
+  div#mytotopbutton:hover > #to-top-button {
+    margin-left: -5px;
+  }
+}
+div#mytotopbutton #to-top-button {
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.7s;
+  margin-left: 15px;
+  pointer-events: none;
+  margin-top: 10px;
+}
+@media screen and (max-width: 500px) {
+  div#mytotopbutton #to-top-button {
+    margin-left: 10px;
+  }
+}
+div#mytotopbutton #to-top-button i {
+  font-size: 3rem;
+  color: #fff;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  div#mytotopbutton #to-top-button i {
+    font-size: 2rem;
+  }
+}
+
+/* Chat icon */
+div#message-icon-div {
+  position: fixed;
+  right: -35px;
+  bottom: 85px;
+  z-index: 10;
+  height: 75px;
+  width: 75px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #b90000;
+  border-radius: 4px 0px 0px 4px;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  div#message-icon-div {
+    right: -15px;
+    height: 50px;
+    width: 50px;
+    bottom: 60px;
+  }
+}
+div#message-icon-div:hover {
+  right: 0px;
+}
+div#message-icon-div:hover > #link-div a {
+  pointer-events: auto;
+  margin-left: 0px;
+}
+@media screen and (max-width: 500px) {
+  div#message-icon-div:hover > #link-div a {
+    margin-left: -5px;
+  }
+}
+div#message-icon-div div#count-div {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #b90000;
+}
+@media screen and (max-width: 500px) {
+  div#message-icon-div div#count-div {
+    left: -10px;
+    top: -10px;
+    height: 20px;
+    width: 20px;
+  }
+}
+div#message-icon-div div#link-div a {
+  color: #fff;
+  font-size: 3rem;
+  text-decoration: none;
+  pointer-events: none;
+  margin-left: 15px;
+  transition: 0.7s;
+}
+@media screen and (max-width: 500px) {
+  div#message-icon-div div#link-div a {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+}
+
+/* Reset link niet meer geldig container*/
+div#resetnotfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#resetnotfound div#card {
+  width: 500px;
+  background-color: #fff;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+div#resetnotfound div#card div#not-found-title {
+  background-color: #cb0000;
+  border-radius: 30px 30px 0px 0px;
+}
+div#resetnotfound div#card div#not-found-title h1 {
+  font-size: 1.5em;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+div#resetnotfound div#card div#not-found-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 90%;
+  margin-left: 5%;
+}
+div#resetnotfound div#card div#found-title {
+  background-color: #cb0000;
+  border-radius: 30px 30px 0px 0px;
+}
+div#resetnotfound div#card div#found-title h1 {
+  font-size: 1.5em;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+div#resetnotfound div#card div#found-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  min-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#resetnotfound div#card div#found-content form {
+  width: 100%;
+}
+div#resetnotfound div#card div#found-content form label {
+  margin-bottom: 1rem;
+}
+div#resetnotfound div#card div#found-content form input[type=password] {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+div#resetnotfound div#card div#found-content form input[type=password]:focus {
+  outline: none;
+}
+div#resetnotfound div#card div#found-content form input[type=submit] {
+  margin-top: 1rem;
+  width: 50%;
+  display: inline-block;
+  width: 200px;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+div#resetnotfound div#card div#found-content form input[type=submit]:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+
+/* Links*/
+a {
+  text-decoration: none;
+  color: #cb0000;
+}
+
+/* general container*/
+.general-container {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+/* Clearfix*/
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Overview container*/
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  /* Button div*/
+}
+.overview-container div.general-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .overview-container div.general-button-div {
+    flex-direction: column;
+  }
+}
+.overview-container div.general-button-div div#url-route-button {
+  flex: 9;
+}
+.overview-container div.general-button-div div#url-route-button p {
+  color: #000;
+}
+.overview-container div.general-button-div div#url-route-button a, .overview-container div.general-button-div div#url-route-button span {
+  color: #cb0000;
+}
+.overview-container div.general-button-div div#url-route-button a:hover {
+  text-decoration: none;
+}
+.overview-container div.general-button-div div#add-button-div {
+  flex: 1;
+  min-height: 5vh;
+  text-align: right;
+}
+.overview-container div.general-button-div div#add-button-div a {
+  display: inline-block;
+  width: 200px;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+.overview-container div.general-button-div div#add-button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+.overview-container div.general-button-div div#edit-button-div {
+  flex: 1;
+  min-height: 5vh;
+  text-align: right;
+}
+.overview-container div.general-button-div div#edit-button-div a {
+  display: inline-block;
+  width: 200px;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+.overview-container div.general-button-div div#edit-button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+.overview-container div.general-button-div div#edit-button-div a#signed-in-true-button {
+  color: green;
+  border: 3px solid green;
+  background: linear-gradient(to right, green 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+}
+.overview-container .overview-content {
+  min-height: 5vh;
+}
+
+/* Dashbord */
+div#dasbord-container {
+  display: flex;
+  flex-direction: column;
+  /*Dashboard event sign out modal*/
+  /*Dashbord guide message*/
+  /* Dashbord main div */
+  /* Projects div */
+  /* Dashbord event + cursus div */
+}
+div#dasbord-container div.event-sign-out-div {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 11;
+}
+div#dasbord-container div.event-sign-out-modal {
+  width: 400px;
+  height: 400px;
+  margin: 0px auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 11;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div.event-sign-out-modal {
+    width: 300px;
+    height: 300px;
+  }
+}
+div#dasbord-container div.event-sign-out-modal a#event-sign-out-modal-close-button {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div {
+    height: 300px;
+  }
+}
+div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div div#event-sign-out-modal-message-div {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+  width: 90%;
+}
+div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div div#event-sign-out-modal-buttons-div a {
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div div#event-sign-out-modal-buttons-div a {
+    width: 100px;
+  }
+}
+div#dasbord-container div.event-sign-out-modal div#event-sign-out-modal-content-div div#event-sign-out-modal-buttons-div a#event-sign-out-decline {
+  background-color: #cb0000;
+}
+div#dasbord-container div#dashbord-sidebar-div {
+  flex: 1;
+  display: none;
+  background-color: #cb0000;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div#dashbord-sidebar-div {
+    margin-bottom: 3rem;
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#dashbord-sidebar-div {
+    display: block;
+    padding-top: 10px;
+  }
+}
+div#dasbord-container div#dashbord-sidebar-div a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div#dashbord-sidebar-div a {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#dashbord-sidebar-div a {
+    float: left;
+    margin-left: 1%;
+    width: 24%;
+  }
+}
+div#dasbord-container div#dashbord-sidebar-div a:hover {
+  background-color: #930000;
+}
+div#dasbord-container div#dashbord-sidebar-div a div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div#dasbord-container div#dashbord-sidebar-div a div i {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#dashbord-sidebar-div a div i {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+}
+div#dasbord-container div#dashbord-sidebar-div a div p {
+  margin-top: 5px;
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#dashbord-sidebar-div a div p {
+    font-size: 0.6rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+div#dasbord-container div#guide-message-div {
+  position: fixed;
+  bottom: 0;
+  width: 20%;
+  color: #fff;
+  border-radius: 0px 20px 0px 0px;
+  background-color: #cb0000;
+  -webkit-animation: slideMe 0.7s ease-in;
+          animation: slideMe 0.7s ease-in;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div#guide-message-div {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#guide-message-div {
+    width: 60%;
+  }
+}
+div#dasbord-container div#guide-message-div div#content-div {
+  padding: 2rem 0rem;
+  width: 75%;
+  margin: 0px auto;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#guide-message-div div#content-div {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+}
+div#dasbord-container div#guide-message-div div#content-div p {
+  font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#guide-message-div div#content-div p {
+    font-size: 0.8em;
+  }
+}
+div#dasbord-container div#guide-message-div div#content-div p a {
+  color: #fff;
+  text-decoration: underline;
+}
+div#dasbord-container div#guide-message-div a#no-show-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+@-webkit-keyframes slideMe {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slideMe {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+div#dasbord-container div#dashbord-main-div {
+  flex: 9;
+  min-height: 90vh;
+}
+@media screen and (max-width: 1024px) {
+  div#dasbord-container div#dashbord-main-div {
+    margin-bottom: 3rem;
+  }
+}
+div#dasbord-container div#user-projects-div {
+  margin-top: 2rem;
+  width: 95%;
+  margin-left: 2.5%;
+}
+div#dasbord-container div#user-projects-div h1 {
+  margin-left: 2.5%;
+}
+div#dasbord-container div#user-projects-div a:hover {
+  color: #cb0000;
+}
+div#dasbord-container div#user-projects-div a div.project-content-div {
+  float: left;
+  width: 11%;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0.5rem 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: stretch;
+  min-height: 200px;
+}
+@media screen and (max-width: 600px) {
+  div#dasbord-container div#user-projects-div a div.project-content-div {
+    width: 90%;
+    margin: 0rem 5%;
+    min-height: 0px;
+  }
+}
+div#dasbord-container div#user-projects-div a div.project-content-div div.project-logo-div {
+  margin: 1rem 0rem;
+}
+div#dasbord-container div#user-projects-div a div.project-content-div div.project-logo-div i {
+  font-size: 3rem;
+}
+div#dasbord-container div#user-projects-div a div.project-content-div div.project-title-div h4 {
+  font-size: 1rem;
+  text-align: center;
+}
+div#dasbord-container div#user-projects-div a.inactive-link {
+  pointer-events: none;
+  cursor: default;
+  color: #afafaf;
+}
+div#dasbord-container div#dashbord-signup-div {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#dasbord-container div#dashbord-signup-div {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div {
+  flex: 1;
+}
+div#dasbord-container div#dashbord-signup-div div#course-div {
+  padding-right: 20px;
+}
+div#dasbord-container div#dashbord-signup-div div#course-div h3 {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#dashbord-signup-div div#course-div h3 {
+    font-size: 1.2rem;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div#course-div div.course-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+div#dasbord-container div#dashbord-signup-div div#course-div div.course-item a {
+  flex: 5;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#dashbord-signup-div div#course-div div.course-item a {
+    margin-left: 2rem;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div#course-div div.course-item a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#dasbord-container div#dashbord-signup-div div#course-div div.course-item i {
+  flex: 1;
+  font-size: 2rem;
+}
+@media screen and (max-width: 800px) {
+  div#dasbord-container div#dashbord-signup-div div#event-div {
+    margin-top: 3rem;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div#event-div h3 {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#dashbord-signup-div div#event-div h3 {
+    font-size: 1.2rem;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div#event-div div.event-item {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 500px) {
+  div#dasbord-container div#dashbord-signup-div div#event-div div.event-item p a {
+    margin-left: 2rem;
+  }
+}
+div#dasbord-container div#dashbord-signup-div div#event-div div.event-item p a:hover {
+  color: #cb0000;
+  text-decoration: none;
+}
+div#dasbord-container div#dashbord-signup-div div#event-div div.event-item p.signed-event-title {
+  margin: 0px 10px;
+  text-align: center;
+  width: 60%;
+}
+@media screen and (max-width: 1200px) {
+  div#dasbord-container div#dashbord-signup-div div#event-div div.event-item p.signed-event-title {
+    width: 60%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    margin-right: 15px;
+  }
+}
+
+/* Create button*/
+div#url-create-route-button {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2rem;
+}
+div#url-create-route-button p {
+  color: #000;
+}
+div#url-create-route-button a, div#url-create-route-button span {
+  color: #cb0000;
+}
+
+/*Delete modal op projects page*/
+div#projects-delete-modal {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+div#projects-delete-modal div#delete-project-content {
+  position: relative;
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30px;
+}
+@media screen and (max-width: 500px) {
+  div#projects-delete-modal div#delete-project-content {
+    height: 300px;
+    width: 300px;
+  }
+}
+div#projects-delete-modal div#delete-project-content div#project-modal-buttons {
+  display: flex;
+}
+div#projects-delete-modal div#delete-project-content div#project-modal-buttons a {
+  flex: 1;
+  color: #fff;
+  background-color: #cb0000;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+div#projects-delete-modal div#delete-project-content div#project-modal-buttons a + a {
+  margin-left: 2rem;
+}
+div#projects-delete-modal div#delete-project-content div#project-modal-buttons a#project-modal-confirm {
+  background: green;
+}
+div#projects-delete-modal div#delete-project-content div {
+  width: 90%;
+  text-align: center;
+}
+div#projects-delete-modal div#delete-project-content div p {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+
+/* Projects page container */
+div#user-project-container-div {
+  min-height: 35vh;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+div#user-project-container-div div#project-list-div {
+  width: 75%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 12.5%;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div div#project-list-div {
+    margin-left: 2.5%;
+    width: 90%;
+  }
+}
+div#user-project-container-div div#project-list-div div#project-item-labels {
+  display: flex;
+}
+div#user-project-container-div div#project-list-div div#project-item-labels div#id-div {
+  flex: 1;
+}
+div#user-project-container-div div#project-list-div div#project-item-labels div#title-div {
+  flex: 5;
+  margin-left: 1rem;
+}
+div#user-project-container-div div#project-list-div div#project-item-labels div#button-div {
+  flex: 3;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+div#user-project-container-div div#project-list-div div#project-item-labels div#button-div p {
+  flex: 1;
+}
+div#user-project-container-div div#project-list-div div.project-item-div {
+  display: flex;
+  margin: 1rem 0rem;
+  border: 1px solid #afafaf;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div div#project-list-div div.project-item-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+div#user-project-container-div div#project-list-div div.project-item-div div {
+  padding: 1rem;
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.id-div {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #afafaf;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div div#project-list-div div.project-item-div div.id-div {
+    border: none;
+  }
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.title-div {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  border-right: 1px solid #afafaf;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div div#project-list-div div.project-item-div div.title-div {
+    border: none;
+  }
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div {
+  flex: 3;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 500px) {
+  div#user-project-container-div div#project-list-div div.project-item-div div.button-div a {
+    margin: 0rem 1rem;
+  }
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div a:hover {
+  text-decoration: none;
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div a.detail-button {
+  color: blue;
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div a.edit-button {
+  color: orange;
+}
+div#user-project-container-div div#project-list-div div.project-item-div div.button-div a.delete-project-button {
+  color: #cb0000;
+}
+
+/* Profiel container */
+div#profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Profiel info*/
+}
+@media screen and (max-width: 1024px) {
+  div#profile-container {
+    flex-direction: column;
+  }
+}
+div#profile-container div#left-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+div#profile-container div#left-side a {
+  display: inline-block;
+  max-width: 200px;
+  width: 100%;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  margin-bottom: 1rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+div#profile-container div#left-side a:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+div#profile-container div#left-side iframe {
+  width: 80%;
+  margin: 1rem 0rem;
+}
+div#profile-container div#left-side img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 2rem 0rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div#profile-container div#left-side div.info-div {
+  width: 80%;
+  text-align: left;
+}
+div#profile-container div#left-side div.info-div p.label-p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding-bottom: 0.5rem;
+}
+div#profile-container div#left-side div.info-div p.user-p {
+  margin-left: 0.5rem;
+}
+
+/* Detail button div*/
+#detail-button-div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: 2rem;
+}
+#detail-button-div div.general-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  #detail-button-div div.general-button-div {
+    flex-direction: column;
+  }
+}
+#detail-button-div div.general-button-div div#url-route-button {
+  flex: 9;
+}
+#detail-button-div div.general-button-div div#url-route-button p {
+  color: #000;
+}
+#detail-button-div div.general-button-div div#url-route-button a, #detail-button-div div.general-button-div div#url-route-button span {
+  color: #cb0000;
+}
+#detail-button-div div.general-button-div div#add-button-div {
+  flex: 1;
+  min-height: 5vh;
+  text-align: right;
+}
+#detail-button-div div.general-button-div div#add-button-div a {
+  display: inline-block;
+  width: 200px;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+#detail-button-div div.general-button-div div#add-button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+#detail-button-div div.general-button-div div#edit-button-div {
+  flex: 1;
+  min-height: 5vh;
+  text-align: right;
+}
+#detail-button-div div.general-button-div div#edit-button-div a {
+  display: inline-block;
+  width: 200px;
+  color: #cb0000;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+#detail-button-div div.general-button-div div#edit-button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+  color: #fff;
+}
+
+/* Article edit main image*/
+#article-edit-main-image {
+  width: 100%;
+}
+
+/* User edit main image*/
+#user-edit-main-image {
+  width: 100%;
+}
+
+/*Searchbar*/
+#search-sidebar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 5;
+}
+#search-sidebar div#search-blackout {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#search-sidebar div#left-side {
+  height: 100vh;
+  background-color: #fff;
+  width: 350px;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  overflow: auto;
+}
+@media screen and (max-width: 400px) {
+  #search-sidebar div#left-side {
+    width: 300px;
+  }
+}
+#search-sidebar div#left-side a#close_searchbar_button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 95%;
+  margin-left: 2.5%;
+  text-align: right;
+  color: #000;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+#search-sidebar div#left-side h3 {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1rem;
+  text-align: center;
+}
+#search-sidebar div#left-side #searchbar {
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search-sidebar div#left-side #searchbar input {
+  flex: 3;
+  margin-right: 1rem;
+  height: 2rem;
+  color: #afafaf;
+  padding-left: 1rem;
+}
+#search-sidebar div#left-side #searchbar input:focus {
+  outline: none;
+}
+@media screen and (max-width: 400px) {
+  #search-sidebar div#left-side #searchbar input {
+    font-size: 0.5rem;
+  }
+}
+#search-sidebar div#left-side div#searchbar-results div.search-bar-result-div {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a div.threads-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a div.threads-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a div.threads-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#threads-results div#threads-results-content-div a div.threads-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a div.courses-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a div.courses-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a div.courses-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#courses-results div#courses-results-content-div a div.courses-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a div.events-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a div.events-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a div.events-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#events-results div#events-results-content-div a div.events-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a div.articles-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a div.articles-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a div.articles-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#articles-results div#articles-results-content-div a div.articles-results-item p {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a {
+  width: 75%;
+  color: #000;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a:hover {
+  text-decoration: none;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a div.users-results-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a div.users-results-item:hover {
+  background-color: #e5e4e4;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a div.users-results-item i {
+  flex: 1;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#search-sidebar div#left-side div#searchbar-results div#users-results div#users-results-content-div a div.users-results-item div#user-info {
+  flex: 3;
+  margin-left: 5%;
+}
+#search-sidebar div#left-side div#searchbar-results div#no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin-left: 0%;
+  font-size: 2em;
+  text-align: center;
+  color: lightgray;
+}
+
+/* Kalender return button*/
+#calender-return-button {
+  text-decoration: none;
+}
+#calender-return-button:hover {
+  color: #cb0000;
+}
+
+/* Notes return button*/
+#notes-return-button {
+  text-decoration: none;
+}
+#notes-return-button:hover {
+  color: #cb0000;
+}
+
+div#admin-delete-blackout {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.31);
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+div#admin-delete-modal {
+  display: none;
+  background: #fff;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 11;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+@media screen and (max-width: 1000px) {
+  div#admin-delete-modal {
+    width: 300px;
+    height: 300px;
+  }
+}
+div#admin-delete-modal a#admin-delete-modal-close-button {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+div#admin-delete-modal div#admin-delete-modal-content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div#admin-delete-modal div#admin-delete-modal-content-div {
+    height: 300px;
+  }
+}
+div#admin-delete-modal div#admin-delete-modal-content-div div#admin-delete-modal-message-div {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+}
+div#admin-delete-modal div#admin-delete-modal-content-div div#admin-delete-modal-buttons-div a {
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div#admin-delete-modal div#admin-delete-modal-content-div div#admin-delete-modal-buttons-div a {
+    width: 100px;
+  }
+}
+div#admin-delete-modal div#admin-delete-modal-content-div div#admin-delete-modal-buttons-div a#admin-delete-decline {
+  background-color: #cb0000;
+}
+
+/* Admin dashbord div */
+div#admin-dashbord {
+  min-height: 38vh;
+  display: flex;
+  /* Sidebar */
+  /* Main div */
+}
+@media screen and (max-width: 1000px) {
+  div#admin-dashbord {
+    flex-direction: column;
+  }
+}
+div#admin-dashbord div#dashbord-sidebar-div {
+  flex: 1;
+  background-color: #cb0000;
+}
+@media screen and (max-width: 1000px) {
+  div#admin-dashbord div#dashbord-sidebar-div {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-sidebar-div {
+    flex-direction: column;
+    display: none;
+  }
+}
+div#admin-dashbord div#dashbord-sidebar-div a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+  div#admin-dashbord div#dashbord-sidebar-div a {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-sidebar-div a {
+    font-size: 0.5rem;
+  }
+}
+div#admin-dashbord div#dashbord-sidebar-div a:hover {
+  background-color: #930000;
+}
+div#admin-dashbord div#dashbord-sidebar-div a div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div#admin-dashbord div#dashbord-sidebar-div a div i {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-sidebar-div a div i {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+}
+div#admin-dashbord div#dashbord-sidebar-div a div p {
+  margin-top: 5px;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-sidebar-div a div p {
+    font-size: 0.6rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+div#admin-dashbord div#dashbord-main-div {
+  flex: 9;
+  min-height: 90vh;
+}
+@media screen and (max-width: 1024px) {
+  div#admin-dashbord div#dashbord-main-div {
+    margin-bottom: 3rem;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div#content-head {
+  width: 60%;
+  margin-left: 20%;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div#content-head {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div#content-head input {
+  height: 2rem;
+  width: 50%;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div#content-head input {
+    width: 100%;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div#search-content-result {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3rem;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div#search-content-result {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 3rem;
+    font-size: 0.5rem;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div#admin-content-table {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div#admin-content-table {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 3rem;
+    font-size: 0.5rem;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div.content-item {
+  margin-top: 3rem;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item td#comment-content img {
+  max-width: 200px;
+  height: 200px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item h4 {
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div.content-item h4 {
+    font-size: 1rem;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.5rem;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody {
+  font-size: 11px;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr {
+  width: 100%;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(1) {
+  width: 30%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(1) {
+    width: 10%;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(2) {
+  width: 30%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+@media screen and (max-width: 600px) {
+  div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(2) {
+    width: 40%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(3), div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(4), div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(5) {
+  width: 10%;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(3) a i {
+  color: #5b5bf6;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(4) a i {
+  color: orange;
+}
+div#admin-dashbord div#dashbord-main-div div.content-item table tbody tr td:nth-of-type(5) a i {
+  color: #cb0000;
+}
+
+ul.pagination .page-link {
+  color: #b90000;
+}
+ul.pagination .activePage > span {
+  background-color: #b90000;
+  color: #fff;
+  border-color: #b90000;
+}
+
+.form-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*Documents page */
+#documents-div {
+  min-height: 50vh;
+}
+#documents-div #file-div {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+#documents-div #file-div ul {
+  list-style: none;
+}
+#documents-div #file-div ul li {
+  text-decoration: none;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Notitie div */
+div#notes-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Delete notities modal */
+  /* Notitie div */
+  /* Voeg notitie toe div */
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container {
+    flex-direction: column-reverse;
+  }
+}
+div#notes-container div#notes-delete-all-modal-div {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content {
+  position: relative;
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content {
+    height: 300px;
+    width: 300px;
+  }
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links {
+  display: flex;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a {
+  flex: 1;
+  color: #fff;
+  background-color: #cb0000;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a + a {
+  margin-left: 2rem;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a#confirm-delete-all {
+  background-color: green;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div {
+  width: 90%;
+  text-align: center;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div h1 {
+  font-size: 1.5em;
+}
+div#notes-container div#show-notes-container {
+  flex: 1.5;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+div#notes-container div#show-notes-container div#notes-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+div#notes-container div#show-notes-container div#notes-header h3 {
+  flex: 3;
+  width: 40%;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header h3 {
+    width: 100%;
+  }
+}
+div#notes-container div#show-notes-container div#notes-header h3:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#notes-container div#show-notes-container div#notes-header a {
+  flex: 2;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  color: #fff;
+  text-decoration: none;
+  background: #cb0000;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header a {
+    margin-top: 1rem;
+    padding: 0.3rem 0.3rem;
+  }
+}
+div#notes-container div#show-notes-container div#display-notes-container {
+  flex: 1;
+}
+div#notes-container div#show-notes-container div#display-notes-container textarea#notes-field {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid grey;
+  resize: none;
+}
+div#notes-container div#show-notes-container div#display-notes-container textarea#notes-field:focus {
+  outline: none;
+}
+div#notes-container div#add-notes-container {
+  flex: 1;
+}
+div#notes-container div#add-notes-container h3 {
+  margin-left: 5%;
+}
+div#notes-container div#add-notes-container h3:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#notes-container div#add-notes-container form {
+  width: 100%;
+}
+div#notes-container div#add-notes-container form textarea {
+  width: 90%;
+  margin: 5%;
+  resize: none;
+  height: 30rem;
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container div#add-notes-container form textarea {
+    height: 15rem;
+  }
+}
+div#notes-container div#add-notes-container form textarea:focus {
+  outline: none;
+}
+div#notes-container div#add-notes-container form button {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: 3rem;
+  border: 2px solid #cb0000;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+  color: #cb0000;
+}
+div#notes-container div#add-notes-container form button:hover {
+  background-position: left;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Notitie edit modal*/
+#notes-modal-div {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#notes-modal-div div#modal {
+  position: relative;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal {
+    max-width: 350px;
+  }
+}
+#notes-modal-div div#modal div#modal-close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+#notes-modal-div div#modal div#modal-close-button a {
+  color: black;
+}
+#notes-modal-div div#modal div#modal-close-button a:hover {
+  text-decoration: none;
+  color: black;
+}
+#notes-modal-div div#modal div#modal-close-button a i {
+  font-size: 1.5rem;
+}
+#notes-modal-div div#modal h3 {
+  margin: 2rem;
+}
+#notes-modal-div div#modal textarea {
+  width: 500px;
+  height: 400px;
+  margin-left: 50px;
+  resize: none;
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal textarea {
+    max-width: 300px;
+    margin-left: 25px;
+  }
+}
+#notes-modal-div div#modal a#note-edit-submit {
+  margin-top: 30px;
+  display: block;
+  background-color: orange;
+  width: 500px;
+  margin-left: 50px;
+  padding: 0.5rem;
+  color: #fff;
+  border: none;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal a#note-edit-submit {
+    max-width: 300px;
+    margin-left: 25px;
+  }
+}
+#notes-modal-div div#modal a#note-edit-submit:hover {
+  text-decoration: none;
+}
+
+#policy-container {
+  width: 90%;
+  margin-left: 5%;
+}
+#policy-container ul {
+  list-style-type: none;
+}
+@media screen and (max-width: 600px) {
+  #policy-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #policy-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #policy-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+div#storage-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 80vh;
+  /* storage design showcase */
+}
+div#storage-container div#right-side {
+  width: 80%;
+}
+div#storage-container div#storage-upload-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#storage-upload-div {
+    flex-direction: column;
+  }
+}
+div#storage-container div#storage-upload-div h1, div#storage-container div#storage-upload-div form {
+  flex: 1;
+}
+@media screen and (max-width: 500px) {
+  div#storage-container div#storage-upload-div h1 {
+    font-size: 1.5em;
+  }
+}
+div#storage-container div#storage-upload-div form input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+div#storage-container div#storage-upload-div form .file-label {
+  font-size: 1em;
+  color: white;
+  background-color: #cb0000;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+div#storage-container div#storage-upload-div form .file-label i {
+  margin-right: 0.5rem;
+}
+div#storage-container div#designs-showcase {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#designs-showcase {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+div#storage-container div#designs-showcase div#design-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#designs-showcase div#design-container {
+    flex-direction: column;
+  }
+}
+div#storage-container div#designs-showcase div#design-container div {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 1%;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#designs-showcase div#design-container div {
+    max-width: 80%;
+    margin: 3%;
+  }
+}
+div#storage-container div#designs-showcase div#design-container div img {
+  width: 250px;
+  min-height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#designs-showcase div#design-container div img {
+    width: 100%;
+  }
+}
+div#storage-container div#designs-showcase div#design-container div video {
+  width: 250px;
+  height: 250px;
+  border: none;
+}
+@media screen and (max-width: 800px) {
+  div#storage-container div#designs-showcase div#design-container div video {
+    width: 100%;
+  }
+}
+div#storage-container div#designs-showcase div#design-container div a.delete-design-button {
+  background-color: #cb0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 1rem 0rem;
+  text-decoration: none;
+}
+div#storage-container div#designs-showcase div#design-container div a.download-design-button {
+  background-color: #5b5bf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 1rem 0rem;
+  text-decoration: none;
+}
+div#storage-container div#designs-showcase div#design-container div#no-upload-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 200px;
+}
+div#storage-container div#designs-showcase div#design-container div#no-upload-div i {
+  font-size: 8rem;
+}
+div#storage-container div#designs-showcase div#design-container div#no-upload-div p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/*Storage delete modal*/
+div#storage-delete-blackout {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.31);
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+div#storage-delete-modal {
+  display: none;
+  background: #fff;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 11;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+@media screen and (max-width: 1000px) {
+  div#storage-delete-modal {
+    width: 300px;
+    height: 300px;
+  }
+}
+div#storage-delete-modal a#storage-delete-modal-close-button {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+div#storage-delete-modal div#storage-delete-modal-content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div#storage-delete-modal div#storage-delete-modal-content-div {
+    height: 300px;
+  }
+}
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-message-div {
+  font-size: 1.5em;
+  padding-bottom: 30px;
+}
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+    width: 100px;
+  }
+}
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a#storage-delete-decline {
+  background-color: #cb0000;
+}
+
+#term-container {
+  width: 90%;
+  margin-left: 5%;
+}
+@media screen and (max-width: 600px) {
+  #term-container h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Discussie overview div */
+div.thread-overview-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  min-height: 60vh;
+}
+@media screen and (max-width: 675px) {
+  div.thread-overview-content {
+    padding-top: 0rem;
+  }
+}
+div.thread-overview-content div.single-thread {
+  border-bottom: 1px solid #afafaf;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+}
+@media screen and (max-width: 675px) {
+  div.thread-overview-content div.single-thread {
+    max-width: 600px;
+    width: 90%;
+    margin: 0;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+div.thread-overview-content div.single-thread div.author-div {
+  flex: 1;
+  text-align: center;
+}
+div.thread-overview-content div.single-thread div.author-div i {
+  font-size: 4rem;
+}
+div.thread-overview-content div.single-thread div.author-div img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div.thread-overview-content div.single-thread div.info-div {
+  flex: 6;
+  width: 100%;
+}
+@media screen and (max-width: 675px) {
+  div.thread-overview-content div.single-thread div.info-div {
+    text-align: center;
+  }
+}
+div.thread-overview-content div.single-thread div.info-div a {
+  text-decoration: none;
+  color: #cb0000;
+}
+div.thread-overview-content div.single-thread div.info-div .thread-overview-text {
+  display: block;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 675px) {
+  div.thread-overview-content div.single-thread div.info-div .thread-overview-text {
+    width: auto;
+  }
+}
+div.thread-overview-content div.single-thread div.info-div .thread-overview-text p, div.thread-overview-content div.single-thread div.info-div .thread-overview-text strong, div.thread-overview-content div.single-thread div.info-div .thread-overview-text em, div.thread-overview-content div.single-thread div.info-div .thread-overview-text blockquote, div.thread-overview-content div.single-thread div.info-div .thread-overview-text q {
+  display: inline;
+}
+div.thread-overview-content div.single-thread div.info-div .thread-overview-text img {
+  display: none;
+}
+div.thread-overview-content div.single-thread div.extra-info-div {
+  flex: 3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 675px) {
+  div.thread-overview-content div.single-thread div.extra-info-div {
+    margin-top: 20px;
+  }
+}
+div.thread-overview-content div.single-thread div.extra-info-div p i {
+  margin-left: 2px;
+}
+div.thread-overview-content div.single-thread div.extra-info-div p + p {
+  margin-left: 20px;
+}
+
+/* Detail Heading */
+div#thread-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cb0000;
+  padding: 1.5rem 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 15px 22px 9px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  div#thread-heading {
+    flex-direction: column;
+  }
+}
+div#thread-heading div#user-image {
+  flex: 1;
+}
+div#thread-heading div#user-image img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (max-width: 800px) {
+  div#thread-heading div#user-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#thread-heading div#user-image img {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#thread-heading div#user-image i {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  border-radius: 50%;
+  color: #cb0000;
+}
+@media screen and (max-width: 800px) {
+  div#thread-heading div#user-image i {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#thread-heading div#user-image i {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#thread-heading div#small-info {
+  flex: 6;
+  color: #fff;
+  padding-left: 12.5%;
+}
+@media screen and (max-width: 600px) {
+  div#thread-heading div#small-info {
+    padding-left: 0%;
+  }
+}
+div#thread-heading div#small-info h1 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  div#thread-heading div#small-info h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+div#thread-heading div#small-info p {
+  font-size: 1rem;
+  text-align: left;
+}
+div#thread-heading div#like {
+  flex: 1;
+}
+div#thread-heading div#like i {
+  font-size: 5rem;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#thread-heading div#like i {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#thread-heading div#like i {
+    margin-top: 2rem;
+  }
+}
+
+/* thread detail*/
+div.thread-general-container {
+  width: 80%;
+  margin: 0px auto;
+}
+@media screen and (max-width: 800px) {
+  div.thread-general-container {
+    width: 95%;
+  }
+}
+div.thread-general-container div.thread-blackout-div {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 11;
+}
+div.thread-general-container div.delete-comment-modal {
+  width: 400px;
+  height: 400px;
+  margin: 0px auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 11;
+}
+@media screen and (max-width: 1000px) {
+  div.thread-general-container div.delete-comment-modal {
+    width: 300px;
+    height: 300px;
+  }
+}
+div.thread-general-container div.delete-comment-modal a#comment-delete-modal-close-button {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div {
+    height: 300px;
+  }
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-message-div {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+  text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+    width: 100px;
+  }
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a#comment-delete-decline {
+  background-color: #cb0000;
+}
+div.thread-general-container div#thread-question-info {
+  width: 75%;
+  padding-top: 50px;
+  margin: 0px auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+@media screen and (max-width: 800px) {
+  div.thread-general-container div#thread-question-info {
+    max-width: 80%;
+  }
+}
+div.thread-general-container div#thread-comment-div {
+  width: 75%;
+  margin: 5rem auto;
+}
+@media screen and (max-width: 800px) {
+  div.thread-general-container div#thread-comment-div {
+    width: 80%;
+  }
+}
+div.thread-general-container div#thread-comment-div h3 {
+  margin-bottom: 3rem;
+}
+div.thread-general-container div#thread-comment-div div.comment {
+  border-bottom: 1px solid #afafaf;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+div.thread-general-container div#thread-comment-div div.comment div#content {
+  flex: 4;
+}
+div.thread-general-container div#thread-comment-div div.comment div#content img {
+  max-width: 200px;
+  height: 200px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+div.thread-general-container div#thread-comment-div div.comment div#content p#comment-user {
+  font-size: 0.8em;
+  font-style: italic;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons {
+  flex: 1;
+  display: flex;
+  text-align: center;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons a {
+  flex: 1;
+  padding: 0.3rem;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons a i {
+  font-size: 1em;
+  color: #fff;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons a + a {
+  margin-left: 10px;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons a#edit-button {
+  background-color: orange;
+}
+div.thread-general-container div#thread-comment-div div.comment div#buttons a#delete-button {
+  background-color: #cb0000;
+}
+div.thread-general-container div#comment-form-div {
+  margin-top: 3rem;
+}
+div.thread-general-container div#comment-form-div form {
+  margin: 0px auto;
+  width: 75%;
+}
+@media screen and (max-width: 800px) {
+  div.thread-general-container div#comment-form-div form {
+    width: 80%;
+  }
+}
+div.thread-general-container div#comment-form-div button#commentsubmit {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #cb0000;
+  color: #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+div.thread-general-container div#comment-form-div button#commentsubmit:focus {
+  outline: none;
+}
+@media screen and (max-width: 800px) {
+  div.thread-general-container div#comment-form-div button#commentsubmit {
+    width: 80%;
+  }
+}
+
+/* Bestand grote error */
+#tut-file-size-error {
+  color: #cb0000;
+}
+
+.notactive {
+  display: none;
+}
+
+#dropdowndiv {
+  position: relative;
+}
+#dropdowndiv #openDropdownButton p {
+  background-color: #cb0000;
+  padding: 0.5rem;
+  color: #fff;
+  width: 10rem;
+  font-size: 1em;
+  text-align: center;
+}
+#dropdowndiv #openDropdownButton p i {
+  margin-right: 10px;
+}
+#dropdowndiv #imagedropdown {
+  position: absolute;
+  z-index: 10;
+  background: white;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #656565;
+}
+#dropdowndiv #imagedropdown .tutorial-dropdown-image {
+  max-width: 100px;
+  width: 100%;
+  cursor: pointer;
+}
+#dropdowndiv #imagedropdown #imagedropdown-close-button p {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  text-align: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#dropdowndiv #imagedropdown #imagedropdown-results {
+  margin-top: 1rem;
+}
+
+.notif {
+  padding: 2rem;
+  background-color: #cb0000;
+  color: #fff;
+  border-radius: 5px;
+  position: fixed;
+  left: 40px;
+  bottom: 0;
+  margin: 1rem;
+}
+
+/* Tutorial overview*/
+div.tutorial-overview {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+div.tutorial-overview div#filter-div a {
+  text-decoration: none;
+  color: #cb0000;
+}
+div.tutorial-overview div#tutorial-card {
+  width: 20%;
+  margin-left: 1.66%;
+  margin-right: 1.66%;
+  float: left;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1375px) {
+  div.tutorial-overview div#tutorial-card {
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  div.tutorial-overview div#tutorial-card {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2rem;
+  }
+}
+div.tutorial-overview div#tutorial-card div#thumbnail-div img {
+  width: 100%;
+  min-height: 225px;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1150px) {
+  div.tutorial-overview div#tutorial-card div#thumbnail-div img {
+    width: 100%;
+    max-height: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  div.tutorial-overview div#tutorial-card div#thumbnail-div img {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+  }
+}
+div.tutorial-overview div#tutorial-card div#title-div {
+  background-color: #cb0000;
+  color: #fff;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.tutorial-overview div#tutorial-card div#title-div p {
+  padding: 1rem;
+}
+@media screen and (max-width: 500px) {
+  div.tutorial-overview div#tutorial-card div#title-div p {
+    padding: 0.5rem;
+  }
+}
+
+/* Detail heading */
+div#tutorial-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cb0000;
+  padding: 1.5rem 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 15px 22px 9px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  div#tutorial-heading {
+    flex-direction: column;
+  }
+}
+div#tutorial-heading div#user-image {
+  flex: 1;
+}
+div#tutorial-heading div#user-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  div#tutorial-heading div#user-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#tutorial-heading div#user-image img {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#tutorial-heading div#user-image i {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  border-radius: 50%;
+  color: #cb0000;
+}
+@media screen and (max-width: 800px) {
+  div#tutorial-heading div#user-image i {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#tutorial-heading div#user-image i {
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+div#tutorial-heading div#small-info {
+  flex: 6;
+  color: #fff;
+  padding-left: 12.5%;
+}
+@media screen and (max-width: 600px) {
+  div#tutorial-heading div#small-info {
+    padding-left: 0%;
+  }
+}
+div#tutorial-heading div#small-info h1 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  div#tutorial-heading div#small-info h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+div#tutorial-heading div#small-info p {
+  font-size: 1rem;
+  text-align: left;
+}
+div#tutorial-heading div#like {
+  flex: 1;
+}
+div#tutorial-heading div#like i {
+  font-size: 5rem;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  div#tutorial-heading div#like i {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#tutorial-heading div#like i {
+    margin-top: 2rem;
+  }
+}
+
+/* Tutorial content div */
+div#tutorial-content-div {
+  width: 80%;
+  margin-left: 10%;
+}
+div#tutorial-content-div div#tutorial-info {
+  width: 80%;
+  margin: 3rem auto;
+}
+@media screen and (max-width: 500px) {
+  div#tutorial-content-div div#tutorial-info {
+    width: 100%;
+  }
+}
+div#tutorial-content-div div#video-div {
+  margin-bottom: 2rem;
+}
+div#tutorial-content-div div#video-div div#video-content-div {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+}
+@media screen and (max-width: 1150px) {
+  div#tutorial-content-div div#video-div div#video-content-div {
+    min-height: 40vh;
+  }
+}
+div#tutorial-content-div div#video-div div#video-content-div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+div#tutorial-content-div div#written-div {
+  width: 80%;
+  margin: 3rem auto;
+  overflow: auto;
+}
+@media screen and (max-width: 500px) {
+  div#tutorial-content-div div#written-div {
+    width: 100%;
+  }
+}
+div#tutorial-content-div div#written-div img {
+  max-width: 100%;
+  float: none;
+}
+
+/* Tutorial url routes extra styling*/
+div.tutorial-detail-container-div div#url-route-button p a {
+  text-decoration: none;
+  color: #cb0000;
+}
+
+#tutorial-edit-image-prev {
+  width: 100%;
+}
+
+#tutorial-edit-video-prev {
+  width: 100%;
+  min-height: 400px;
+}
