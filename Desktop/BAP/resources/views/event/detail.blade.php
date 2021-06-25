@@ -81,6 +81,8 @@
         </div>
         @auth
         @if(Auth::user()->id == $event->author_id)
+        <a href="{{route('eventPDF')}}">Print PDF</a>
+
     {{-- <button id="download-list-button">PDF DOWNLOAD</button> --}}
     <div id="signed-in-people">
 

@@ -16,6 +16,7 @@ use App\Http\Controllers\DashbordController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StorageController;
+use App\Http\Controllers\PDFController;
 use \Chatify\Http\Controllers\MessagesController;
 
 use App\Http\Controllers\Auth\LogoutController;
@@ -176,3 +177,5 @@ Route::post('/contactmail',  [EmailController::class, 'contactmail'])->name('con
 /* searchbarroutes */
 Route::post('/searchbarresults',  [HomeController::class, 'searchbarResult'])->name('searchbar-result');
 Route::post('/adminsearchbarresults',  [HomeController::class, 'adminSearchbarResult'])->name('admin-searchbar-result');
+
+Route::get('/event-pdf', [PDFController::class,'index'])->name('eventPDF');
