@@ -106,7 +106,7 @@ function doneTypingNotes () {
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
           type: "POST",
-          url: baseURL + '/noteupload',  
+          url: baseURL + '/notes/noteupload',  
           data: { 
               note: document.querySelector('#notes-field').value, 
               user_id: document.querySelector('#notes-field').getAttribute('data-i'),

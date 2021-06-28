@@ -18,9 +18,7 @@ class CourseController extends Controller
     //Overview pagina
     public function overview()
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'course-overview';
        $courses = Course::paginate(4);
        foreach($courses as $course){
@@ -31,9 +29,7 @@ class CourseController extends Controller
     //Detail pagina
     public function detail($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'detail';
       $course = Course::where('id', $id)->first();
        if($course != null){
@@ -46,18 +42,14 @@ class CourseController extends Controller
     //Create pagina
     public function create()
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'course-create';
        return view('course.create')->with(compact('page'));
     }
     //Create submit
     public function createSubmit(Request $request)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'course-create-submit';
        $validator = Validator::make(
        $request->all(),[
@@ -80,9 +72,7 @@ class CourseController extends Controller
     //Edit pagina
     public function edit($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
       $course = Course::where('id', $id)->first();
        if($course != null){
          if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
@@ -99,9 +89,7 @@ class CourseController extends Controller
     public function editSubmit(Request $request, $id)
     {
       $page = 'course-edit';
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       } 
+        
       $course = Course::where('id', $id)->first();
        if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
             $validator = Validator::make(
@@ -126,9 +114,7 @@ class CourseController extends Controller
     //Delete
     public function delete($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'course-delete';
       $course = Course::where('id', $id)->first();
       if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
@@ -150,9 +136,7 @@ class CourseController extends Controller
    //Overzicht van de cursus uploads
     public function uploadsOvervieuw($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
       $course = Course::where('id', $id)->first();
        $signed = CourseSignUp::where('course_id', $course->id)->where('user_id', auth()->user()->id)->first();
        if(auth()->user()->id != $course->author_id && $signed == null && auth()->user()->role != 2){
@@ -186,9 +170,7 @@ class CourseController extends Controller
     //Bestanden van de cursus
     public function files($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'course-files';
       $course = Course::where('id', $id)->first();
        if($course != null){
@@ -222,9 +204,7 @@ class CourseController extends Controller
     }
     //Verwijder bestand
     public function deleteFile($id, $path){
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
       $course = Course::where('id', $id)->first();
        if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
          $filepath =  public_path("images/course/".$id."/files/".$path);
@@ -241,9 +221,7 @@ class CourseController extends Controller
     //Voeg content toe ( upload of bestand) pagina
     public function addcontent($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
       $course = Course::where('id', $id)->first();
        if($course != null){
          if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
@@ -373,9 +351,7 @@ class CourseController extends Controller
    //Download foto
     public function downloadPath($id, $filename, $extension)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $file= public_path(). "/images/course/".$id."/files/".$filename;
        $headers = array(
                  'Content-Type: application/'.$extension,
@@ -387,9 +363,7 @@ class CourseController extends Controller
     //Toon PDF
     public function showPDF($id, $pdfname)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $file= public_path(). "/images/course/".$id."/files/".$pdfname;
        {
          $file = File::get($file);
@@ -404,9 +378,7 @@ class CourseController extends Controller
     //Toon Video
     public function showVideo($id, $videoname)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'video-show';
        $file= "/images/course/".$id."/files/".$videoname;
        

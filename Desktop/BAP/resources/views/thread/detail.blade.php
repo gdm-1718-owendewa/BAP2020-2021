@@ -74,7 +74,7 @@
                 @if($comment->author_id == Auth::user()->id || auth()->user()->role == 2)
                     <div id="buttons">
                         <a href="{{route('edit-comment', $comment->id)}}" id="edit-button"><i class="far fa-edit"></i></a>
-                        <a href="#" id="delete-button" data-i="{{$comment->id}}" data-content="{!!$comment->content!!}" class="comment-delete-button"><i class="far fa-trash-alt"></i></a>
+                        <a href="#" id="delete-button" data-i="{{$comment->id}}" {{--data-content="{!!$comment->content!!}" --}} class="comment-delete-button"><i class="far fa-trash-alt"></i></a>
                     </div>
                 @endif
             </div>

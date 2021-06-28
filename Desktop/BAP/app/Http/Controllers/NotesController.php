@@ -12,9 +12,6 @@ class NotesController extends Controller
     //Notitie pagina
     public function index($user_id)
     {
-        if(!auth()->user()){
-            return redirect()->route('welcome');
-          }
             $page = 'notes-index';
             if($user_id != auth()->user()->id){
                 return redirect()->back();

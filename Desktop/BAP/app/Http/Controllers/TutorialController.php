@@ -15,9 +15,7 @@ class TutorialController extends Controller
     //Tutorial overview
     public function overview(Request $request)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        if($request->has('type')){
          $type = $request->type.'-type';
          $tutorials = Tutorial::where('type', $type)->paginate(6); 
@@ -45,9 +43,7 @@ class TutorialController extends Controller
     //Tutorial detail pagina
     public function detail($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'detail';
        $tutorial = Tutorial::where('id',$id)->first();
        if($tutorial != null){
@@ -81,9 +77,7 @@ class TutorialController extends Controller
     //Tutorial create pagina
     public function create()
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'tutorial-create';
        $user_id = auth()->user()->id;
        $storage_path = public_path('images/users/'.$user_id.'/designs');
@@ -108,9 +102,7 @@ class TutorialController extends Controller
     public function createSubmit(Request $request)
     {
        
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
          $validator = Validator::make(
             $request->all(),[
             'title' => 'required|max:200',
@@ -202,9 +194,7 @@ class TutorialController extends Controller
     //Edit pagina van tutorial
     public function edit($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'tutorial-edit';
        $tutorial = Tutorial::where('id',$id)->first();
        $user_id = auth()->user()->id;
@@ -251,9 +241,7 @@ class TutorialController extends Controller
     //Pas tutorial aan
     public function editSubmit(Request $request, $id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $tutorial =  Tutorial::findOrFail($id);
        if($tutorial->author_id == auth()->user()->id || auth()->user()->role == 2){
          $validator = Validator::make(

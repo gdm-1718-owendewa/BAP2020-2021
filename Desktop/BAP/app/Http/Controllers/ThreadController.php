@@ -17,9 +17,7 @@ class ThreadController extends Controller
     //Discussie overview
     public function overview()
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'overview';
        $threads = Thread::paginate(3);
        foreach($threads as $thread){
@@ -47,9 +45,7 @@ class ThreadController extends Controller
     //Discussie detail
     public function detail(Request $request, $id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'detail';
        $data = [
           'thread_id' =>  $id,
@@ -80,9 +76,7 @@ class ThreadController extends Controller
    //Discussie create pagina
     public function create()
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'thread-create';
        return view('thread.create')->with(compact('page'));
     }
@@ -109,9 +103,7 @@ class ThreadController extends Controller
     //Discussie edit pagina
     public function edit($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'thread-edit';
        $thread =  Thread::where('id',$id)->first();
        if($thread !=null){
@@ -158,9 +150,7 @@ class ThreadController extends Controller
     }
     //Comment op discussie
     public function comment(Request $request, $id){
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $user_id = auth()->user()->id;
        $data = [
          'author' => auth()->user()->name,

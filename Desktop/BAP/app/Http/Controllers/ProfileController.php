@@ -26,9 +26,7 @@ class ProfileController extends Controller
     //Profiel pagina
     public function index($user_id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+     
        $page = 'profile-index';
        $user = User::where('id',$user_id)->first();
        if($user != null){
@@ -52,9 +50,7 @@ class ProfileController extends Controller
     //Ga naar edit pagina
     public function edit($user_id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+     
        $page = 'profile-edit';
        $user = User::where('id',$user_id)->first();
 

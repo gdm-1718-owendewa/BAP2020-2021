@@ -22,9 +22,6 @@ class DashbordController extends Controller
     //Index
 
     public function index($id){
-        if(!auth()->user()){
-            return redirect()->route('welcome');
-          }
         $page = 'dashbord';
         $user = User::where('id',$id)->first();
         if($user->id != auth()->user()->id){
@@ -98,9 +95,6 @@ class DashbordController extends Controller
     }
     //User projecten pagina
     public function myProjects($id, $project_type){
-        if(!auth()->user()){
-            return redirect()->route('welcome');
-        }
         if(auth()->user()->id != $id){
             return redirect()->back();  
         }

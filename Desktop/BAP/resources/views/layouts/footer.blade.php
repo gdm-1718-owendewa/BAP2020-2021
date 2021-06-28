@@ -13,11 +13,11 @@
                         <li><a href="{{route('tutorial-overview')}}">Tutorials</a></li>
                     @endauth
                     @guest
-                        <li><a href="{{route('login')}}">Artikelen</a></li>
+                        <li><a href="{{route('article-overview')}}">Artikelen</a></li>
                          <li><a href="{{route('course-overview')}}">Cursussen</a></li>
-                        <li><a href="{{route('login')}}">Discussies</a></li>
-                        <li><a href="{{route('login')}}">Evenementen</a></li>
-                        <li><a href="{{route('login')}}">Tutorials</a></li>
+                        <li><a href="{{route('thread-overview')}}">Discussies</a></li>
+                        <li><a href="{{route('event-overview')}}">Evenementen</a></li>
+                        <li><a href="{{route('tutorial-overview')}}">Tutorials</a></li>
                     @endguest
                 </ul>
             </div>

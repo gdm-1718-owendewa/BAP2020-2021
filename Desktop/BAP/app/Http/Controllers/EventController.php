@@ -18,9 +18,7 @@ class EventController extends Controller
     //Overview pagina
     public function overview()
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'overview';
        $events = Event::paginate(6);
        foreach($events as $event){
@@ -34,9 +32,7 @@ class EventController extends Controller
     //Detail pagina
     public function detail($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'event-detail';
        $event = Event::where('id',$id)->first();
        if($event != null){
@@ -56,18 +52,14 @@ class EventController extends Controller
     //Create pagina
     public function create()
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'event-create';
        return view('event.create')->with(compact('page'));
     }
     //Maak event aan
     public function createSubmit(Request $request)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $validator = Validator::make(
          $request->all(),[
          'title' => 'required|max:200',
@@ -112,9 +104,7 @@ class EventController extends Controller
     //Ga naar edit pagina
     public function edit($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'event-edit';
        $event = Event::where('id',$id)->first();
        //Check of event bestaat
@@ -137,9 +127,7 @@ class EventController extends Controller
     //Pas event aan
     public function editSubmit(Request $request, $id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
       $event = Event::findOrFail($id);
       if($event->author_id == auth()->user()->id || auth()->user()->role == 2){
 
@@ -197,9 +185,7 @@ class EventController extends Controller
     //Verwijder event
     public function delete($id)
     {
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $page = 'event-delete';
        $event = Event::where('id',$id)->first();
 
@@ -218,9 +204,7 @@ class EventController extends Controller
    }
    //Inschrijving event
     public function eventSignUp($user_id, $event_id){
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        
       if($user_id != auth()->user()->id || auth()->user()->role == 2){
          return redirect()->back();
@@ -243,9 +227,7 @@ class EventController extends Controller
    }
    //Event uitschrijven
    public function eventSignOut($user_id, $event_id){
-      if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $event = Event::where('id',$event_id)->first();
 
        if($user_id == auth()->user()->id || auth()->user()->role == 2){

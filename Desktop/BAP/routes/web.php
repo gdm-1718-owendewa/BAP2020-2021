@@ -34,7 +34,9 @@ use App\Http\Controllers\Auth\LogoutController;
 
 
 Auth::routes();
-Route::get('/dashbord/{id}', [DashbordController::class, 'index'])->name('home');
+Route::get('/home', function() {
+    return redirect()->route('welcome');
+})->name('home');
 
 /* General routes */
 Route::get('/',  [WelcomeController::class, 'index'])->name('welcome');
@@ -47,20 +49,19 @@ Route::get('/documents',  [GeneralController::class, 'documents'])->name('docume
 Route::get('/documents/files/download/{filename}.{extension}', [GeneralController::class, 'downloadPath'])->name('document-files-download');
 
 /*dashbord routes*/
-Route::prefix('dashbord')->group(function(){
+Route::prefix('dashbord')->middleware('auth')->group(function(){
     Route::get('/{id}',  [DashbordController::class, 'index'])->name('dashbord');
     Route::get('/{id}/no-guide-message', [DashbordController::class, 'noGuideMessage'])->name('no-guide-message');
     Route::get('/{id}/projects/{project_type}', [DashbordController::class, 'myProjects'])->name('dashbord-my-projects');
 });
 /* Notes Routes */
-Route::prefix('notes')->group(function(){
+Route::prefix('notes')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [NotesController::class, 'index'])->name('notes');
-    Route::post('/{user_id}/submit',  [NotesController::class, 'createSubmit'])->name('note-create-submit');
-    Route::get('/{note_id}/{user_id}/delete',  [NotesController::class, 'deleteNote'])->name('note-delete');
-    Route::get('/{user_id}/deleteall',  [NotesController::class, 'deleteAllNotes'])->name('note-delete-all');
+    Route::post('/noteupload',  [NotesController::class, 'uploadNote'])->name('upload-note');
 }); 
+/*note route */
 /* Article routes */
-Route::prefix('article')->group(function(){
+Route::prefix('article')->middleware('auth')->group(function(){
     Route::get('/article-overview',  [ArticleController::class, 'overview'])->name('article-overview');
     Route::get('/article-detail/{id}',  [ArticleController::class, 'detail'])->name('article-detail');
     Route::get('/create',  [ArticleController::class, 'create'])->name('article-create');
@@ -72,7 +73,7 @@ Route::prefix('article')->group(function(){
     Route::get('/edit/{id}/supportfile/delete/{oldfilename}',  [ArticleController::class, 'deletesupportfile'])->name('article-delete-support');
 });
 /* Tutorial routes */
-Route::prefix('tutorial')->group(function(){
+Route::prefix('tutorial')->middleware('auth')->group(function(){
     Route::get('/tutorial-overview',  [TutorialController::class, 'overview'])->name('tutorial-overview');
     Route::get('/detail/{id}',  [TutorialController::class, 'detail'])->name('tutorial-detail');
     Route::get('/create',  [TutorialController::class, 'create'])->name('tutorial-create');
@@ -82,7 +83,7 @@ Route::prefix('tutorial')->group(function(){
     Route::get('/delete/{id}',  [TutorialController::class, 'delete'])->name('tutorial-delete');
 });
 /* Event routes */
-Route::prefix('event')->group(function(){
+Route::prefix('event')->middleware('auth')->group(function(){
     Route::get('/event-overview',  [EventController::class, 'overview'])->name('event-overview');
     Route::get('/event-detail/{id}',  [EventController::class, 'detail'])->name('event-detail');
     Route::get('/create',  [EventController::class, 'create'])->name('event-create');
@@ -92,9 +93,10 @@ Route::prefix('event')->group(function(){
     Route::get('/delete/{id}',  [EventController::class, 'delete'])->name('event-delete');
     Route::get('/sign/{user_id}/{event_id}',  [EventController::class, 'eventSignUp'])->name('event-sign');
     Route::get('/unsign/{user_id}/{event_id}',  [EventController::class, 'eventSignOut'])->name('event-unsign');
+    Route::get('/event-pdf', [PDFController::class,'index'])->name('eventPDF');
 });
 /* Thread routes */
-Route::prefix('thread')->group(function(){
+Route::prefix('thread')->middleware('auth')->group(function(){
     Route::get('/thread-overview',  [ThreadController::class, 'overview'])->name('thread-overview');
     Route::get('/thread-detail/{id}',  [ThreadController::class, 'detail'])->name('thread-detail');
     Route::get('/create',  [ThreadController::class, 'create'])->name('thread-create');
@@ -105,7 +107,7 @@ Route::prefix('thread')->group(function(){
     Route::post('/thread-detail/{id}/comment',  [ThreadController::class, 'comment'])->name('thread-comment-submit');
 });
 /* Courses routes */
-Route::prefix('course')->group(function(){
+Route::prefix('course')->middleware('auth')->group(function(){
     Route::get('/course-overview',  [CourseController::class, 'overview'])->name('course-overview');
     Route::get('/course-detail/{id}',  [CourseController::class, 'detail'])->name('course-detail');
     Route::get('/course-detail/{id}/{user_id}/signup',  [CourseController::class, 'courseSignUp'])->name('course-signup');
@@ -129,31 +131,27 @@ Route::prefix('course')->group(function(){
     Route::get('/files/{id}/delete/{path}',  [CourseController::class, 'deleteFile'])->name('course-delete-file');
 });
 /* profile routes*/ 
-Route::prefix('profile')->group(function(){
-
-Route::get('/{user_id}',  [ProfileController::class, 'index'])->name('profile');
-Route::get('/edit/{user_id}',  [ProfileController::class, 'edit'])->name('profile-edit');
-Route::get('/delete/{user_id}',  [ProfileController::class, 'delete'])->name('profile-delete');
-Route::patch('/edit/{user_id}/submit',  [ProfileController::class, 'editSubmit'])->name('profile-edit-submit');
+Route::prefix('profile')->middleware('auth')->group(function(){
+    Route::get('/{user_id}',  [ProfileController::class, 'index'])->name('profile');
+    Route::get('/edit/{user_id}',  [ProfileController::class, 'edit'])->name('profile-edit');
+    Route::get('/delete/{user_id}',  [ProfileController::class, 'delete'])->name('profile-delete');
+    Route::patch('/edit/{user_id}/submit',  [ProfileController::class, 'editSubmit'])->name('profile-edit-submit');
 });
 
 /* Storage route */
-Route::prefix('storage')->group(function(){
+Route::prefix('storage')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [StorageController::class, 'index'])->name('storage');
     Route::post('/{user_id}/design',  [StorageController::class, 'adddesign'])->name('storage-design-add');
     Route::get('/{user_id}/design/{file}/delete',  [StorageController::class, 'deletedesign'])->name('storage-design-delete');
     Route::get('/{user_id}/design/{filename}/{extension}', [StorageController::class, 'downloadPath'])->name('storage-download-file');
 });
-/* logout route*/
-Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
-
 /* comments */
 Route::get('/delete-comment/{id}',  [CommentController::class, 'delete'])->name('delete-comment');
 Route::get('/edit-comment/{id}',  [CommentController::class, 'edit'])->name('edit-comment');
 Route::patch('/edit-comment/{id}/submit',  [CommentController::class, 'editSubmit'])->name('edit-comment-submit');
 
 /* calendar routes */
-Route::prefix('calender')->group(function(){
+Route::prefix('calender')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [CalenderController::class, 'index'])->name('calendar');
     Route::post('/{user_id}/{date}',  [CalenderController::class, 'createTask'])->name('calendar-add-task');
     Route::patch('/{user_id}/edittask/{task_id}/submit',  [CalenderController::class, 'editTaskSubmit'])->name('calendar-edit-task-submit');
@@ -162,15 +160,15 @@ Route::prefix('calender')->group(function(){
     Route::post('/alltasks',  [CalenderController::class, 'getAllTasks'])->name('calendar-get-all-task');
 });
 
-/*note route */
-Route::post('/noteupload',  [NotesController::class, 'uploadNote'])->name('upload-note');
+
 
 /* pass reset routes */
-Route::get('/reset-password',  [EmailController::class, 'gotoresetemail'])->name('gotoresetemail');
-Route::post('/passreset',  [EmailController::class, 'passresetmail'])->name('passresetmail');
-Route::get('/password/reset/{token}/{email}',  [EmailController::class, 'passreset'])->name('passreset');
-Route::post('/passresetsubmit/{email}',  [EmailController::class, 'passresetsubmit'])->name('passresetsubmit');
-
+Route::prefix('password')->group(function(){
+    Route::get('/reset-password',  [EmailController::class, 'gotoresetemail'])->name('gotoresetemail');
+    Route::post('/passreset',  [EmailController::class, 'passresetmail'])->name('passresetmail');
+    Route::get('/reset/{token}/{email}',  [EmailController::class, 'passreset'])->name('passreset');
+    Route::post('/passresetsubmit/{email}',  [EmailController::class, 'passresetsubmit'])->name('passresetsubmit');
+});
 /* contact mail route */
 Route::post('/contactmail',  [EmailController::class, 'contactmail'])->name('contact-mail');
 
@@ -178,4 +176,6 @@ Route::post('/contactmail',  [EmailController::class, 'contactmail'])->name('con
 Route::post('/searchbarresults',  [HomeController::class, 'searchbarResult'])->name('searchbar-result');
 Route::post('/adminsearchbarresults',  [HomeController::class, 'adminSearchbarResult'])->name('admin-searchbar-result');
 
-Route::get('/event-pdf', [PDFController::class,'index'])->name('eventPDF');
+
+/* logout route*/
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');

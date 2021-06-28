@@ -17,10 +17,7 @@ class ArticleController extends Controller
     //Overview view
     public function overview()
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
-      
+       
        $page = 'overview';
        $articles = Article::paginate(6);
        //voeg artikel info toe voor ieder artikel
@@ -52,9 +49,6 @@ class ArticleController extends Controller
     // artikel detail view
     public function detail($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
        $page = 'detail';
        Views::create(['article_id' => $id]);
        $article = Article::where('id',$id)->first();
@@ -94,18 +88,13 @@ class ArticleController extends Controller
     // create view
     public function create()
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
        $page = 'article-create';
        return view('article.create')->with(compact('page'));
     }
     // create submit
     public function createSubmit(Request $request)
     { 
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $validator = Validator::make(
          $request->all(),[
          'title' => 'required|max:200',
@@ -142,9 +131,7 @@ class ArticleController extends Controller
     //edit view
     public function edit($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'article-edit';
        $article = Article::where('id',$id)->first();
        // check of artikel bestaat
@@ -184,9 +171,7 @@ class ArticleController extends Controller
     // edit submit
     public function editSubmit(Request $request,$id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
       $article = Article::where('id',$id)->first();
       if($article->author_id == auth()->user()->id || auth()->user()->role == 2){
          
@@ -229,9 +214,7 @@ class ArticleController extends Controller
     //Delete
     public function delete($id)
     {
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+       
        $page = 'article-delete';
        $article = Article::where('id',$id)->first();
        if($article->author_id == auth()->user()->id || auth()->user()->role == 2){
@@ -269,9 +252,7 @@ class ArticleController extends Controller
    //  }
     //Verwijder support file
     public function deletesupportfile($id,$oldfilename){
-       if(!auth()->user()){
-         return redirect()->route('welcome');
-       }
+      
        $article = Article::where('id',$id)->first();
        if($article->author_id == auth()->user()->id || auth()->user()->role == 2){
          $supportfilepath = public_path("images/articles/".$id."/support-images/".$oldfilename);
