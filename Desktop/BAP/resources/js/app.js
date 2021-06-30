@@ -146,7 +146,7 @@ for(let i=0; i < adminDeleteButtons.length; i++){
             typeUrl = '/delete-comment/'+id;
             message.innerHTML = "Bent u zeker dat u de comment van " + title + " wilt verwijderen?";
         }
-        document.getElementById('admin-delete-accept').href = baseURL+typeUrl;
+        document.getElementById('admin-delete-accept-form').action = baseURL+typeUrl;
         document.getElementById('admin-delete-blackout').style.display = "block";
         document.getElementById('admin-delete-modal').style.display = "block";
         document.body.style.overflow = "hidden";
@@ -598,7 +598,7 @@ document.addEventListener('click',function(e){
             let projectDeleteLink = deleteProjectButtons[i].getAttribute('data-l');
             document.getElementById('projects-modal-message').innerHTML = "  <p>Ben u zeker dat u " + projectTitle + " wilt verwijderen?</p>"
             document.getElementById('projects-delete-modal').style.display = "block";
-            document.getElementById('project-modal-confirm').href=baseURL+''+projectDeleteLink;
+            document.getElementById('project-modal-confirm-form').action=baseURL+''+projectDeleteLink;
             document.body.style.overflow = "hidden";
             document.body.style.height = "100vh";
         })
@@ -754,7 +754,7 @@ function adminDoneTyping () {
                             typeUrl = '/delete-comment/'+id;
                             message.innerHTML = "Bent u zeker dat u de comment van " + title + " wilt verwijderen?";
                         }
-                        document.getElementById('admin-delete-accept').href = baseURL+typeUrl;
+                        document.getElementById('admin-delete-accept-form').action = baseURL+typeUrl;
                         document.getElementById('admin-delete-blackout').style.display = "block";
                         document.getElementById('admin-delete-modal').style.display = "block";
                         document.body.style.overflow = "hidden";

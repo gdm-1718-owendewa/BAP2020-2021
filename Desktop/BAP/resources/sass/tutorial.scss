@@ -93,8 +93,7 @@ div.tutorial-overview{
         div#thumbnail-div{
            img{
             width: 100%;
-            min-height: 225px;
-            max-height: 250px;
+            height: 250px;
             object-fit: cover;
             @media screen and (max-width: 1150px    ) {
                 width:100%;

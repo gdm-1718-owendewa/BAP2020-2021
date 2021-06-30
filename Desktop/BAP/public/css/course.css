@@ -256,20 +256,23 @@ div#course-detail-container div#course-detail-container-content div#course-detai
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a.download i {
   font-size: 1em;
 }
-div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
-  flex: 1;
-}
-div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file:hover {
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div form button#delete-upload-file {
   color: #cb0000;
+  background-color: #fff;
+  border: none;
 }
 @media screen and (max-width: 850px) {
-  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file {
+  div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div form button#delete-upload-file {
     margin-top: 20px;
     margin-bottom: 20px;
   }
 }
-div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div a#delete-upload-file i {
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div form button#delete-upload-file i {
   font-size: 1em;
+  text-align: left;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list div.file-div form button#delete-upload-file:focus {
+  outline: none;
 }
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div.no-upload-div {
   color: #afafaf;
@@ -332,6 +335,26 @@ div#course-detail-container div#course-detail-container-content div#course-detai
   align-items: center;
   padding: 0rem 0rem;
   border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item button.delete-button {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  text-decoration: none;
+  color: #cb0000;
+  background-color: none;
+  border: none;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item button.delete-button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 0rem;
+  border-right: 0px solid #afafaf;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item button.delete-button:focus {
+  outline: none;
 }
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#upload-list div.upload-item a.edit-button {
   display: flex;

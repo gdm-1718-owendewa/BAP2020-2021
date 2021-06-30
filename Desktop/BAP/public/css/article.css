@@ -295,7 +295,7 @@ div#article-edit-div div#supporting-files-div div.article-support-image-form-div
 div#article-edit-div div#supporting-files-div div.article-support-image-form-div h1, div#article-edit-div div#supporting-files-div div.article-support-image-form-div form {
   flex: 1;
 }
-div#article-edit-div div#supporting-files-div div.article-support-image-form-div a.edit-support-image-delete {
+div#article-edit-div div#supporting-files-div div.article-support-image-form-div button.edit-support-image-delete {
   background-color: #cb0000;
   width: 300px;
   display: block;

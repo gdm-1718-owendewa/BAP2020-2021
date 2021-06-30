@@ -8,7 +8,11 @@
         <div id="projects-modal-message">
         </div>
         <div id="project-modal-buttons">
-            <a id="project-modal-confirm" href="#">Ja</a>
+            <form id="project-modal-confirm-form" action="" method="post">
+                @method('delete')
+                @csrf
+                <button id="project-modal-confirm" href="#">Ja</button>
+            </form>
             <a id="projects-modal-decline" href="#">Nee</a>
         </div>
     </div>

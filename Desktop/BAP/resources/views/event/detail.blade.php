@@ -81,12 +81,13 @@
         </div>
         @auth
         @if(Auth::user()->id == $event->author_id)
-        <a href="{{route('eventPDF')}}">Print PDF</a>
+        
 
     {{-- <button id="download-list-button">PDF DOWNLOAD</button> --}}
     <div id="signed-in-people">
 
             <h1>Deze personen zijn ingeschreven</h1>
+            <a href="{{route('eventPDF',  ['rows' => json_encode($eventSigns)] )}}">Print PDF</a>
             <table>
                 <thead>
                     <tr>
@@ -106,6 +107,7 @@
                 </tbody>
             </table>
         </div>
+
     @endif
         @endauth
     </div>

@@ -70,7 +70,7 @@
                     @csrf
                     <div class="form-item">
                         <label>Titel<span id="titleSpan" style="margin-left:5px;"></span></label>
-                        <input type="text" name="title" required value="{{$article->title}}">
+                        <input type="text" name="title" id="title" required value="{{$article->title}}">
                     </div>
                     <div class="form-item">
                         <label for="inhoud" data-for="content">Inhoud (min. 300)<span id="contentSpan" style="margin-left:5px;"></span></label>
@@ -98,8 +98,11 @@
            @foreach($supportFileNames as $file)
             <div class='article-support-image-form-div'>
                 <img class="edit-support-image" src="{{asset('images/articles/'.$article->id.'/support-images/'.$file)}}" alt="">  
-                <a href="{{route('article-delete-support', ['id' => $article->id, 'oldfilename' => $file])}}" class="edit-support-image-delete"><i class="far fa-trash-alt"></i> Verwijder Bestand</a>
-                
+                <form action="{{route('article-delete-support', ['id' => $article->id, 'oldfilename' => $file])}}" method="post">
+                    @method('delete')
+                    @csrf
+                    <button class="edit-support-image-delete"><i class="far fa-trash-alt"></i> Verwijder Bestand</a>
+                </form>
            </div>
            @endforeach
         </div>

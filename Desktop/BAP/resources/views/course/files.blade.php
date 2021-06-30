@@ -72,7 +72,11 @@
                                     <a href="{{route('course-files-download', ['id' => $id, 'filename' => $supportfile['filename'], 'extension' => $supportfile['extension'] ])}}" class="download"><i class="fas fa-download"></i></a>
                                 @endif
                                 @if($course->author_id == auth()->user()->id)
-                                    <a href="{{route('course-delete-file', ['id' => $id, 'path' => $supportfile['filename']])}}" id="delete-upload-file"><i class="far fa-trash-alt"></i></a>
+                                <form action="{{route('course-delete-file', ['id' => $id, 'path' => $supportfile['filename']])}}" method="post">
+                                    @method('delete')
+                                    @csrf
+                                    <button id="delete-upload-file" type="submit"><i class="far fa-trash-alt"></i></button>
+                                </form>
                                 @endif
                             </div>
                         @endforeach

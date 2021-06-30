@@ -68,9 +68,9 @@ Route::prefix('article')->middleware('auth')->group(function(){
     Route::post('/create/submit',  [ArticleController::class, 'createSubmit'])->name('article-create-submit');
     Route::get('/edit/{id}',  [ArticleController::class, 'edit'])->name('article-edit');
     Route::patch('/edit/{id}/submit',  [ArticleController::class, 'editSubmit'])->name('article-edit-submit');
-    Route::get('/delete/{id}',  [ArticleController::class, 'delete'])->name('article-delete');
+    Route::delete('/delete/{id}',  [ArticleController::class, 'delete'])->name('article-delete');
     // Route::post('/edit/{id}/supportfile/edit/{oldfilename}',  [ArticleController::class, 'editsupportfile'])->name('article-edit-support');
-    Route::get('/edit/{id}/supportfile/delete/{oldfilename}',  [ArticleController::class, 'deletesupportfile'])->name('article-delete-support');
+    Route::delete('/edit/{id}/supportfile/delete/{oldfilename}',  [ArticleController::class, 'deletesupportfile'])->name('article-delete-support');
 });
 /* Tutorial routes */
 Route::prefix('tutorial')->middleware('auth')->group(function(){
@@ -80,7 +80,7 @@ Route::prefix('tutorial')->middleware('auth')->group(function(){
     Route::post('/create/submit',  [TutorialController::class, 'createSubmit'])->name('tutorial-create-submit');
     Route::get('/edit/{id}',  [TutorialController::class, 'edit'])->name('tutorial-edit');
     Route::patch('/edit/{id}/submit',  [TutorialController::class, 'editSubmit'])->name('tutorial-edit-submit');
-    Route::get('/delete/{id}',  [TutorialController::class, 'delete'])->name('tutorial-delete');
+    Route::delete('/delete/{id}',  [TutorialController::class, 'delete'])->name('tutorial-delete');
 });
 /* Event routes */
 Route::prefix('event')->middleware('auth')->group(function(){
@@ -90,7 +90,7 @@ Route::prefix('event')->middleware('auth')->group(function(){
     Route::post('/create/submit',  [EventController::class, 'createSubmit'])->name('event-create-submit');
     Route::get('/edit/{id}',  [EventController::class, 'edit'])->name('event-edit');
     Route::patch('/edit/{id}/submit',  [EventController::class, 'editSubmit'])->name('event-edit-submit');
-    Route::get('/delete/{id}',  [EventController::class, 'delete'])->name('event-delete');
+    Route::delete('/delete/{id}',  [EventController::class, 'delete'])->name('event-delete');
     Route::get('/sign/{user_id}/{event_id}',  [EventController::class, 'eventSignUp'])->name('event-sign');
     Route::get('/unsign/{user_id}/{event_id}',  [EventController::class, 'eventSignOut'])->name('event-unsign');
     Route::get('/event-pdf', [PDFController::class,'index'])->name('eventPDF');
@@ -103,7 +103,7 @@ Route::prefix('thread')->middleware('auth')->group(function(){
     Route::post('/create/submit',  [ThreadController::class, 'createSubmit'])->name('thread-create-submit');
     Route::get('/edit/{id}',  [ThreadController::class, 'edit'])->name('thread-edit');
     Route::patch('/edit/{id}/submit',  [ThreadController::class, 'editSubmit'])->name('thread-edit-submit');
-    Route::get('/delete/{id}',  [ThreadController::class, 'delete'])->name('thread-delete');
+    Route::delete('/delete/{id}',  [ThreadController::class, 'delete'])->name('thread-delete');
     Route::post('/thread-detail/{id}/comment',  [ThreadController::class, 'comment'])->name('thread-comment-submit');
 });
 /* Courses routes */
@@ -116,9 +116,9 @@ Route::prefix('course')->middleware('auth')->group(function(){
     Route::post('/create/submit',  [CourseController::class, 'createSubmit'])->name('course-create-submit');
     Route::get('/edit/{id}',  [CourseController::class, 'edit'])->name('course-edit');
     Route::patch('/edit/{id}/submit',  [CourseController::class, 'editSubmit'])->name('course-edit-submit');
-    Route::get('/delete/{id}',  [CourseController::class, 'delete'])->name('course-delete');
+    Route::delete('/delete/{id}',  [CourseController::class, 'delete'])->name('course-delete');
     Route::get('/upload-overview/{id}',  [CourseController::class, 'uploadsOvervieuw'])->name('course-upload-overview');
-    Route::get('/upload-overview/{id}/delete/{upload_id}',  [CourseController::class, 'deleteUpload'])->name('course-upload-delete');
+    Route::delete('/upload-overview/{id}/delete/{upload_id}',  [CourseController::class, 'deleteUpload'])->name('course-upload-delete');
     Route::get('/upload-overview/{id}/upload/{upload_id}',  [CourseController::class, 'uploadDetail'])->name('course-upload-detail');
     Route::get('/{id}/addcontent',  [CourseController::class, 'addcontent'])->name('course-addcontent'); 
     Route::get('/{id}/editupload/{upload_id}',  [CourseController::class, 'editcontent'])->name('course-editcontent'); 
@@ -128,13 +128,13 @@ Route::prefix('course')->middleware('auth')->group(function(){
     Route::get('/files/{id}/generate/{pdfname}', [CourseController::class, 'showPDF'])->name('course-generate-pdf');
     Route::get('/files/{id}/{videoname}', [CourseController::class, 'showVideo'])->name('course-video');
     Route::get('/files/{id}',  [CourseController::class, 'files'])->name('course-files');
-    Route::get('/files/{id}/delete/{path}',  [CourseController::class, 'deleteFile'])->name('course-delete-file');
+    Route::delete('/files/{id}/delete/{path}',  [CourseController::class, 'deleteFile'])->name('course-delete-file');
 });
 /* profile routes*/ 
 Route::prefix('profile')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [ProfileController::class, 'index'])->name('profile');
     Route::get('/edit/{user_id}',  [ProfileController::class, 'edit'])->name('profile-edit');
-    Route::get('/delete/{user_id}',  [ProfileController::class, 'delete'])->name('profile-delete');
+    Route::delete('/delete/{user_id}',  [ProfileController::class, 'delete'])->name('profile-delete');
     Route::patch('/edit/{user_id}/submit',  [ProfileController::class, 'editSubmit'])->name('profile-edit-submit');
 });
 
@@ -146,7 +146,7 @@ Route::prefix('storage')->middleware('auth')->group(function(){
     Route::get('/{user_id}/design/{filename}/{extension}', [StorageController::class, 'downloadPath'])->name('storage-download-file');
 });
 /* comments */
-Route::get('/delete-comment/{id}',  [CommentController::class, 'delete'])->name('delete-comment');
+Route::delete('/delete-comment/{id}',  [CommentController::class, 'delete'])->name('delete-comment');
 Route::get('/edit-comment/{id}',  [CommentController::class, 'edit'])->name('edit-comment');
 Route::patch('/edit-comment/{id}/submit',  [CommentController::class, 'editSubmit'])->name('edit-comment-submit');
 

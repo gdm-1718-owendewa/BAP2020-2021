@@ -48,5 +48,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/storage.scss', 'public/css')
     .sass('resources/sass/datepicker.scss', 'public/css')
     .sass('resources/sass/test.scss', 'public/css')
+    .sass('resources/sass/pdf.scss', 'public/css')
     .sass('resources/sass/styles.scss', 'public/css');
 

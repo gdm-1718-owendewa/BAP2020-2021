@@ -245,7 +245,7 @@ class CourseController extends Controller
       if($course->author_id == auth()->user()->id || auth()->user()->role == 2){
          $validator = Validator::make(
             $request->all(),[
-            'title' => 'required|max:200',
+            'title' => 'nullable|max:200',
             'inhoud' => 'nullable|min:50',
             'supporting-files.*' => 'file|mimes:jpeg,png,mp4,pdf|max:100000000',
             ])->validate();

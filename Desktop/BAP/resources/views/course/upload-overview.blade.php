@@ -54,7 +54,11 @@
                                     <a id="upload-detail-button" href="{{route('course-upload-detail', ['id' => $course->id, 'upload_id' => $upload->id])}}"><p>{{$upload->title}}</p></a>
                                     @if($course->author_id == auth()->user()->id || auth()->user()->role == 2)
                                     <a href="{{route('course-editcontent', ['id' => $course->id, 'upload_id' => $upload->id])}}" class="edit-button"><i class="far fa-edit"></i></a>
-                                    <a href="{{route('course-upload-delete', ['id' => $course->id, 'upload_id' => $upload->id])}}" class="delete-button"><i class="far fa-trash-alt"></i></a>
+                                    <form action="{{route('course-upload-delete', ['id' => $course->id, 'upload_id' => $upload->id])}}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="delete-button" id="delete-upload" type="submit"><i class="far fa-trash-alt"></i></button>
+                                    </form>
                                 @endif
                                 </div>
                             @endforeach

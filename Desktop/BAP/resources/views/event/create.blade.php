@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title','TattooEase | Evenement Aanmaken')
 @push('scripts')
-<script src="{{ asset('js/datepicker.js') }}" defer></script>
+    <script src="{{ asset('js/datepicker.js') }}" defer></script>
     <script src="{{asset('js/eventforms.js')}}" defer></script>
     <script>    
         tinymce.init({

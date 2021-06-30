@@ -11,7 +11,11 @@
             <p id="admin-delete-modal-message"></p>
         </div>
         <div id="admin-delete-modal-buttons-div">
-            <a href="#" id="admin-delete-accept">Ja</a>
+            <form action="" method="post" id="admin-delete-accept-form">
+                @method('delete')
+                @csrf
+                <button id="admin-delete-accept">Ja</button>
+            </form>
             <a href="#" id="admin-delete-decline">Nee</a>
         </div>  
     </div>
