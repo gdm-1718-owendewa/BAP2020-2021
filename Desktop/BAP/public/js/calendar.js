@@ -53,7 +53,7 @@ $(document).ready(function () {
   MonthAndYear.innerHTML = today.getDate() + ' ' + months[currentMonth] + ' ' + currentYear;
   document.getElementById('add-task-open-modal-button').setAttribute('data-date', today.getDate() + '-' + (currentMonth + 1) + '-' + currentYear);
   document.getElementById('add-div').style.display = "flex";
-  tasksDiv.style.display = "flex"; //Voordat je de huidige dag ophaalt check of er een value aanwezig is in de localstorage van een dag war juist een taak op is toegevoegd
+  tasksDiv.style.display = "flex"; //Voordat je de huidige dag ophaalt check of er een value aanwezig is in de localstorage van een dag waar juist een taak op is toegevoegd
 
   if (currentTaskDayCheck) {
     var day = getWithExpiry('currentDayTaskDay');
@@ -67,6 +67,9 @@ $(document).ready(function () {
     localStorage.removeItem('currentDayTaskDay');
     localStorage.removeItem('currentDayTaskMonth');
     localStorage.removeItem('currentDayTaskYear');
+    setWithExpiry('currentDayTaskDay', today.getDate(), 600000);
+    setWithExpiry('currentDayTaskMonth', currentMonth + 1, 600000);
+    setWithExpiry('currentDayTaskYear', currentYear, 600000);
   } //Toon de taken voor de geselecteerde dag
 
 
@@ -340,7 +343,6 @@ $(document).ready(function () {
 
 
   function previousMonth() {
-    localStorage.clear();
     currentYear = currentMonth === 0 ? currentYear - 1 : currentYear;
     currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
     showCalendar(currentMonth, currentYear);
@@ -354,9 +356,18 @@ $(document).ready(function () {
 
 
   function nextMonth() {
-    localStorage.clear();
-    currentYear = currentMonth === 11 ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
+    console.log(currentMonth);
+
+    if (currentMonth == 11) {
+      currentYear = Number(currentYear) + 1;
+      currentMonth = 0;
+    } else {
+      currentMonth = Number(currentMonth) + 1;
+    } // currentYear = (currentMonth === 11 ) ? currentYear + 1: currentYear;
+    // currentMonth =  (currentMonth + 1 ) % 12;
+
+
+    console.log(currentMonth, currentYear);
     showCalendar(currentMonth, currentYear);
   }
 
@@ -376,28 +387,27 @@ $(document).ready(function () {
         setWithExpiry('currentDayTaskMonth', dayDate[1], 600000);
         setWithExpiry('currentDayTaskYear', dayDate[2], 600000);
         e.preventDefault();
-        var blackoutDiv = document.createElement('div');
-        blackoutDiv.classList.add('calendar-full-blackout');
-        document.getElementById('calendar-delete-modal-div').appendChild(blackoutDiv);
+        var blackoutDiv = document.querySelector('.calendar-full-blackout');
         document.body.style.overflow = "hidden";
         document.body.style.height = "100vh";
         blackoutDiv.style.display = 'flex';
-        var deleteTaskModal = document.createElement('div');
-        deleteTaskModal.classList.add('delete-task-modal');
-        document.getElementById('calendar-delete-modal-div').appendChild(deleteTaskModal);
-        deleteTaskModal.innerHTML = "\n            <a id=\"task-delete-modal-close-button\" href=\"#\">&#10005;</a> \n            <div id=\"task-delete-modal-content-div\">\n            <div id=\"task-delete-modal-message-div\">\n                <p id=\"task-delete-modal-message\"></p>\n            </div>\n            <div id=\"task-delete-modal-buttons-div\">\n                <a href=\"".concat(baseURL, "/calender/").concat(taskDeleteButtons[index].getAttribute('data-u'), "/deletetask/").concat(taskDeleteButtons[index].getAttribute('data-i'), "\" id=\"task-delete-accept\">Ja</a>\n                <a href=\"#\" id=\"task-delete-decline\">Nee</a>\n                </div>  \n            </div>");
+        var deleteTaskModal = document.querySelector('.delete-task-modal');
+        console.log(deleteTaskModal);
+        deleteTaskModal.style.display = "flex";
+        var deleteForm = document.getElementById('delete-task-form');
+        deleteForm.action = "".concat(baseURL, "/calender/").concat(taskDeleteButtons[index].getAttribute('data-u'), "/deletetask/").concat(taskDeleteButtons[index].getAttribute('data-i'));
         document.getElementById('task-delete-modal-message').innerHTML = "Bent u zeker dat u deze taak wilt verwijderen?";
         document.getElementById('task-delete-decline').addEventListener('click', function (e) {
           e.preventDefault();
-          document.getElementById('calendar-delete-modal-div').removeChild(deleteTaskModal);
-          document.getElementById('calendar-delete-modal-div').removeChild(blackoutDiv);
+          document.querySelector('.delete-task-modal').style.display = "none";
+          document.querySelector('.calendar-full-blackout').style.display = "none";
           document.body.style.overflow = "";
           document.body.style.height = "";
         });
         document.getElementById('task-delete-modal-close-button').addEventListener('click', function (e) {
           e.preventDefault();
-          document.getElementById('calendar-delete-modal-div').removeChild(deleteTaskModal);
-          document.getElementById('calendar-delete-modal-div').removeChild(blackoutDiv);
+          document.querySelector('.calendar-full-blackout').style.display = "none";
+          document.querySelector('.delete-task-modal').style.display = "none";
           document.body.style.overflow = "";
           document.body.style.height = "";
         });

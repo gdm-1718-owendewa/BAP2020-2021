@@ -4,7 +4,25 @@
     <script src="{{ asset('js/calendar.js') }}" defer></script>
 @endpush  
 @section('content')
-<div id="calendar-delete-modal-div"></div>
+<div id="calendar-delete-modal-div">
+    <div class="calendar-full-blackout"></div>
+    <div class="delete-task-modal">
+        <a id="task-delete-modal-close-button" href="#">&#10005;</a> 
+        <div id="task-delete-modal-content-div">
+        <div id="task-delete-modal-message-div">
+            <p id="task-delete-modal-message"></p>
+        </div>
+        <div id="task-delete-modal-buttons-div">
+            <form action="" id="delete-task-form" method="post">
+            @method("delete")
+            @csrf
+            <button id="task-delete-accept">Ja</button>
+            </form>
+            <a href="#" id="task-delete-decline">Nee</a>
+            </div>  
+        </div>
+    </div>
+</div>
 {{-- Kalender edit task model --}}
 <div id="calendar-task-edit-div">
     <div id="calendar-blackout"></div>

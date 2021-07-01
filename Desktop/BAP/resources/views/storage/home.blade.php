@@ -13,7 +13,11 @@
             <p id="storage-delete-modal-message"></p>
         </div>
         <div id="storage-delete-modal-buttons-div">
-            <a href="#" id="storage-delete-accept">Ja</a>
+            <form action="" method="post" id="storage-delete-accept-form">
+                @method('delete')
+                @csrf
+                <button id="storage-delete-accept">Ja</button>
+            </form>
             <a href="#" id="storage-delete-decline">Nee</a>
         </div>  
     </div>

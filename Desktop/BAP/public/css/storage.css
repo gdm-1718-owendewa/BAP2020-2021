@@ -190,9 +190,13 @@ div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete
   font-size: 1.5em;
   padding-bottom: 30px;
 }
-div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div {
+  display: flex;
+}
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a, div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div button {
   text-decoration: none;
   display: inline-block;
+  border: none;
   width: 150px;
   margin: 0px 24px;
   background-color: green;
@@ -201,7 +205,7 @@ div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+  div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a, div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div button {
     width: 100px;
   }
 }

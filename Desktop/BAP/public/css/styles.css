@@ -862,7 +862,8 @@ div.delete-task-modal {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  z-index: 11;
+  z-index: 13;
+  display: none;
 }
 @media screen and (max-width: 1000px) {
   div.delete-task-modal {
@@ -894,6 +895,22 @@ div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-me
   text-align: center;
   font-size: 1.5em;
   padding-bottom: 30px;
+}
+div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div {
+  display: flex;
+}
+div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div form button {
+  width: 150px;
+  margin: 0px 24px;
+  background-color: green;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div form button {
+    width: 100px;
+  }
 }
 div.delete-task-modal div#task-delete-modal-content-div div#task-delete-modal-buttons-div a {
   text-decoration: none;
@@ -5576,9 +5593,13 @@ div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete
   font-size: 1.5em;
   padding-bottom: 30px;
 }
-div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div {
+  display: flex;
+}
+div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a, div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div button {
   text-decoration: none;
   display: inline-block;
+  border: none;
   width: 150px;
   margin: 0px 24px;
   background-color: green;
@@ -5587,7 +5608,7 @@ div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a {
+  div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div a, div#storage-delete-modal div#storage-delete-modal-content-div div#storage-delete-modal-buttons-div button {
     width: 100px;
   }
 }

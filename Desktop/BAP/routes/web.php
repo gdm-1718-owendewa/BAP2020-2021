@@ -142,7 +142,7 @@ Route::prefix('profile')->middleware('auth')->group(function(){
 Route::prefix('storage')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [StorageController::class, 'index'])->name('storage');
     Route::post('/{user_id}/design',  [StorageController::class, 'adddesign'])->name('storage-design-add');
-    Route::get('/{user_id}/design/{file}/delete',  [StorageController::class, 'deletedesign'])->name('storage-design-delete');
+    Route::delete('/{user_id}/design/{file}/delete',  [StorageController::class, 'deletedesign'])->name('storage-design-delete');
     Route::get('/{user_id}/design/{filename}/{extension}', [StorageController::class, 'downloadPath'])->name('storage-download-file');
 });
 /* comments */
@@ -155,7 +155,7 @@ Route::prefix('calender')->middleware('auth')->group(function(){
     Route::get('/{user_id}',  [CalenderController::class, 'index'])->name('calendar');
     Route::post('/{user_id}/{date}',  [CalenderController::class, 'createTask'])->name('calendar-add-task');
     Route::patch('/{user_id}/edittask/{task_id}/submit',  [CalenderController::class, 'editTaskSubmit'])->name('calendar-edit-task-submit');
-    Route::get('/{user_id}/deletetask/{task_id}',  [CalenderController::class, 'deleteTask'])->name('calendar-delete-task');
+    Route::delete('/{user_id}/deletetask/{task_id}',  [CalenderController::class, 'deleteTask'])->name('calendar-delete-task');
     Route::post('/daytasks',  [CalenderController::class, 'getTasks'])->name('calendar-get-task');
     Route::post('/alltasks',  [CalenderController::class, 'getAllTasks'])->name('calendar-get-all-task');
 });

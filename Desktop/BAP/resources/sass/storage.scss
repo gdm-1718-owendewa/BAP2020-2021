@@ -173,9 +173,11 @@ div#storage-delete-modal{
             padding-bottom:30px;
         }
         div#storage-delete-modal-buttons-div{
-           a{
+            display:flex;
+           a,button{
                text-decoration: none;
                display: inline-block;
+               border:none;
                width:150px;
                margin:0px 24px;
                background-color: green;

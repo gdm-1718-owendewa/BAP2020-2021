@@ -5,6 +5,7 @@ $(document).ready(function(){
     let today = new Date();
     let currentMonth = '';
     let currentYear = '';
+   
     if(currentTaskDayCheck){
         currentMonth = getWithExpiry('currentDayTaskMonth')
         currentYear = getWithExpiry('currentDayTaskYear')
@@ -26,7 +27,6 @@ $(document).ready(function(){
         "Nov",
         "Dec",
     ]
-
 //dag,jaar boven kalender
 let monthAndYear = ''
 if(document.getElementById("month-and-year") !=null){
@@ -55,7 +55,7 @@ document.getElementById('add-task-open-modal-button').setAttribute('data-date', 
 document.getElementById('add-div').style.display ="flex";
 tasksDiv.style.display ="flex";
 
-//Voordat je de huidige dag ophaalt check of er een value aanwezig is in de localstorage van een dag war juist een taak op is toegevoegd
+//Voordat je de huidige dag ophaalt check of er een value aanwezig is in de localstorage van een dag waar juist een taak op is toegevoegd
 if(currentTaskDayCheck){
    let day = getWithExpiry('currentDayTaskDay')
    let month = getWithExpiry('currentDayTaskMonth')
@@ -69,8 +69,10 @@ if(currentTaskDayCheck){
     localStorage.removeItem('currentDayTaskDay');
     localStorage.removeItem('currentDayTaskMonth');
     localStorage.removeItem('currentDayTaskYear');
+    setWithExpiry('currentDayTaskDay', today.getDate(), 600000);
+    setWithExpiry('currentDayTaskMonth', (currentMonth+1), 600000);
+    setWithExpiry('currentDayTaskYear', currentYear, 600000);
 }
-
 //Toon de taken voor de geselecteerde dag
 function showCurrentDayTasks(calenderu, date){
     $.ajax({
@@ -126,6 +128,7 @@ if(currentTaskDayCheck){
     showCalendar(month-1, year);
 }else{
     showCalendar(currentMonth, currentYear);
+
 
 }
 function showCalendar(month, year){
@@ -191,29 +194,29 @@ function showCalendar(month, year){
                         let editTaskButtons = document.querySelectorAll(".edit-task");
                         console.log(editTaskButtons);
                         if(editTaskButtons){
-                        for(let j = 0; j < editTaskButtons.length; j++){
-                            editTaskButtons[j].setAttribute('data-date', calendarDayButtons[i].getAttribute('data-date'));
-                            setWithExpiry('currentDayTask', true, 300000);
-                            let dayDate = editTaskButtons[j].getAttribute('data-date').split('-');
-                            setWithExpiry('currentDayTaskDay', dayDate[0], 300000);
-                            setWithExpiry('currentDayTaskMonth', dayDate[1], 300000);
-                            setWithExpiry('currentDayTaskYear', dayDate[2], 300000);
-                            editTaskButtons[j].addEventListener('click', (e)=>{
-                                e.preventDefault();
-                                document.getElementById('calendar-task-edit-div').style.display = "flex";
-                                scrollTo(0,0);
-                                document.body.style.overflow = "hidden";
-                                document.body.style.height = "100vh";
-                                let baseURL = window.location.origin;
-                                let editTaskForm = document.getElementById('edit-task-form');
-                                editTaskForm.action = baseURL +'/calender/' + editTaskButtons[j].getAttribute('data-u') + '/edittask/' + editTaskButtons[j].getAttribute('data-i') +'/submit';
-                                document.getElementById('calendar-edit-task-title').value = editTaskButtons[j].getAttribute('data-d');
-                                let hour = document.getElementById('task-edit-hour');
-                                hour.value = editTaskButtons[j].getAttribute('data-h');
-                                let minute = document.getElementById('task-edit-minute');
-                                minute.value = editTaskButtons[j].getAttribute('data-m');   
-                            })
-                        }
+                            for(let j = 0; j < editTaskButtons.length; j++){
+                                editTaskButtons[j].setAttribute('data-date', calendarDayButtons[i].getAttribute('data-date'));
+                                setWithExpiry('currentDayTask', true, 300000);
+                                let dayDate = editTaskButtons[j].getAttribute('data-date').split('-');
+                                setWithExpiry('currentDayTaskDay', dayDate[0], 300000);
+                                setWithExpiry('currentDayTaskMonth', dayDate[1], 300000);
+                                setWithExpiry('currentDayTaskYear', dayDate[2], 300000);
+                                editTaskButtons[j].addEventListener('click', (e)=>{
+                                    e.preventDefault();
+                                    document.getElementById('calendar-task-edit-div').style.display = "flex";
+                                    scrollTo(0,0);
+                                    document.body.style.overflow = "hidden";
+                                    document.body.style.height = "100vh";
+                                    let baseURL = window.location.origin;
+                                    let editTaskForm = document.getElementById('edit-task-form');
+                                    editTaskForm.action = baseURL +'/calender/' + editTaskButtons[j].getAttribute('data-u') + '/edittask/' + editTaskButtons[j].getAttribute('data-i') +'/submit';
+                                    document.getElementById('calendar-edit-task-title').value = editTaskButtons[j].getAttribute('data-d');
+                                    let hour = document.getElementById('task-edit-hour');
+                                    hour.value = editTaskButtons[j].getAttribute('data-h');
+                                    let minute = document.getElementById('task-edit-minute');
+                                    minute.value = editTaskButtons[j].getAttribute('data-m');   
+                                })
+                            }
                         }
                         let taskDeleteButtons = document.querySelectorAll('.delete-task');
                         deleteModalShow(taskDeleteButtons);
@@ -305,7 +308,6 @@ if(closeTaskModalEditButton){
 }
 //Ga naar vorige maand
 function previousMonth(){
-    localStorage.clear();
     currentYear = (currentMonth === 0 )? currentYear - 1: currentYear;
     currentMonth = (currentMonth === 0 )? 11: currentMonth -1
     showCalendar(currentMonth, currentYear);
@@ -316,9 +318,16 @@ if(prevButton){
 }
 //Ga naar volgende maand
 function nextMonth(){
-    localStorage.clear();
-    currentYear = (currentMonth === 11 )? currentYear + 1: currentYear;
-    currentMonth =  (currentMonth + 1 ) % 12;
+    console.log(currentMonth)
+    if(currentMonth == 11){
+        currentYear = Number(currentYear) + 1
+        currentMonth = 0
+    }else{
+        currentMonth = Number(currentMonth) + 1
+    }
+    // currentYear = (currentMonth === 11 ) ? currentYear + 1: currentYear;
+    // currentMonth =  (currentMonth + 1 ) % 12;
+    console.log(currentMonth, currentYear);
     showCalendar(currentMonth, currentYear);
 }
 let nextButton = document.getElementById("next-button")
@@ -336,39 +345,28 @@ function deleteModalShow(taskDeleteButtons){
             setWithExpiry('currentDayTaskMonth', dayDate[1], 600000);
             setWithExpiry('currentDayTaskYear', dayDate[2], 600000);
             e.preventDefault();
-            let blackoutDiv = document.createElement('div')
-            blackoutDiv.classList.add('calendar-full-blackout')
-            document.getElementById('calendar-delete-modal-div').appendChild(blackoutDiv);
+            let blackoutDiv = document.querySelector('.calendar-full-blackout')
             document.body.style.overflow = "hidden";
             document.body.style.height = "100vh";
             blackoutDiv.style.display ='flex';
-            let deleteTaskModal = document.createElement('div')
-            deleteTaskModal.classList.add('delete-task-modal')
-            document.getElementById('calendar-delete-modal-div').appendChild(deleteTaskModal);
-
-            deleteTaskModal.innerHTML = `
-            <a id="task-delete-modal-close-button" href="#">&#10005;</a> 
-            <div id="task-delete-modal-content-div">
-            <div id="task-delete-modal-message-div">
-                <p id="task-delete-modal-message"></p>
-            </div>
-            <div id="task-delete-modal-buttons-div">
-                <a href="${baseURL}/calender/${taskDeleteButtons[index].getAttribute('data-u')}/deletetask/${taskDeleteButtons[index].getAttribute('data-i')}" id="task-delete-accept">Ja</a>
-                <a href="#" id="task-delete-decline">Nee</a>
-                </div>  
-            </div>`;
+            let deleteTaskModal = document.querySelector('.delete-task-modal')
+            console.log(deleteTaskModal);
+            deleteTaskModal.style.display = "flex";
+            let deleteForm = document.getElementById('delete-task-form');
+            deleteForm.action = `${baseURL}/calender/${taskDeleteButtons[index].getAttribute('data-u')}/deletetask/${taskDeleteButtons[index].getAttribute('data-i')}`;
+         
             document.getElementById('task-delete-modal-message').innerHTML = `Bent u zeker dat u deze taak wilt verwijderen?`
             document.getElementById('task-delete-decline').addEventListener('click', (e)=>{
                 e.preventDefault();
-                document.getElementById('calendar-delete-modal-div').removeChild(deleteTaskModal);
-                document.getElementById('calendar-delete-modal-div').removeChild(blackoutDiv);
+                document.querySelector('.delete-task-modal').style.display = "none";
+                document.querySelector('.calendar-full-blackout').style.display = "none";
                 document.body.style.overflow = "";
                 document.body.style.height = "";
             })
             document.getElementById('task-delete-modal-close-button').addEventListener('click', (e)=>{
                 e.preventDefault();
-                document.getElementById('calendar-delete-modal-div').removeChild(deleteTaskModal);
-                document.getElementById('calendar-delete-modal-div').removeChild(blackoutDiv);
+                document.querySelector('.calendar-full-blackout').style.display = "none";
+                document.querySelector('.delete-task-modal').style.display = "none";
                 document.body.style.overflow = "";
                 document.body.style.height = "";
             })
