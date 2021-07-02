@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title','TattooEase | Evenement Detail Pagina')
 @push('scripts')
+    <script src="{{ asset('js/pdfdownload.js') }}" defer></script>
 @endpush
 @section('content')
 <div class="general-container">
@@ -84,10 +85,10 @@
         
 
     {{-- <button id="download-list-button">PDF DOWNLOAD</button> --}}
+    <a class="btn btn-danger" href="{{route('eventPDF', $event->id )}}" id="print-event-list-button">Print PDF <i class="fas fa-print"></i></a>
     <div id="signed-in-people">
 
             <h1>Deze personen zijn ingeschreven</h1>
-            <a href="{{route('eventPDF',  ['rows' => json_encode($eventSigns)] )}}">Print PDF</a>
             <table>
                 <thead>
                     <tr>

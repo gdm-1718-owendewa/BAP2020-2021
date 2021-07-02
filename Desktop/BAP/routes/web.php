@@ -93,7 +93,7 @@ Route::prefix('event')->middleware('auth')->group(function(){
     Route::delete('/delete/{id}',  [EventController::class, 'delete'])->name('event-delete');
     Route::get('/sign/{user_id}/{event_id}',  [EventController::class, 'eventSignUp'])->name('event-sign');
     Route::get('/unsign/{user_id}/{event_id}',  [EventController::class, 'eventSignOut'])->name('event-unsign');
-    Route::get('/event-pdf', [PDFController::class,'index'])->name('eventPDF');
+    Route::get('/event-pdf/{id}', [PDFController::class,'index'])->name('eventPDF');
 });
 /* Thread routes */
 Route::prefix('thread')->middleware('auth')->group(function(){

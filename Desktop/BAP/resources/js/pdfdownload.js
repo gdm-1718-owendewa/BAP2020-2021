@@ -1,15 +1,11 @@
-let button = document.getElementById('download-list-button');
-console.log(button)
-button.addEventListener('click', ()=>{
-    var doc = new jsPDF();  //create jsPDF object
-  doc.fromHTML(document.getElementById("test"), // page element which you want to print as PDF
-  15,
-  15, 
-  {
-    'width': 170  //set width
-  },
-  function(a) 
-   {
-    doc.save("HTML2PDF.pdf"); // save file name as HTML2PDF.pdf
-  });
-})
+// document.getElementById('print-event-list-button').addEventListener('click', (e) =>{
+//   e.preventDefault();
+//   var divContents = document.getElementById("signed-in-people").innerHTML;
+//             var a = window.open('', '', 'height=1000, width=1000');
+//             a.document.write('<html>');
+//             a.document.write('<body >');
+//             a.document.write(divContents);
+//             a.document.write('</body></html>');
+//             a.document.close();
+//             a.print();
+// })

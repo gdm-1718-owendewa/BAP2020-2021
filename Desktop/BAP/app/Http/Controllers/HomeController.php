@@ -62,7 +62,7 @@ class HomeController extends Controller
         $tutorials = Tutorial::where('title', 'like' , '%'. $request->searchterm .'%')->orWhere('author', 'like' , '%'. $request->searchterm .'%')->get();
         $courses = Course::where('title', 'like' , '%'. $request->searchterm .'%')->orWhere('author', 'like' , '%'. $request->searchterm .'%')->get();
         $users = User::where('name', 'like' , '%'. $request->searchterm .'%')->orWhere('shopname', 'like' , '%'. $request->searchterm .'%')->get();
-        $comments = Comment::where('content', 'like' , '%'. $request->searchterm .'%')->get();
+        $comments = Comment::where('content', 'like' , '%'. $request->searchterm .'%')->orWhere('author', 'like' , '%'. $request->searchterm .'%')->get();
 
         $data = [
             'articles' => $articles,
