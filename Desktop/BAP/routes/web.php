@@ -157,7 +157,10 @@ Route::prefix('calender')->middleware('auth')->group(function(){
     Route::patch('/{user_id}/edittask/{task_id}/submit',  [CalenderController::class, 'editTaskSubmit'])->name('calendar-edit-task-submit');
     Route::delete('/{user_id}/deletetask/{task_id}',  [CalenderController::class, 'deleteTask'])->name('calendar-delete-task');
     Route::post('/daytasks',  [CalenderController::class, 'getTasks'])->name('calendar-get-task');
+    Route::post('/dayevents',  [CalenderController::class, 'getEvents'])->name('calendar-get-events');
     Route::post('/alltasks',  [CalenderController::class, 'getAllTasks'])->name('calendar-get-all-task');
+    Route::post('/allevents',  [CalenderController::class, 'getAllEvents'])->name('calendar-get-all-events');
+
 });
 
 

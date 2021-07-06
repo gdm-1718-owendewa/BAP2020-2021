@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Query;
 use App\Models\Task;
+use App\Models\EventSigns;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -57,6 +58,16 @@ class CalenderController extends Controller
             $data = Task::where('user_id',$user_id)->where('date', $date)->get();
             return response()->json($data);
     }
+    public function getEvents(Request $request)
+    {
+        $user_id = $request->user_id;
+        $date = $request->date;
+        $data = EventSigns::leftjoin('events', 'events.id', '=', 'event-signs.event_id')->where('event-signs.user_id','=',$user_id)->where('events.start_date','=', $date)->get();
+        if($user_id != auth()->user()->id){
+            return redirect()->back();
+        }
+        return response()->json($data);
+    }
      // Haal alle taken op 
      public function getAllTasks(Request $request)
      {
@@ -65,6 +76,15 @@ class CalenderController extends Controller
                  return redirect()->back();
              }
              $data = Task::where('user_id',$user_id)->get();
+             return response()->json($data);
+     }
+     public function getAllEvents(Request $request)
+     {
+             $user_id = $request->user_id;
+             $data = EventSigns::leftjoin('events', 'events.id', '=', 'event-signs.event_id')->where('event-signs.user_id','=',$user_id)->get();
+             if($user_id != auth()->user()->id){
+                 return redirect()->back();
+             }
              return response()->json($data);
      }
     //Pas taak aan pagina

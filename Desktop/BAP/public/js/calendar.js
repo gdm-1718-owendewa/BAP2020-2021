@@ -32,7 +32,14 @@ $(document).ready(function () {
 
   if (document.getElementById('tasks-div') != null) {
     tasksDiv = document.getElementById('tasks-div');
+  }
+
+  var eventsDiv = '';
+
+  if (document.getElementById('events-div') != null) {
+    eventsDiv = document.getElementById('events-div');
   } //dagen container
+  //dagen container
 
 
   var daydivcontainer = '';
@@ -50,8 +57,24 @@ $(document).ready(function () {
 
   var MonthAndYear = '';
   MonthAndYear = document.getElementById("month-and-year-left");
-  MonthAndYear.innerHTML = today.getDate() + ' ' + months[currentMonth] + ' ' + currentYear;
-  document.getElementById('add-task-open-modal-button').setAttribute('data-date', today.getDate() + '-' + (currentMonth + 1) + '-' + currentYear);
+  var showtoday = '';
+
+  if (today.getDate() < 10) {
+    showtoday = '0' + today.getDate();
+  } else {
+    showtoday = today.getDate();
+  }
+
+  var showtodaymonth = '';
+
+  if (currentMonth + 1 < 10) {
+    showtodaymonth = '0' + (currentMonth + 1);
+  } else {
+    showtodaymonth = currentMonth + 1;
+  }
+
+  MonthAndYear.innerHTML = showtoday + ' ' + months[currentMonth] + ' ' + currentYear;
+  document.getElementById('add-task-open-modal-button').setAttribute('data-date', showtoday + '-' + showtodaymonth + '-' + currentYear);
   document.getElementById('add-div').style.display = "flex";
   tasksDiv.style.display = "flex"; //Voordat je de huidige dag ophaalt check of er een value aanwezig is in de localstorage van een dag waar juist een taak op is toegevoegd
 
@@ -63,12 +86,12 @@ $(document).ready(function () {
     document.getElementById('add-task-open-modal-button').setAttribute('data-date', day + '-' + month + '-' + year);
     showCurrentDayTasks(calenderu, day + '-' + month + '-' + year);
   } else {
-    showCurrentDayTasks(calenderu, today.getDate() + '-' + (currentMonth + 1) + '-' + currentYear);
+    showCurrentDayTasks(calenderu, showtoday + '-' + showtodaymonth + '-' + currentYear);
     localStorage.removeItem('currentDayTaskDay');
     localStorage.removeItem('currentDayTaskMonth');
     localStorage.removeItem('currentDayTaskYear');
-    setWithExpiry('currentDayTaskDay', today.getDate(), 600000);
-    setWithExpiry('currentDayTaskMonth', currentMonth + 1, 600000);
+    setWithExpiry('currentDayTaskDay', showtoday, 600000);
+    setWithExpiry('currentDayTaskMonth', showtodaymonth, 600000);
     setWithExpiry('currentDayTaskYear', currentYear, 600000);
   } //Toon de taken voor de geselecteerde dag
 
@@ -88,6 +111,10 @@ $(document).ready(function () {
         // What to do if we succeed
         tasksDiv.innerHTML = '';
 
+        if (response.length > 0) {
+          tasksDiv.innerHTML = '<h4>Taken</h4>';
+        }
+
         for (var _i = 0; _i < response.length; _i++) {
           tasksDiv.innerHTML += "<div class=\"task-div\"><div class=\"task-title-div\"><p>".concat(response[_i]["hour"], ":").concat(response[_i]["minute"], " - ").concat(response[_i]["description"], "</p></div><div class=\"task-button-div\"><a href=\"#\" class=\"edit-task\" data-i=\"").concat(response[_i]["id"], "\" data-u=\"").concat(response[_i]["user_id"], "\" data-d=\"").concat(response[_i]["description"], "\" data-h=\"").concat(response[_i]["hour"], "\" data-m=\"").concat(response[_i]["minute"], "\"><i class=\"far fa-edit\"></i></a><a href=\"#\" data-i=\"").concat(response[_i]["id"], "\" data-u=\"").concat(response[_i]["user_id"], "\" class=\"delete-task\"><i class=\"far fa-trash-alt\"></i></a></div></div>");
         }
@@ -98,7 +125,6 @@ $(document).ready(function () {
           var _loop = function _loop(_i2) {
             editTaskButtons[_i2].addEventListener('click', function (e) {
               e.preventDefault();
-              console.log(editTaskButtons[_i2]);
               document.getElementById('calendar-task-edit-div').style.display = "flex";
               scrollTo(0, 0);
               document.body.style.overflow = "hidden";
@@ -121,6 +147,32 @@ $(document).ready(function () {
 
         var taskDeleteButtons = document.querySelectorAll('.delete-task');
         deleteModalShow(taskDeleteButtons);
+      },
+      error: function error(response) {
+        console.log('Error' + response);
+      }
+    });
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      type: "POST",
+      url: baseURL + '/calender/dayevents',
+      data: {
+        user_id: calenderu,
+        date: date
+      },
+      success: function success(response) {
+        // What to do if we succeed
+        eventsDiv.innerHTML = '';
+
+        if (response.length > 0) {
+          eventsDiv.innerHTML = '<h4>Evenementen</h4>';
+        }
+
+        for (var _i3 = 0; _i3 < response.length; _i3++) {
+          eventsDiv.innerHTML += "<div><p>".concat(response[_i3].start_time, " - ").concat(response[_i3].title, "</p></div>");
+        }
       },
       error: function error(response) {
         console.log('Error' + response);
@@ -149,8 +201,22 @@ $(document).ready(function () {
     monthAndYear.innerHTML = months[month] + ' ' + currentYear; //Voor iedere dag in de maand maak een div aan
 
     for (i = 0; i < daysInMonth; i++) {
-      var actualDay = i + 1;
-      var actualMonth = month + 1;
+      var actualDay = '';
+
+      if (i + 1 < 10) {
+        actualDay = '0' + (i + 1);
+      } else {
+        actualDay = i + 1;
+      }
+
+      var actualMonth = '';
+
+      if (month + 1 < 10) {
+        actualMonth = '0' + (month + 1);
+      } else {
+        actualMonth = month + 1;
+      }
+
       var daydiva = document.createElement("a");
       daydiva.href = '#';
       daydiva.setAttribute("class", 'calendar-date-button');
@@ -174,18 +240,18 @@ $(document).ready(function () {
 
     var calendarDayButtons = document.querySelectorAll('.calendar-date-button');
 
-    var _loop2 = function _loop2(_i3) {
-      calendarDayButtons[_i3].addEventListener('click', function (e) {
+    var _loop2 = function _loop2(_i4) {
+      calendarDayButtons[_i4].addEventListener('click', function (e) {
         e.preventDefault();
         localStorage.clear();
 
-        var clickedDay = calendarDayButtons[_i3].getAttribute('data-day');
+        var clickedDay = calendarDayButtons[_i4].getAttribute('data-day');
 
-        var clickedMonth = calendarDayButtons[_i3].getAttribute('data-month');
+        var clickedMonth = calendarDayButtons[_i4].getAttribute('data-month');
 
-        var clickedYear = calendarDayButtons[_i3].getAttribute('data-year');
+        var clickedYear = calendarDayButtons[_i4].getAttribute('data-year');
 
-        setWithExpiry('clickedday', calendarDayButtons[_i3].getAttribute('data-date'), 300000);
+        setWithExpiry('clickedday', calendarDayButtons[_i4].getAttribute('data-date'), 300000);
         MonthAndYear.innerHTML = clickedDay + ' ' + clickedMonth + ' ' + clickedYear;
         /* AJAX CALL VOOR DE TAKEN VAN DE AANGEKLIKTE DAG*/
 
@@ -197,22 +263,25 @@ $(document).ready(function () {
           url: baseURL + '/calender/daytasks',
           data: {
             user_id: calenderu,
-            date: calendarDayButtons[_i3].getAttribute('data-date')
+            date: calendarDayButtons[_i4].getAttribute('data-date')
           },
           success: function success(response) {
             // What to do if we succeed
             tasksDiv.innerHTML = '';
 
-            for (var _i4 = 0; _i4 < response.length; _i4++) {
-              tasksDiv.innerHTML += "<div class=\"task-div\"><div class=\"task-title-div\"><p>".concat(response[_i4]["hour"], ":").concat(response[_i4]["minute"], " - ").concat(response[_i4]["description"], "</p></div><div class=\"task-button-div\"><a href=\"#\" class=\"edit-task\" data-i=\"").concat(response[_i4]["id"], "\" data-u=\"").concat(response[_i4]["user_id"], "\" data-d=\"").concat(response[_i4]["description"], "\" data-h=\"").concat(response[_i4]["hour"], "\" data-m=\"").concat(response[_i4]["minute"], "\"><i class=\"far fa-edit\"></i></a><a href=\"#\" data-i=\"").concat(response[_i4]["id"], "\" data-u=\"").concat(response[_i4]["user_id"], "\" class=\"delete-task\"><i class=\"far fa-trash-alt\"></i></a></div></div>");
+            if (response.length > 0) {
+              tasksDiv.innerHTML = '<h4>Taken</h4>';
+            }
+
+            for (var _i5 = 0; _i5 < response.length; _i5++) {
+              tasksDiv.innerHTML += "<div class=\"task-div\"><div class=\"task-title-div\"><p>".concat(response[_i5]["hour"], ":").concat(response[_i5]["minute"], " - ").concat(response[_i5]["description"], "</p></div><div class=\"task-button-div\"><a href=\"#\" class=\"edit-task\" data-i=\"").concat(response[_i5]["id"], "\" data-u=\"").concat(response[_i5]["user_id"], "\" data-d=\"").concat(response[_i5]["description"], "\" data-h=\"").concat(response[_i5]["hour"], "\" data-m=\"").concat(response[_i5]["minute"], "\"><i class=\"far fa-edit\"></i></a><a href=\"#\" data-i=\"").concat(response[_i5]["id"], "\" data-u=\"").concat(response[_i5]["user_id"], "\" class=\"delete-task\"><i class=\"far fa-trash-alt\"></i></a></div></div>");
             }
 
             var editTaskButtons = document.querySelectorAll(".edit-task");
-            console.log(editTaskButtons);
 
             if (editTaskButtons) {
               var _loop3 = function _loop3(j) {
-                editTaskButtons[j].setAttribute('data-date', calendarDayButtons[_i3].getAttribute('data-date'));
+                editTaskButtons[j].setAttribute('data-date', calendarDayButtons[_i4].getAttribute('data-date'));
                 setWithExpiry('currentDayTask', true, 300000);
                 var dayDate = editTaskButtons[j].getAttribute('data-date').split('-');
                 setWithExpiry('currentDayTaskDay', dayDate[0], 300000);
@@ -247,16 +316,42 @@ $(document).ready(function () {
             console.log('Error' + response);
           }
         });
+        $.ajax({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          type: "POST",
+          url: baseURL + '/calender/dayevents',
+          data: {
+            user_id: calenderu,
+            date: calendarDayButtons[_i4].getAttribute('data-date')
+          },
+          success: function success(response) {
+            // What to do if we succeed
+            eventsDiv.innerHTML = '';
+
+            if (response.length > 0) {
+              eventsDiv.innerHTML = '<h4>Evenementen</h4>';
+            }
+
+            for (var _i6 = 0; _i6 < response.length; _i6++) {
+              eventsDiv.innerHTML += "<div><p>".concat(response[_i6].start_time, " - ").concat(response[_i6].title, "</p></div>");
+            }
+          },
+          error: function error(response) {
+            console.log('Error' + response);
+          }
+        });
         /* Toon taken en zet add task div zichtbaar*/
 
-        document.getElementById('add-task-open-modal-button').setAttribute('data-date', calendarDayButtons[_i3].getAttribute('data-date'));
+        document.getElementById('add-task-open-modal-button').setAttribute('data-date', calendarDayButtons[_i4].getAttribute('data-date'));
         document.getElementById('add-div').style.display = "flex";
         tasksDiv.style.display = "flex";
       });
     };
 
-    for (var _i3 = 0; _i3 < calendarDayButtons.length; _i3++) {
-      _loop2(_i3);
+    for (var _i4 = 0; _i4 < calendarDayButtons.length; _i4++) {
+      _loop2(_i4);
     }
 
     $.ajax({
@@ -280,6 +375,37 @@ $(document).ready(function () {
           var item = document.querySelector("[day-date='" + element + "']");
           var dayWithTaskDiv = document.createElement("div");
           dayWithTaskDiv.classList.add('task-indicator');
+
+          if (item != null) {
+            item.appendChild(dayWithTaskDiv);
+          }
+        });
+      },
+      error: function error(response) {
+        console.log('Error' + response);
+      }
+    });
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      type: "POST",
+      url: baseURL + '/calender/allevents',
+      data: {
+        user_id: calenderu
+      },
+      success: function success(response) {
+        // What to do if we succeed
+        var eventDates = [];
+        response.forEach(function (element) {
+          if (!eventDates.includes(element['start_date'])) {
+            eventDates.push(element['start_date']);
+          }
+        });
+        eventDates.forEach(function (element) {
+          var item = document.querySelector("[day-date='" + element + "']");
+          var dayWithTaskDiv = document.createElement("div");
+          dayWithTaskDiv.classList.add('event-indicator');
 
           if (item != null) {
             item.appendChild(dayWithTaskDiv);
@@ -356,8 +482,6 @@ $(document).ready(function () {
 
 
   function nextMonth() {
-    console.log(currentMonth);
-
     if (currentMonth == 11) {
       currentYear = Number(currentYear) + 1;
       currentMonth = 0;
@@ -367,7 +491,6 @@ $(document).ready(function () {
     // currentMonth =  (currentMonth + 1 ) % 12;
 
 
-    console.log(currentMonth, currentYear);
     showCalendar(currentMonth, currentYear);
   }
 
@@ -392,7 +515,6 @@ $(document).ready(function () {
         document.body.style.height = "100vh";
         blackoutDiv.style.display = 'flex';
         var deleteTaskModal = document.querySelector('.delete-task-modal');
-        console.log(deleteTaskModal);
         deleteTaskModal.style.display = "flex";
         var deleteForm = document.getElementById('delete-task-form');
         deleteForm.action = "".concat(baseURL, "/calender/").concat(taskDeleteButtons[index].getAttribute('data-u'), "/deletetask/").concat(taskDeleteButtons[index].getAttribute('data-i'));

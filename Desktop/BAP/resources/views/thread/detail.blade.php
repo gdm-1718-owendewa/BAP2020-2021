@@ -58,6 +58,23 @@
     </div>
     {{-- Discussie detail container --}}
     <div id="detail-thread-container" >
+        <div class="thread-blackout-div"></div>
+        <div class="delete-comment-modal">
+            <a id="comment-delete-modal-close-button" href="#">&#10005;</a> 
+            <div id="comment-delete-modal-content-div">
+            <div id="comment-delete-modal-message-div">
+                <p id="comment-delete-modal-message"></p>
+            </div>
+            <div id="comment-delete-modal-buttons-div">
+                <form action="" method="post" id="delete-comment-form">
+                    @method('delete');
+                    @csrf
+                    <button id="comment-delete-accept">Ja</button>
+                </form>
+                <a href="#" id="comment-delete-decline">Nee</a>
+                </div>  
+            </div>`
+        </div>
         <div id="thread-question-info">
             <p>{!!$thread->question!!}</p>
         </div>

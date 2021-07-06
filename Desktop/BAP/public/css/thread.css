@@ -216,6 +216,7 @@ div.thread-general-container div.thread-blackout-div {
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 11;
+  display: none;
 }
 div.thread-general-container div.delete-comment-modal {
   width: 400px;
@@ -227,6 +228,7 @@ div.thread-general-container div.delete-comment-modal {
   transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 11;
+  display: none;
 }
 @media screen and (max-width: 1000px) {
   div.thread-general-container div.delete-comment-modal {
@@ -259,7 +261,11 @@ div.thread-general-container div.delete-comment-modal div#comment-delete-modal-c
   font-size: 1.5em;
   padding-bottom: 30px;
 }
-div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div {
+  display: flex;
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a, div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div button {
+  flex: 1;
   text-decoration: none;
   display: inline-block;
   width: 150px;
@@ -270,7 +276,7 @@ div.thread-general-container div.delete-comment-modal div#comment-delete-modal-c
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a, div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div button {
     width: 100px;
   }
 }

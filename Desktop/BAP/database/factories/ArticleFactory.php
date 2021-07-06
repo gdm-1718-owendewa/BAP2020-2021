@@ -26,7 +26,7 @@ class ArticleFactory extends Factory
                 'author' => $user->name,
                 'author_id' => $user->id,
                 'title' => $this->faker->name(),
-                'content' => '<p>'. $this->faker->text() .'</p>',
+                'content' => '<p>'. $this->faker->sentence(501) .'</p>',
                 'image_name' => null,
         ];
     }

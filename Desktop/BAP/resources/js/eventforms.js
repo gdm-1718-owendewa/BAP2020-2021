@@ -100,37 +100,71 @@ if(document.getElementById('event-create-div')){
     })
     let datefromCheck = false;
     let datefrom = document.getElementById('date-from');
+    let dateuntilCheck = false;
+    let dateuntil = document.getElementById('date-until');
 
     document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-times"></i>'
     document.getElementById('datefromSpan').style.color = "red"
 
     function fooDateFrom() {
         if(datefrom.value != ''){
-            datefromCheck = true;
-            document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
-            document.getElementById('datefromSpan').style.color = "green"
-            setTimeout(fooDateFrom, 2000);
+            if(dateuntil.value != ''){
+                d1 = new Date(datefrom.getAttribute('data-date'));
+                d2 = new Date(dateuntil.getAttribute('data-date'));
+                if(d1 <= d2){
+                    datefromCheck = true;
+                    document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
+                    document.getElementById('datefromSpan').style.color = "green"
+                    setTimeout(fooDateFrom, 500);
+                }else{
+                    datefromCheck = false;
+                    document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-times"></i>'
+                    document.getElementById('datefromSpan').style.color = "red"
+                    setTimeout(fooDateFrom, 500);
+                }
+            }else{
+                datefromCheck = true;
+                document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
+                document.getElementById('datefromSpan').style.color = "green"
+                setTimeout(fooDateFrom, 500);
+            }
         }else{
             datefromCheck = false;
-            setTimeout(fooDateFrom, 2000);
+            setTimeout(fooDateFrom, 500);
         }
         validateForm();
 
     }
     fooDateFrom();
-    let dateuntilCheck = false;
-    let dateuntil = document.getElementById('date-until');
+    
     document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-times"></i>'
     document.getElementById('dateuntilSpan').style.color = "red"
     function fooDateUntil() {
         if(dateuntil.value != ''){
-            dateuntilCheck = true;
-            document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
-            document.getElementById('dateuntilSpan').style.color = "green"
-            setTimeout(fooDateUntil, 2000);
+            if(datefrom.value != ''){
+                d1 = new Date(datefrom.getAttribute('data-date'));
+                d2 = new Date(dateuntil.getAttribute('data-date'));
+                if(d1 <= d2){
+                    dateuntilCheck = true;
+                    document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
+                    document.getElementById('dateuntilSpan').style.color = "green"
+                    setTimeout(fooDateUntil, 500);
+                }else{
+                    dateuntilCheck = false;
+                    document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-times"></i>'
+                    document.getElementById('dateuntilSpan').style.color = "red"
+                    setTimeout(fooDateUntil, 500);
+                }
+            }else{
+                dateuntilCheck = true;
+                document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
+                document.getElementById('dateuntilSpan').style.color = "green"
+                setTimeout(fooDateUntil, 500);
+            }
+          
         }else{
             dateuntilCheck = false;
-            setTimeout(fooDateUntil, 2000);
+            setTimeout(fooDateUntil, 500);
         }
         validateForm();
 
@@ -247,35 +281,69 @@ if(document.getElementById('event-edit-div')){
     })
     let datefromCheck = true;
     let datefrom = document.getElementById('date-from');
+    let dateuntilCheck = true;
+    let dateuntil = document.getElementById('date-until');
 
     document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-times"></i>'
     document.getElementById('datefromSpan').style.color = "red"
 
     function fooDateFrom() {
         if(datefrom.value != ''){
-            datefromCheck = true;
-            document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
-            document.getElementById('datefromSpan').style.color = "green"
-            setTimeout(fooDateFrom, 2000);
+            if(dateuntil.value != ''){
+                d1 = new Date(datefrom.getAttribute('data-date'));
+                d2 = new Date(dateuntil.getAttribute('data-date'));
+                if(d1 <= d2){
+                    datefromCheck = true;
+                    document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
+                    document.getElementById('datefromSpan').style.color = "green"
+                    setTimeout(fooDateFrom, 500);
+                }else{
+                    datefromCheck = false;
+                    document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-times"></i>'
+                    document.getElementById('datefromSpan').style.color = "red"
+                    setTimeout(fooDateFrom, 500);
+                }
+            }else{
+                datefromCheck = true;
+                document.getElementById('datefromSpan').innerHTML = '<i class="fas fa-check"></i>'
+                document.getElementById('datefromSpan').style.color = "green"
+                setTimeout(fooDateFrom, 500);
+            }
         }else{
             datefromCheck = false;
-            setTimeout(fooDateFrom, 2000);
+            setTimeout(fooDateFrom, 500);
         }
         validateForm();
     }
-    let dateuntilCheck = true;
-    let dateuntil = document.getElementById('date-until');
+
     document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-times"></i>'
     document.getElementById('dateuntilSpan').style.color = "red"
+
     function fooDateUntil() {
         if(dateuntil.value != ''){
-            dateuntilCheck = true;
-            document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
-            document.getElementById('dateuntilSpan').style.color = "green"
-            setTimeout(fooDateUntil, 2000);
+            if(datefrom.value != ''){
+                d1 = new Date(datefrom.getAttribute('data-date'));
+                d2 = new Date(dateuntil.getAttribute('data-date'));
+                if(d1 <= d2){
+                    dateuntilCheck = true;
+                    document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
+                    document.getElementById('dateuntilSpan').style.color = "green"
+                    setTimeout(fooDateUntil, 500);
+                }else{
+                    dateuntilCheck = false;
+                    document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-times"></i>'
+                    document.getElementById('dateuntilSpan').style.color = "red"
+                    setTimeout(fooDateUntil, 500);
+                }
+            }else{
+                dateuntilCheck = true;
+                document.getElementById('dateuntilSpan').innerHTML = '<i class="fas fa-check"></i>'
+                document.getElementById('dateuntilSpan').style.color = "green"
+                setTimeout(fooDateUntil, 500);
+            }
         }else{
             dateuntilCheck = false;
-            setTimeout(fooDateUntil, 2000);
+            setTimeout(fooDateUntil, 500);
         }
         validateForm();
     }

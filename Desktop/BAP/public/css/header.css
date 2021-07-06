@@ -24,7 +24,6 @@ header div#tutorials-results div#tutorials-results-content-div a div.tutorials-r
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item:hover {
   background-color: #e5e4e4;
@@ -32,11 +31,11 @@ header div#tutorials-results div#tutorials-results-content-div a div.tutorials-r
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#threads-results div#threads-results-content-div a {
   width: 75%;
@@ -50,7 +49,6 @@ header div#threads-results div#threads-results-content-div a div.threads-results
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#threads-results div#threads-results-content-div a div.threads-results-item:hover {
   background-color: #e5e4e4;
@@ -58,11 +56,11 @@ header div#threads-results div#threads-results-content-div a div.threads-results
 header div#threads-results div#threads-results-content-div a div.threads-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#threads-results div#threads-results-content-div a div.threads-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#courses-results div#courses-results-content-div a {
   width: 75%;
@@ -76,7 +74,6 @@ header div#courses-results div#courses-results-content-div a div.courses-results
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#courses-results div#courses-results-content-div a div.courses-results-item:hover {
   background-color: #e5e4e4;
@@ -84,11 +81,11 @@ header div#courses-results div#courses-results-content-div a div.courses-results
 header div#courses-results div#courses-results-content-div a div.courses-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#courses-results div#courses-results-content-div a div.courses-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#events-results div#events-results-content-div a {
   width: 75%;
@@ -102,7 +99,6 @@ header div#events-results div#events-results-content-div a div.events-results-it
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#events-results div#events-results-content-div a div.events-results-item:hover {
   background-color: #e5e4e4;
@@ -110,11 +106,11 @@ header div#events-results div#events-results-content-div a div.events-results-it
 header div#events-results div#events-results-content-div a div.events-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#events-results div#events-results-content-div a div.events-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#articles-results div#articles-results-content-div a {
   width: 75%;
@@ -128,7 +124,6 @@ header div#articles-results div#articles-results-content-div a div.articles-resu
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#articles-results div#articles-results-content-div a div.articles-results-item:hover {
   background-color: #e5e4e4;
@@ -136,11 +131,11 @@ header div#articles-results div#articles-results-content-div a div.articles-resu
 header div#articles-results div#articles-results-content-div a div.articles-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#articles-results div#articles-results-content-div a div.articles-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#users-results div#users-results-content-div a {
   width: 75%;
@@ -154,7 +149,6 @@ header div#users-results div#users-results-content-div a div.users-results-item 
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#users-results div#users-results-content-div a div.users-results-item:hover {
   background-color: #e5e4e4;
@@ -162,11 +156,11 @@ header div#users-results div#users-results-content-div a div.users-results-item:
 header div#users-results div#users-results-content-div a div.users-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#users-results div#users-results-content-div a div.users-results-item div#user-info {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#no-results {
   display: flex;

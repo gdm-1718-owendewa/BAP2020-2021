@@ -37,6 +37,12 @@ let tasksDiv = '';
 if(document.getElementById('tasks-div') !=null){
     tasksDiv = document.getElementById('tasks-div');
 }
+let eventsDiv = '';
+
+  if (document.getElementById('events-div') != null) {
+    eventsDiv = document.getElementById('events-div');
+  } //dagen container
+
 //dagen container
 let daydivcontainer = ''
 if(document.getElementById("day-div") !=null){
@@ -50,8 +56,20 @@ if(document.querySelector('.calender') !=null){
 //dag,maand,jaar boven taken
 let MonthAndYear = ''
 MonthAndYear = document.getElementById("month-and-year-left");
-MonthAndYear.innerHTML = today.getDate() +' '+months[currentMonth]+' '+currentYear;
-document.getElementById('add-task-open-modal-button').setAttribute('data-date', today.getDate() +'-'+(currentMonth+1)+'-'+currentYear)
+let showtoday = '';
+if(today.getDate() < 10 ){
+    showtoday = '0' + today.getDate();
+}else{
+    showtoday = today.getDate();
+}
+let showtodaymonth = '';
+if((currentMonth+1) < 10){
+    showtodaymonth = '0' + (currentMonth+1)
+}else{
+    showtodaymonth = (currentMonth+1)
+}
+MonthAndYear.innerHTML =  showtoday +' '+months[currentMonth]+' '+currentYear;
+document.getElementById('add-task-open-modal-button').setAttribute('data-date', showtoday +'-'+showtodaymonth+'-'+currentYear)
 document.getElementById('add-div').style.display ="flex";
 tasksDiv.style.display ="flex";
 
@@ -65,12 +83,12 @@ if(currentTaskDayCheck){
    showCurrentDayTasks(calenderu, day +'-'+month+'-'+year)
 
 }else{
-    showCurrentDayTasks(calenderu, today.getDate() +'-'+(currentMonth+1)+'-'+currentYear)
+    showCurrentDayTasks(calenderu, showtoday +'-'+showtodaymonth+'-'+currentYear)
     localStorage.removeItem('currentDayTaskDay');
     localStorage.removeItem('currentDayTaskMonth');
     localStorage.removeItem('currentDayTaskYear');
-    setWithExpiry('currentDayTaskDay', today.getDate(), 600000);
-    setWithExpiry('currentDayTaskMonth', (currentMonth+1), 600000);
+    setWithExpiry('currentDayTaskDay', showtoday, 600000);
+    setWithExpiry('currentDayTaskMonth', showtodaymonth, 600000);
     setWithExpiry('currentDayTaskYear', currentYear, 600000);
 }
 //Toon de taken voor de geselecteerde dag
@@ -87,6 +105,9 @@ function showCurrentDayTasks(calenderu, date){
         }, 
             success: function(response){ // What to do if we succeed
              tasksDiv.innerHTML = '';
+             if(response.length > 0){
+                tasksDiv.innerHTML = '<h4>Taken</h4>';
+             }
             for(let i = 0; i < response.length; i ++){
                 tasksDiv.innerHTML += `<div class="task-div"><div class="task-title-div"><p>${response[i]["hour"]}:${response[i]["minute"]} - ${response[i]["description"]}</p></div><div class="task-button-div"><a href="#" class="edit-task" data-i="${response[i]["id"]}" data-u="${response[i]["user_id"]}" data-d="${response[i]["description"]}" data-h="${response[i]["hour"]}" data-m="${response[i]["minute"]}"><i class="far fa-edit"></i></a><a href="#" data-i="${response[i]["id"]}" data-u="${response[i]["user_id"]}" class="delete-task"><i class="far fa-trash-alt"></i></a></div></div>`
             }
@@ -95,7 +116,6 @@ function showCurrentDayTasks(calenderu, date){
             for(let i = 0; i < editTaskButtons.length; i++){
                 editTaskButtons[i].addEventListener('click', (e)=>{
                     e.preventDefault();
-                    console.log(editTaskButtons[i]);
                     document.getElementById('calendar-task-edit-div').style.display = "flex";
                     scrollTo(0,0);
                     document.body.style.overflow = "hidden";
@@ -114,6 +134,29 @@ function showCurrentDayTasks(calenderu, date){
             let taskDeleteButtons = document.querySelectorAll('.delete-task');
             deleteModalShow(taskDeleteButtons);
         },
+        error: function(response){
+        console.log('Error'+response);
+    }
+    })
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "POST",
+        url: baseURL + '/calender/dayevents', 
+        data: { 
+            user_id: calenderu,
+            date: date,
+        }, 
+            success: function(response){ // What to do if we succeed
+                eventsDiv   .innerHTML = '';
+                if(response.length > 0){
+                    eventsDiv.innerHTML = '<h4>Evenementen</h4>';
+                 }
+                for(let i = 0; i < response.length; i ++){
+                    eventsDiv.innerHTML += `<div><p>${response[i].start_time} - ${response[i].title}</p></div>`
+                }
+            },
         error: function(response){
         console.log('Error'+response);
     }
@@ -141,8 +184,18 @@ function showCalendar(month, year){
     monthAndYear.innerHTML = months[month] +' ' + currentYear;
     //Voor iedere dag in de maand maak een div aan
     for(i=0; i < daysInMonth; i++){
-        let actualDay = i+1
-        let actualMonth = month+1
+        let actualDay = '';
+        if(i+1 < 10){
+            actualDay = '0' + (i+1)
+        }else{
+            actualDay = (i+1)
+        }
+        let actualMonth = '';
+        if(month+1 < 10){
+            actualMonth = '0' + (month+1)
+        }else{
+            actualMonth = (month+1)
+        }
         let daydiva = document.createElement("a");
         daydiva.href='#';
         daydiva.setAttribute("class", 'calendar-date-button');
@@ -150,6 +203,7 @@ function showCalendar(month, year){
         daydiva.setAttribute("data-day", actualDay);
         daydiva.setAttribute("data-month", months[month]);
         daydiva.setAttribute("data-year", currentYear);
+
         let daydiv = document.createElement("div");
         daydiva.appendChild(daydiv);
         daydiva.dataset.dayofmonth = actualDay;
@@ -188,11 +242,13 @@ function showCalendar(month, year){
                     }, 
                         success: function(response){ // What to do if we succeed
                          tasksDiv.innerHTML = '';
+                         if(response.length > 0){
+                            tasksDiv.innerHTML = '<h4>Taken</h4>';
+                         }
                         for(let i = 0; i < response.length; i ++){
                             tasksDiv.innerHTML += `<div class="task-div"><div class="task-title-div"><p>${response[i]["hour"]}:${response[i]["minute"]} - ${response[i]["description"]}</p></div><div class="task-button-div"><a href="#" class="edit-task" data-i="${response[i]["id"]}" data-u="${response[i]["user_id"]}" data-d="${response[i]["description"]}" data-h="${response[i]["hour"]}" data-m="${response[i]["minute"]}"><i class="far fa-edit"></i></a><a href="#" data-i="${response[i]["id"]}" data-u="${response[i]["user_id"]}" class="delete-task"><i class="far fa-trash-alt"></i></a></div></div>`
                         }
                         let editTaskButtons = document.querySelectorAll(".edit-task");
-                        console.log(editTaskButtons);
                         if(editTaskButtons){
                             for(let j = 0; j < editTaskButtons.length; j++){
                                 editTaskButtons[j].setAttribute('data-date', calendarDayButtons[i].getAttribute('data-date'));
@@ -221,6 +277,29 @@ function showCalendar(month, year){
                         let taskDeleteButtons = document.querySelectorAll('.delete-task');
                         deleteModalShow(taskDeleteButtons);
                     },
+                    error: function(response){
+                    console.log('Error'+response);
+                }
+                })
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: "POST",
+                    url: baseURL + '/calender/dayevents', 
+                    data: { 
+                        user_id: calenderu,
+                        date: calendarDayButtons[i].getAttribute('data-date'),
+                    }, 
+                        success: function(response){ // What to do if we succeed
+                            eventsDiv   .innerHTML = '';
+                            if(response.length > 0){
+                                eventsDiv.innerHTML = '<h4>Evenementen</h4>';
+                             }
+                            for(let i = 0; i < response.length; i ++){
+                                eventsDiv.innerHTML += `<div><p>${response[i].start_time} - ${response[i].title}</p></div>`
+                            }
+                        },
                     error: function(response){
                     console.log('Error'+response);
                 }
@@ -255,11 +334,41 @@ function showCalendar(month, year){
                     if(item!=null){
                        item.appendChild(dayWithTaskDiv)
                     }
+                }); 
+        },
+        error: function(response){
+            console.log('Error'+response);
+        }
+    })
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "POST",
+        url: baseURL + '/calender/allevents', 
+        data: { 
+            user_id: calenderu,
+        }, 
+            success: function(response){ // What to do if we succeed
+                let eventDates = [];
+                response.forEach(element => {
+                    if(!eventDates.includes(element['start_date'])){
+                        eventDates.push(element['start_date'])
+                    }
+                });
+
+               eventDates.forEach(element => {
+                    let item = document.querySelector("[day-date='"+element+"']");
+                    let dayWithTaskDiv = document.createElement("div");
+                    dayWithTaskDiv.classList.add('event-indicator')
+                    if(item!=null){
+                       item.appendChild(dayWithTaskDiv)
+                    }
                 });
         },
         error: function(response){
-        console.log('Error'+response);
-    }
+            console.log('Error'+response);
+        }
     })
 
 }
@@ -318,7 +427,6 @@ if(prevButton){
 }
 //Ga naar volgende maand
 function nextMonth(){
-    console.log(currentMonth)
     if(currentMonth == 11){
         currentYear = Number(currentYear) + 1
         currentMonth = 0
@@ -327,7 +435,6 @@ function nextMonth(){
     }
     // currentYear = (currentMonth === 11 ) ? currentYear + 1: currentYear;
     // currentMonth =  (currentMonth + 1 ) % 12;
-    console.log(currentMonth, currentYear);
     showCalendar(currentMonth, currentYear);
 }
 let nextButton = document.getElementById("next-button")
@@ -350,7 +457,6 @@ function deleteModalShow(taskDeleteButtons){
             document.body.style.height = "100vh";
             blackoutDiv.style.display ='flex';
             let deleteTaskModal = document.querySelector('.delete-task-modal')
-            console.log(deleteTaskModal);
             deleteTaskModal.style.display = "flex";
             let deleteForm = document.getElementById('delete-task-form');
             deleteForm.action = `${baseURL}/calender/${taskDeleteButtons[index].getAttribute('data-u')}/deletetask/${taskDeleteButtons[index].getAttribute('data-i')}`;

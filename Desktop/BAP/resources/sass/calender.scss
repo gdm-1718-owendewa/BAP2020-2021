@@ -271,6 +271,32 @@ div#calender-div{
                 }
             }
         }
+        div#events-div{
+            width:100%;
+            flex:4;
+            flex-direction: column;
+            @media screen and (max-width: 1000px    ) {
+                margin-top:1rem;
+               
+                 
+              }
+            @media screen and (max-width: 600px    ) {
+            min-height: 200px;
+            
+                
+            }
+            .event-div{
+                display: flex;
+                margin-top:.25rem;
+                margin-bottom:.25rem;
+                div.event-title-div{
+                    flex:2;
+                    margin-right:5px;
+                    word-break: break-all;
+
+                }
+            }
+        }
         div#add-div{
             width:100%;
             flex:1;
@@ -346,6 +372,15 @@ div#calender-div{
                             position:absolute;
                             right:5px;
                             top:10px;
+                        }
+                        .event-indicator{
+                            background-color: blue;
+                            width:10px;
+                            height: 10px;
+                            border-radius:50%;
+                            position:absolute;
+                            right:5px;
+                            top:13px;
                         }
                     }
                 }

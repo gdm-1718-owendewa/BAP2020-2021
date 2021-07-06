@@ -2241,7 +2241,7 @@ function doneTyping() {
           var articlesResultContentDiv = document.getElementById('articles-results-content-div');
 
           for (var _i2 = 0; _i2 < articles.length; _i2++) {
-            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[_i2].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[_i2].title + '<br>Door: ' + articles[_i2].author + '</p></div></a>';
+            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[_i2].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[_i2].title + ' - ' + articles[_i2].author + '</p></div></a>';
           }
         } //Events
 
@@ -2252,7 +2252,7 @@ function doneTyping() {
           var events = response['events'];
 
           for (var _i3 = 0; _i3 < events.length; _i3++) {
-            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[_i3].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[_i3].title + '<br>Door: ' + events[_i3].author + '</p></div></a>';
+            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[_i3].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[_i3].title + ' - ' + events[_i3].author + '</p></div></a>';
           }
         } //Tutorials
 
@@ -2263,7 +2263,7 @@ function doneTyping() {
           var tutorialResultContentDiv = document.getElementById('tutorials-results-content-div');
 
           for (var _i4 = 0; _i4 < tutorials.length; _i4++) {
-            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[_i4].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[_i4].title + '<br>Door: ' + tutorials[_i4].author + '</p></div></a>';
+            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[_i4].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[_i4].title + ' - ' + tutorials[_i4].author + '</p></div></a>';
           }
         } //Discussies
 
@@ -2274,7 +2274,7 @@ function doneTyping() {
           var threadsResultContentDiv = document.getElementById('threads-results-content-div');
 
           for (var _i5 = 0; _i5 < threads.length; _i5++) {
-            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[_i5].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[_i5].title + '<br>Door: ' + threads[_i5].author + '</p></div></a>';
+            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[_i5].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[_i5].title + ' - ' + threads[_i5].author + '</p></div></a>';
           }
         } //Cursussen
 
@@ -2285,7 +2285,7 @@ function doneTyping() {
           var courses = response['course'];
 
           for (var _i6 = 0; _i6 < courses.length; _i6++) {
-            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[_i6].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[_i6].title + '<br>Door: ' + courses[_i6].author + '</p></div></a>';
+            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[_i6].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[_i6].title + ' - ' + courses[_i6].author + '</p></div></a>';
           }
         } //Gebruikers
 
@@ -2301,7 +2301,7 @@ function doneTyping() {
 
             for (var _i7 = 0; _i7 < users.length; _i7++) {
               if (users[_i7].name != 'Admin' || users[_i7].email != 'admin@email.be') {
-                usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[_i7].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[_i7].name + '<br><em>' + users[_i7].shopname + '</em></p> </div></div></a>';
+                usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[_i7].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[_i7].name + ' - <em>' + users[_i7].shopname + '</em></p> </div></div></a>';
               }
             }
           }
@@ -2785,27 +2785,28 @@ var _loop5 = function _loop5(index) {
   var baseURL = window.location.origin;
   commentDeleteButtons[index].addEventListener('click', function (e) {
     e.preventDefault();
-    var blackoutDiv = document.createElement('div');
-    blackoutDiv.classList.add('thread-blackout-div');
-    document.getElementById('detail-thread-container').appendChild(blackoutDiv);
-    var deleteCommentModal = document.createElement('div');
-    deleteCommentModal.classList.add('delete-comment-modal');
-    document.getElementById('detail-thread-container').appendChild(deleteCommentModal);
-    deleteCommentModal.innerHTML = "\n        <a id=\"comment-delete-modal-close-button\" href=\"#\">&#10005;</a> \n        <div id=\"comment-delete-modal-content-div\">\n        <div id=\"comment-delete-modal-message-div\">\n            <p id=\"comment-delete-modal-message\"></p>\n        </div>\n        <div id=\"comment-delete-modal-buttons-div\">\n            <a href=\"".concat(baseURL + '/delete-comment/' + commentDeleteButtons[index].getAttribute('data-i'), "\" id=\"comment-delete-accept\">Ja</a>\n            <a href=\"#\" id=\"comment-delete-decline\">Nee</a>\n            </div>  \n        </div>");
+    var blackoutDiv = document.querySelector('.thread-blackout-div');
+    var deleteCommentModal = document.querySelector('.delete-comment-modal');
+    blackoutDiv.style.display = "block";
+    deleteCommentModal.style.display = "block"; // <a href="${baseURL+'/delete-comment/'+commentDeleteButtons[index].getAttribute('data-i')}" id="comment-delete-accept">Ja</a>
+
+    document.getElementById('delete-comment-form').action = baseURL + '/delete-comment/' + commentDeleteButtons[index].getAttribute('data-i');
     document.getElementById('comment-delete-modal-message').innerHTML = "Bent u zeker dat u deze comment wilt verwijderen?";
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
     document.getElementById('comment-delete-decline').addEventListener('click', function (e) {
       e.preventDefault();
-      document.getElementById('detail-thread-container').removeChild(deleteCommentModal);
-      document.getElementById('detail-thread-container').removeChild(blackoutDiv);
+      blackoutDiv.style.display = "none";
+      deleteCommentModal.style.display = "none";
+      document.getElementById('delete-comment-form').action = "";
       document.body.style.overflow = "";
       document.body.style.height = "";
     });
     document.getElementById('comment-delete-modal-close-button').addEventListener('click', function (e) {
       e.preventDefault();
-      document.getElementById('detail-thread-container').removeChild(deleteCommentModal);
-      document.getElementById('detail-thread-container').removeChild(blackoutDiv);
+      blackoutDiv.style.display = "none";
+      deleteCommentModal.style.display = "none";
+      document.getElementById('delete-comment-form').action = "";
       document.body.style.overflow = "";
       document.body.style.height = "";
     });

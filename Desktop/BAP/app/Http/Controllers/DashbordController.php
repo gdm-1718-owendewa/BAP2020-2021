@@ -34,7 +34,7 @@ class DashbordController extends Controller
         }
         $following_courses_count = count($following_courses);
         //Ingeschreven evenementen
-        $following_events = EventSigns::join('events', 'events.id', '=', 'event-signs.event_id')->where('event-signs.user_id' ,'=', $user->id)->where('events.start_date' ,'>', Carbon::now()->format('d-m-Y'))->orderBy('event-signs.event_id')->get();
+        $following_events = EventSigns::join('events', 'events.id', '=', 'event-signs.event_id')->where('event-signs.user_id' ,'=', $user->id)->orderBy('event-signs.event_id')->get();
         foreach($following_events as $fevent){
             $fevent->event_info = Event::where('id',$fevent->event_id)->first();
             $fevent->show = Carbon::parse($fevent->event_info->start_date)->gt(Carbon::now());

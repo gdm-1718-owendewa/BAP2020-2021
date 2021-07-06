@@ -737,6 +737,31 @@ div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a
 div#calender-div div#calender-left div#tasks-div .task-div div.task-button-div a.delete-task {
   background-color: #cb0000;
 }
+div#calender-div div#calender-left div#events-div {
+  width: 100%;
+  flex: 4;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#calender-div div#calender-left div#events-div {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#calender-div div#calender-left div#events-div {
+    min-height: 200px;
+  }
+}
+div#calender-div div#calender-left div#events-div .event-div {
+  display: flex;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+div#calender-div div#calender-left div#events-div .event-div div.event-title-div {
+  flex: 2;
+  margin-right: 5px;
+  word-break: break-all;
+}
 div#calender-div div#calender-left div#add-div {
   width: 100%;
   flex: 1;
@@ -819,6 +844,15 @@ div#calender-div div#calender-right div.calender div#day-div a div.day-of-month 
   position: absolute;
   right: 5px;
   top: 10px;
+}
+div#calender-div div#calender-right div.calender div#day-div a div.day-of-month .event-indicator {
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 13px;
 }
 div#calender-div div#calender-right div.calendar-buttons {
   display: flex;
@@ -2345,7 +2379,6 @@ header div#tutorials-results div#tutorials-results-content-div a div.tutorials-r
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item:hover {
   background-color: #e5e4e4;
@@ -2353,11 +2386,11 @@ header div#tutorials-results div#tutorials-results-content-div a div.tutorials-r
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#tutorials-results div#tutorials-results-content-div a div.tutorials-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#threads-results div#threads-results-content-div a {
   width: 75%;
@@ -2371,7 +2404,6 @@ header div#threads-results div#threads-results-content-div a div.threads-results
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#threads-results div#threads-results-content-div a div.threads-results-item:hover {
   background-color: #e5e4e4;
@@ -2379,11 +2411,11 @@ header div#threads-results div#threads-results-content-div a div.threads-results
 header div#threads-results div#threads-results-content-div a div.threads-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#threads-results div#threads-results-content-div a div.threads-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#courses-results div#courses-results-content-div a {
   width: 75%;
@@ -2397,7 +2429,6 @@ header div#courses-results div#courses-results-content-div a div.courses-results
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#courses-results div#courses-results-content-div a div.courses-results-item:hover {
   background-color: #e5e4e4;
@@ -2405,11 +2436,11 @@ header div#courses-results div#courses-results-content-div a div.courses-results
 header div#courses-results div#courses-results-content-div a div.courses-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#courses-results div#courses-results-content-div a div.courses-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#events-results div#events-results-content-div a {
   width: 75%;
@@ -2423,7 +2454,6 @@ header div#events-results div#events-results-content-div a div.events-results-it
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#events-results div#events-results-content-div a div.events-results-item:hover {
   background-color: #e5e4e4;
@@ -2431,11 +2461,11 @@ header div#events-results div#events-results-content-div a div.events-results-it
 header div#events-results div#events-results-content-div a div.events-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#events-results div#events-results-content-div a div.events-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#articles-results div#articles-results-content-div a {
   width: 75%;
@@ -2449,7 +2479,6 @@ header div#articles-results div#articles-results-content-div a div.articles-resu
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#articles-results div#articles-results-content-div a div.articles-results-item:hover {
   background-color: #e5e4e4;
@@ -2457,11 +2486,11 @@ header div#articles-results div#articles-results-content-div a div.articles-resu
 header div#articles-results div#articles-results-content-div a div.articles-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#articles-results div#articles-results-content-div a div.articles-results-item p {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#users-results div#users-results-content-div a {
   width: 75%;
@@ -2475,7 +2504,6 @@ header div#users-results div#users-results-content-div a div.users-results-item 
   justify-content: stretch;
   align-items: stretch;
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 header div#users-results div#users-results-content-div a div.users-results-item:hover {
   background-color: #e5e4e4;
@@ -2483,11 +2511,11 @@ header div#users-results div#users-results-content-div a div.users-results-item:
 header div#users-results div#users-results-content-div a div.users-results-item i {
   flex: 1;
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header div#users-results div#users-results-content-div a div.users-results-item div#user-info {
-  flex: 3;
-  margin-left: 5%;
+  flex: 4;
+  margin-left: 2%;
 }
 header div#no-results {
   display: flex;
@@ -5843,6 +5871,7 @@ div.thread-general-container div.thread-blackout-div {
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 11;
+  display: none;
 }
 div.thread-general-container div.delete-comment-modal {
   width: 400px;
@@ -5854,6 +5883,7 @@ div.thread-general-container div.delete-comment-modal {
   transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 11;
+  display: none;
 }
 @media screen and (max-width: 1000px) {
   div.thread-general-container div.delete-comment-modal {
@@ -5886,7 +5916,11 @@ div.thread-general-container div.delete-comment-modal div#comment-delete-modal-c
   font-size: 1.5em;
   padding-bottom: 30px;
 }
-div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div {
+  display: flex;
+}
+div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a, div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div button {
+  flex: 1;
   text-decoration: none;
   display: inline-block;
   width: 150px;
@@ -5897,7 +5931,7 @@ div.thread-general-container div.delete-comment-modal div#comment-delete-modal-c
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a {
+  div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div a, div.thread-general-container div.delete-comment-modal div#comment-delete-modal-content-div div#comment-delete-modal-buttons-div button {
     width: 100px;
   }
 }

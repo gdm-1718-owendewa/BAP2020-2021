@@ -144,6 +144,8 @@
             <h3 id="month-and-year-left"></h3>
             <div id="tasks-div">  
             </div>
+            <div id="events-div">  
+            </div>
             {{-- Taak toevoegen --}}
             <div id="add-div">
                     <a href="#" id="add-task-open-modal-button">Voeg taak toe<i class="fas fa-plus-circle"></i></a>

@@ -30,10 +30,22 @@ function getVal(e) {
   }
 
   focusElement.value = day + "-" + month + "-" + year;
+  focusElement.setAttribute('data-date', new Date(year + '/' + month + '/' + day));
 }
 
 $(document).ready(function () {
   var pickerInputs = document.querySelectorAll('.datepicker-input');
+
+  if (document.getElementById('event-edit-div') != null) {
+    var fromdate = pickerInputs[0].value;
+    var untildate = pickerInputs[1].value;
+    var fromParts = fromdate.split("-");
+    var untilParts = untildate.split("-");
+    var fromObject = new Date(+fromParts[2], fromParts[1] - 1, +fromParts[0]);
+    var untilObject = new Date(+untilParts[2], untilParts[1] - 1, +untilParts[0]);
+    pickerInputs[0].setAttribute('data-date', fromObject.toString());
+    pickerInputs[1].setAttribute('data-date', untilObject.toString());
+  }
 
   var _loop = function _loop(index) {
     pickerInputs[index].addEventListener("focus", function () {
