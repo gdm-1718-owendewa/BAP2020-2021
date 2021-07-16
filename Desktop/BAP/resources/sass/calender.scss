@@ -228,6 +228,8 @@ div#calender-div{
             flex:4;
             display: none;
             flex-direction: column;
+            max-height: 300px;
+            overflow:scroll;
             @media screen and (max-width: 1000px    ) {
                 margin-top:1rem;
                
@@ -275,6 +277,9 @@ div#calender-div{
             width:100%;
             flex:4;
             flex-direction: column;
+             max-height: 300px;
+            overflow:scroll;
+            margin-top:20px;
             @media screen and (max-width: 1000px    ) {
                 margin-top:1rem;
                

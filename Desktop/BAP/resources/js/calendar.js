@@ -150,6 +150,7 @@ function showCurrentDayTasks(calenderu, date){
         }, 
             success: function(response){ // What to do if we succeed
                 eventsDiv   .innerHTML = '';
+                console.log(response);
                 if(response.length > 0){
                     eventsDiv.innerHTML = '<h4>Evenementen</h4>';
                  }
@@ -292,7 +293,9 @@ function showCalendar(month, year){
                         date: calendarDayButtons[i].getAttribute('data-date'),
                     }, 
                         success: function(response){ // What to do if we succeed
-                            eventsDiv   .innerHTML = '';
+                            eventsDiv.innerHTML = '';
+                            console.log(response);
+
                             if(response.length > 0){
                                 eventsDiv.innerHTML = '<h4>Evenementen</h4>';
                              }

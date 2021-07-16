@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-
+use Auth;
+use Cache;
+use App\Models\User;
+use Carbon\Carbon;
 class LoginController extends Controller
 {
     /*
@@ -25,6 +28,11 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         $user_id = $user->getAttributes()["id"];
+        $expireTime = Carbon::now()->addMinute(60); // keep online for 60 min
+        Cache::put('is_online'.$user_id, true, $expireTime);
+        //Last Seen
+        User::where('id',  $user_id)->update(['last_seen' => Carbon::now()]);
+        
         return redirect()->route('dashbord', $user_id);
     }
     /**

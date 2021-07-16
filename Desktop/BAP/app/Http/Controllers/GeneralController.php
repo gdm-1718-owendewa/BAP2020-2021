@@ -27,7 +27,7 @@ class GeneralController extends Controller
     {
        $page = 'guide';
        if(!auth()->user()){
-         return redirect()->back();
+         return redirect()->route('login');
        }else{
          return view('general.guide')->with(compact('page'));
 
@@ -35,8 +35,7 @@ class GeneralController extends Controller
     }
     //Contact pagina
     public function contact()
-    {
-
+    { 
        $page = 'contact';
        return view('general.contact')->with(compact('page'));
     }
@@ -50,18 +49,21 @@ class GeneralController extends Controller
     public function documents()
     {
        $page = 'documents';
-
-       $mainpath = storage_path("documents");
-       $mainFiles = File::allFiles($mainpath);
-       $files = [];
-       foreach($mainFiles as $design){
-         $file = [
-           'filename' => pathinfo($design,PATHINFO_FILENAME),
-           'extension' => pathinfo($design,PATHINFO_EXTENSION),
-         ];
-         array_push($files, $file);
+       if(!auth()->user()){
+         return redirect()->route('login');
+       }else{
+         $mainpath = storage_path("documents");
+         $mainFiles = File::allFiles($mainpath);
+         $files = [];
+         foreach($mainFiles as $design){
+            $file = [
+            'filename' => pathinfo($design,PATHINFO_FILENAME),
+            'extension' => pathinfo($design,PATHINFO_EXTENSION),
+            ];
+            array_push($files, $file);
+         }
+         return view('general.documents')->with(compact('page', 'files'));
       }
-       return view('general.documents')->with(compact('page', 'files'));
     }
 
     //Download bestand

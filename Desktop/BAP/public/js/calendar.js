@@ -165,6 +165,7 @@ $(document).ready(function () {
       success: function success(response) {
         // What to do if we succeed
         eventsDiv.innerHTML = '';
+        console.log(response);
 
         if (response.length > 0) {
           eventsDiv.innerHTML = '<h4>Evenementen</h4>';
@@ -329,6 +330,7 @@ $(document).ready(function () {
           success: function success(response) {
             // What to do if we succeed
             eventsDiv.innerHTML = '';
+            console.log(response);
 
             if (response.length > 0) {
               eventsDiv.innerHTML = '<h4>Evenementen</h4>';

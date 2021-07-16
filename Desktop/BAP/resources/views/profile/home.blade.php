@@ -9,15 +9,22 @@
         </div>
     </div>
 </div>
+
 {{-- Profile container --}}
 <div id="profile-container">
     {{-- Profile informtaion --}}
     <div id="left-side">
         @if(isset($user->image) && $user->image != null )
-        <img src="{{asset('images/users/'.$user->id.'/profile-image/'.$user->image)}}" alt="">
+            <img src="{{asset('images/users/'.$user->id.'/profile-image/'.$user->image)}}" alt="">
         @else
-        <img src="{{asset('images/user.svg')}}" alt="">
+            <img src="{{asset('images/user.svg')}}" alt="">
         @endif
+        @if(Cache::has('is_online' . $user->id))
+            <span class="text-success" style="margin-bottom:20px;">Online</span>
+        @else
+            <span class="text-secondary" style="margin-bottom:20px;">Offline, last seen {{ \Carbon\Carbon::parse($user->last_seen)->diffForHumans() }}</span>
+        @endif
+        
         @if($user->id == auth()->user()->id || auth()->user()->role == 2)
         <a href="{{route('profile-edit',$user->id)}}">Pas aan</a>
         @else

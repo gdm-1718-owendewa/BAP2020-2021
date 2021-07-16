@@ -43,7 +43,7 @@
                         <div class="dropdown-content">
                             <a href="{{route('dashbord', Auth::user()->id)}}">Mijn Dashboard</a>
                             <a href="{{route('profile', Auth::user()->id)}}">Profiel</a>
-                            <a href="{{route('logout')}}">Logout</a>
+                            <a href="{{route('logout', Auth::user()->id)}}">Logout</a>
                           </div>
                     </div>
                 @endauth
@@ -146,7 +146,7 @@
                         <div class="dropdown-content">
                             <a href="{{route('dashbord', Auth::user()->id)}}">Mijn Dashboard</a>
                             <a href="{{route('profile', Auth::user()->id)}}">Profiel</a>
-                            <a href="{{route('logout')}}">Logout</a>    
+                            <a href="{{route('logout', Auth::user()->id)}}">Logout</a>    
                           </div>
                     </div>
                 @endauth
