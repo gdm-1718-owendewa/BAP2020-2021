@@ -6,7 +6,7 @@
     {{-- Home banner image en tekst --}}
     <div id="home-banner-div">
         <div>
-            <h1>TattooEase is een educatie platform voor artiesten waar ze hun kennis met elkaar kunnen delen
+            <h1>TattooEase is een community platform voor artiesten waar ze hun kennis met elkaar kunnen delen
             </h1>
         </div>
         <div>

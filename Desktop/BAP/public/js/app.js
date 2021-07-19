@@ -2177,6 +2177,8 @@ if (homescrolldownbutton != null) {
 
 
 if (document.getElementById("design-files") != null) {
+  console.log('test');
+
   document.getElementById("design-files").onchange = function () {
     document.getElementById("design-form").submit();
   };

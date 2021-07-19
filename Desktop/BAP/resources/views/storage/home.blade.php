@@ -53,15 +53,13 @@
             <h1>Uw designs & video's</h1>
             <div id="design-form-div">
                 @if($user->id == auth()->user()->id)
-                <form action="{{route('storage-design-add', $user->id)}}" method="POST" enctype="multipart/form-data" id="design-form">
-                    @csrf
-                    <div>
-                        <label for="design-files" class="file-label"><i class="far fa-file-image"></i>Voeg Bestand toe</label>
-                        <input type="file" name="design-files[]" id="design-files" required multiple>
-                    </div>
-                </form> 
-                
-            @endif
+                    <form action="{{route('storage-design-add', $user->id)}}" method="POST" enctype="multipart/form-data" id="design-form">
+                        @csrf
+                            <label for="design-files" class="file-label"><i class="far fa-file-image"></i>Voeg Bestand toe</label>
+                            <input type="file" name="design-files[]" id="design-files" multiple accept="image/png, image/jpeg">
+                    </form> 
+                    
+                @endif
             </div>
         </div>
 
