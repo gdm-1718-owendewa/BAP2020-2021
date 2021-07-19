@@ -12,10 +12,13 @@ class LogoutController extends Controller
 {
     //Logout
     public function logout(Request $request, $id) {
-       
-        Cache::forget('is_online'.$id);
-        User::where('id',  $id)->update(['last_seen' => Carbon::now()]);
-        Auth::logout();
-        return redirect('/');
+        if($id == auth()->user()->id){
+            Cache::forget('is_online'.$id);
+            User::where('id',  $id)->update(['last_seen' => Carbon::now()]);
+            Auth::logout();
+            return redirect('/');
+        }else{
+            return redirect()->back();
+        }
     }
 }
