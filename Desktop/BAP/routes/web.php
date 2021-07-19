@@ -181,5 +181,5 @@ Route::post('/adminsearchbarresults',  [HomeController::class, 'adminSearchbarRe
 
 
 /* logout route*/
-Route::get('/logout/{id}', [LogoutController::class, 'logout'])->name('logout');
+Route::get('/logout/{id}', [LogoutController::class, 'logout'])->middleware('auth')->name('logout');
 
