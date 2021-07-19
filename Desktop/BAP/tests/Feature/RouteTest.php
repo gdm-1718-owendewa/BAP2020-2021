@@ -65,6 +65,12 @@ class RouteTest extends TestCase
         ->assertRedirect('/login');
     }
     /** @test */
+    public function redirect_if_no_user_is_logged_in_on_article_edit_submit_page()
+    {
+        $response = $this->call('PATCH', '/article/edit/1/submit')
+        ->assertRedirect('/login');
+    }
+    /** @test */
     public function redirect_if_no_user_is_logged_in_on_article_delete()
     {
         $response = $this->call('DELETE', '/article/delete/20')

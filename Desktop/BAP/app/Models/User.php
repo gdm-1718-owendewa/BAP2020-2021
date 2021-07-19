@@ -23,6 +23,7 @@ class User extends Authenticatable
         'shopname',
         'shoplocation',
         'role',
+        'guide_message',
         
     ];
 

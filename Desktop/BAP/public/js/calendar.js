@@ -137,6 +137,34 @@ $(document).ready(function () {
               hour.value = editTaskButtons[_i2].getAttribute('data-h');
               var minute = document.getElementById('task-edit-minute');
               minute.value = editTaskButtons[_i2].getAttribute('data-m');
+              var button = document.querySelector('#edit-task-submit-button');
+
+              function validateForm() {
+                if (titleCheck) {
+                  button.disabled = false;
+                  button.style.backgroundColor = "";
+                } else {
+                  button.disabled = true;
+                  button.style.backgroundColor = "grey";
+                }
+              }
+
+              var title = document.getElementById('calendar-edit-task-title');
+              document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
+              document.getElementById('titleSpan').style.color = "green";
+              title.addEventListener('input', function (e) {
+                if (title.value.length > 0 && title.value.length < 200) {
+                  titleCheck = true;
+                  document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
+                  document.getElementById('titleSpan').style.color = "green";
+                } else {
+                  titleCheck = false;
+                  document.getElementById('titleSpan').innerHTML = '<i class="fas fa-times"></i>';
+                  document.getElementById('titleSpan').style.color = "red";
+                }
+
+                validateForm();
+              });
             });
           };
 
@@ -165,7 +193,6 @@ $(document).ready(function () {
       success: function success(response) {
         // What to do if we succeed
         eventsDiv.innerHTML = '';
-        console.log(response);
 
         if (response.length > 0) {
           eventsDiv.innerHTML = '<h4>Evenementen</h4>';
@@ -281,6 +308,35 @@ $(document).ready(function () {
             var editTaskButtons = document.querySelectorAll(".edit-task");
 
             if (editTaskButtons) {
+              var validateForm = function validateForm() {
+                if (titleCheck) {
+                  button.disabled = false;
+                  button.style.backgroundColor = "";
+                } else {
+                  button.disabled = true;
+                  button.style.backgroundColor = "grey";
+                }
+              };
+
+              /* EDIT TASKS FORM VALIDATION */
+              var button = document.querySelector('#edit-task-submit-button');
+              var title = document.getElementById('calendar-edit-task-title');
+              document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
+              document.getElementById('titleSpan').style.color = "green";
+              title.addEventListener('input', function (e) {
+                if (title.value.length > 0 && title.value.length < 200) {
+                  titleCheck = true;
+                  document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
+                  document.getElementById('titleSpan').style.color = "green";
+                } else {
+                  titleCheck = false;
+                  document.getElementById('titleSpan').innerHTML = '<i class="fas fa-times"></i>';
+                  document.getElementById('titleSpan').style.color = "red";
+                }
+
+                validateForm();
+              });
+
               var _loop3 = function _loop3(j) {
                 editTaskButtons[j].setAttribute('data-date', calendarDayButtons[_i4].getAttribute('data-date'));
                 setWithExpiry('currentDayTask', true, 300000);
@@ -330,7 +386,6 @@ $(document).ready(function () {
           success: function success(response) {
             // What to do if we succeed
             eventsDiv.innerHTML = '';
-            console.log(response);
 
             if (response.length > 0) {
               eventsDiv.innerHTML = '<h4>Evenementen</h4>';
@@ -438,6 +493,38 @@ $(document).ready(function () {
       addTaskForm.action = baseURL + '/calender/' + calenderu + '/' + addTaskOpenModalButton.getAttribute('data-date');
       document.body.style.overflow = "hidden";
       document.body.style.height = "100vh";
+      /* ADD TASKS FORM VALIDATION */
+
+      var button = document.querySelector('#add-task-submit-button');
+      button.disabled = true;
+      button.style.backgroundColor = "grey";
+
+      function validateForm() {
+        if (titleCheck) {
+          button.disabled = false;
+          button.style.backgroundColor = "";
+        } else {
+          button.disabled = true;
+          button.style.backgroundColor = "grey";
+        }
+      }
+
+      var title = document.getElementById('calendar-task-title');
+      document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-times"></i>';
+      document.getElementById('titleSpanCreate').style.color = "red";
+      title.addEventListener('input', function (e) {
+        if (title.value.length > 0 && title.value.length < 200) {
+          titleCheck = true;
+          document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-check"></i>';
+          document.getElementById('titleSpanCreate').style.color = "green";
+        } else {
+          titleCheck = false;
+          document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-times"></i>';
+          document.getElementById('titleSpanCreate').style.color = "red";
+        }
+
+        validateForm();
+      });
     });
   } //Zet effect op button die de voeg taak toe modal sluit
 
@@ -572,5 +659,6 @@ function getWithExpiry(key) {
 
   return item.value;
 }
+/* task validation */
 /******/ })()
 ;

@@ -128,6 +128,33 @@ function showCurrentDayTasks(calenderu, date){
                     hour.value = editTaskButtons[i].getAttribute('data-h');
                     let minute = document.getElementById('task-edit-minute');
                     minute.value = editTaskButtons[i].getAttribute('data-m');
+                    let button = document.querySelector('#edit-task-submit-button')
+                    
+                    function validateForm(){
+                        if(titleCheck){
+                            button.disabled = false
+                            button.style.backgroundColor= ""
+                        }else{
+                            button.disabled = true
+                            button.style.backgroundColor= "grey"
+                        }
+                    }
+                    let title = document.getElementById('calendar-edit-task-title');
+                    document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>'
+                    document.getElementById('titleSpan').style.color = "green"
+                    title.addEventListener('input', (e) => {
+                        if(title.value.length > 0 && title.value.length < 200){
+                            titleCheck = true;
+                            document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>'
+                            document.getElementById('titleSpan').style.color = "green"
+                
+                        }else{
+                            titleCheck = false;
+                            document.getElementById('titleSpan').innerHTML = '<i class="fas fa-times"></i>'
+                            document.getElementById('titleSpan').style.color = "red"
+                        }
+                        validateForm();
+                    })
                 })
             }
             }
@@ -150,7 +177,6 @@ function showCurrentDayTasks(calenderu, date){
         }, 
             success: function(response){ // What to do if we succeed
                 eventsDiv   .innerHTML = '';
-                console.log(response);
                 if(response.length > 0){
                     eventsDiv.innerHTML = '<h4>Evenementen</h4>';
                  }
@@ -251,6 +277,33 @@ function showCalendar(month, year){
                         }
                         let editTaskButtons = document.querySelectorAll(".edit-task");
                         if(editTaskButtons){
+                             /* EDIT TASKS FORM VALIDATION */
+                                    let button = document.querySelector('#edit-task-submit-button')
+                                    function validateForm(){
+                                        if(titleCheck){
+                                            button.disabled = false
+                                            button.style.backgroundColor= ""
+                                        }else{
+                                            button.disabled = true
+                                            button.style.backgroundColor= "grey"
+                                        }
+                                    }
+                                    let title = document.getElementById('calendar-edit-task-title');
+                                    document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>'
+                                    document.getElementById('titleSpan').style.color = "green"
+                                    title.addEventListener('input', (e) => {
+                                        if(title.value.length > 0 && title.value.length < 200){
+                                            titleCheck = true;
+                                            document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>'
+                                            document.getElementById('titleSpan').style.color = "green"
+                                
+                                        }else{
+                                            titleCheck = false;
+                                            document.getElementById('titleSpan').innerHTML = '<i class="fas fa-times"></i>'
+                                            document.getElementById('titleSpan').style.color = "red"
+                                        }
+                                        validateForm();
+                                    })
                             for(let j = 0; j < editTaskButtons.length; j++){
                                 editTaskButtons[j].setAttribute('data-date', calendarDayButtons[i].getAttribute('data-date'));
                                 setWithExpiry('currentDayTask', true, 300000);
@@ -261,7 +314,9 @@ function showCalendar(month, year){
                                 editTaskButtons[j].addEventListener('click', (e)=>{
                                     e.preventDefault();
                                     document.getElementById('calendar-task-edit-div').style.display = "flex";
+                                   
                                     scrollTo(0,0);
+
                                     document.body.style.overflow = "hidden";
                                     document.body.style.height = "100vh";
                                     let baseURL = window.location.origin;
@@ -272,6 +327,8 @@ function showCalendar(month, year){
                                     hour.value = editTaskButtons[j].getAttribute('data-h');
                                     let minute = document.getElementById('task-edit-minute');
                                     minute.value = editTaskButtons[j].getAttribute('data-m');   
+                                      
+                                   
                                 })
                             }
                         }
@@ -294,7 +351,6 @@ function showCalendar(month, year){
                     }, 
                         success: function(response){ // What to do if we succeed
                             eventsDiv.innerHTML = '';
-                            console.log(response);
 
                             if(response.length > 0){
                                 eventsDiv.innerHTML = '<h4>Evenementen</h4>';
@@ -392,6 +448,35 @@ if(addTaskOpenModalButton){
         addTaskForm.action = baseURL +'/calender/' + calenderu + '/' + addTaskOpenModalButton.getAttribute('data-date')
         document.body.style.overflow = "hidden";
         document.body.style.height = "100vh";
+        /* ADD TASKS FORM VALIDATION */
+        let button = document.querySelector('#add-task-submit-button')
+        button.disabled = true
+        button.style.backgroundColor= "grey"
+        function validateForm(){
+            if(titleCheck){
+                button.disabled = false
+                button.style.backgroundColor= ""
+            }else{
+                button.disabled = true
+                button.style.backgroundColor= "grey"
+            }
+        }
+        let title = document.getElementById('calendar-task-title');
+        document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-times"></i>'
+        document.getElementById('titleSpanCreate').style.color = "red"
+        title.addEventListener('input', (e) => {
+            if(title.value.length > 0 && title.value.length < 200){
+                titleCheck = true;
+                document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-check"></i>'
+                document.getElementById('titleSpanCreate').style.color = "green"
+    
+            }else{
+                titleCheck = false;
+                document.getElementById('titleSpanCreate').innerHTML = '<i class="fas fa-times"></i>'
+                document.getElementById('titleSpanCreate').style.color = "red"
+            }
+            validateForm();
+        })
     })
 }
 //Zet effect op button die de voeg taak toe modal sluit
@@ -515,3 +600,6 @@ function getWithExpiry(key) {
     }
     return item.value
 }
+
+
+/* task validation */

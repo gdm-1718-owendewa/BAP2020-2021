@@ -80,6 +80,7 @@ class RegisterController extends Controller
             'shopname' => $data['shopname'],
             'shoplocation' => $data['shoplocation'],
             'role' => 1,
+            'guide_message' => 0,
         ]);
     }
 }

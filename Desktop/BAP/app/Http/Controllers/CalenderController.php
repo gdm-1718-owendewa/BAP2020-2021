@@ -31,7 +31,7 @@ class CalenderController extends Controller
             }else{
                 $validator = Validator::make(
                     $request->all(),[
-                    'calendar-task-title' => 'required',
+                    'calendar-task-title' => 'required|max:200',
                     'time-from-hour' => 'required',
                     'time-from-minute' => 'required',
                     ])->validate();
@@ -105,7 +105,7 @@ class CalenderController extends Controller
         }
         $validator = Validator::make(
             $request->all(),[
-            'task-description' => 'required',
+            'task-description' => 'required|max:200',
             'time-from-hour' => 'required',
             'time-from-minute' => 'required',
             ])->validate();

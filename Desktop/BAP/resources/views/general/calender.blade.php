@@ -44,7 +44,7 @@
                 </div>
             @endif 
             @csrf
-            <label for="calendar-task-title">Taak naam</label>
+            <label for="calendar-task-title">Taak naam (max 200) <span id="titleSpan" style="margin-left:5px;"></span></label>
             <input type="text" id="calendar-edit-task-title" name="task-description" required>
             <div id="time-div">
                 <p>Kies tijd</p>
@@ -94,7 +94,7 @@
             @endif 
 
             @csrf
-            <label for="calendar-task-title">Taak naam</label>
+            <label for="calendar-task-title">Taak naam (max 200)<span id="titleSpanCreate" style="margin-left:5px;"></span></label>
             <input type="text" id="calendar-task-title" name="calendar-task-title" required>
             <div id="time-div">
                 <p>Kies tijd</p>
