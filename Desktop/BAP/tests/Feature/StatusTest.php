@@ -10,6 +10,7 @@ use App\Models\Article;
 use App\Models\Tutorial;
 use App\Models\Event;
 use App\Models\Thread;
+use App\Models\Course;
 
 use Illuminate\Support\Facades\File;
 
@@ -188,7 +189,7 @@ class StatusTest extends TestCase
         $response->assertStatus(200);
     }
     /** @test*/
-    public function check_if_event_sign_gives_200_status()
+    public function check_if_event_sign_works_and_redirects_to_detail_page()
     {
         $user = $this->actingAsUserWithReturn();
         $event = $this->createEvent();
@@ -197,7 +198,7 @@ class StatusTest extends TestCase
         $response->assertRedirect('/event/event-detail/'.$event->id);
     }
     /** @test*/
-    public function check_if_event_unsign_gives_200_status()
+    public function check_if_event_unsign_works_and_redirects_to_detail_page()
     {
         $user = $this->actingAsUserWithReturn();
         $event = $this->createEvent();
@@ -205,8 +206,62 @@ class StatusTest extends TestCase
         $response->assertRedirect('/event/event-detail/'.$event->id);
     }
 
-
-
+    /********************** THREAD **********************/
+    /** @test*/
+    public function check_if_thread_overview_gives_200_status()
+    {
+        $this->actingAsUser();
+        $response = $this->get('/thread/thread-overview');
+        $response->assertStatus(200);
+    }
+    /** @test*/
+    public function check_if_thread_detail_gives_200_status()
+    {
+        $this->actingAsUser();
+        $thread = $this->createThread();
+        $response = $this->get('/thread/thread-detail/'.$thread->id);
+        $response->assertStatus(200);
+    }
+     /** @test*/
+     public function check_if_thread_create_gives_200_status()
+     {
+         $this->actingAsUser();
+         $response = $this->get('/thread/create');
+         $response->assertStatus(200);
+     }
+     /** @test*/
+    public function check_if_thread_edit_gives_200_status()
+    {
+        $this->actingAsUser();
+        $thread = $this->createThread();
+        $response = $this->get('/thread/edit/'.$thread->id);
+        $response->assertStatus(200);
+    }
+    /********************** COURSE **********************/
+    /** @test*/
+    public function check_if_course_overview_gives_200_status()
+    {
+        $this->actingAsUser();
+        $response = $this->get('/course/course-overview');
+        $response->assertStatus(200);
+    }
+    /** @test*/
+    public function check_if_course_detail_gives_200_status()
+    {
+        $this->actingAsUser();
+        $course = $this->createCourse();
+        $response = $this->get('/course/course-detail/'.$course->id);
+        $response->assertStatus(200);
+    }
+     /** @test*/
+     public function check_if_course_sign_works_and_redirects_to_detail_page()
+     {
+         $user = $this->actingAsUserWithReturn();
+         $course = $this->createCourse();
+ 
+         $response = $this->get('/course/course-detail/'.$course->id.'/'.$user->id.'/signup');
+         $response->assertRedirect('/course/course-detail/'.$course->id);
+     }
 
 
 
@@ -244,5 +299,13 @@ class StatusTest extends TestCase
         $newpath = public_path('/images/events/'.$event->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
         return $event;
+    }
+    private function createThread(){
+        $thread = Thread::factory()->create();
+        return $thread;
+    }
+    private function createCourse(){
+        $course = Course::factory()->create();
+        return $course;
     }
 }

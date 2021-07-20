@@ -409,7 +409,7 @@ class CourseController extends Controller
             'user_id' => $user_id,
           ];
           CourseSignUp::create($data);
-          return redirect()->back();
+          return redirect()->route('course-detail', $id);
        }
     }
     //Uitschrijven cursus
@@ -419,7 +419,7 @@ class CourseController extends Controller
 
       if($user_id == auth()->user()->id || auth()->user()->role == 2){
          CourseSignUp::where('course_id', $id)->where('user_id', $user_id)->delete();
-         return redirect()->back();
+         return redirect()->route('course-detail', $id);
       }else{
          return redirect()->back();
       }
