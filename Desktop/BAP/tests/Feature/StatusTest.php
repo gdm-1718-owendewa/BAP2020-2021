@@ -11,6 +11,8 @@ use App\Models\Tutorial;
 use App\Models\Event;
 use App\Models\Thread;
 use App\Models\Course;
+use App\Models\CourseUpload;
+use App\Models\Comment;
 
 use Illuminate\Support\Facades\File;
 
@@ -262,7 +264,129 @@ class StatusTest extends TestCase
          $response = $this->get('/course/course-detail/'.$course->id.'/'.$user->id.'/signup');
          $response->assertRedirect('/course/course-detail/'.$course->id);
      }
-
+      /** @test*/
+      public function check_if_course_unsign_works_and_redirects_to_detail_page()
+      {
+          $user = $this->actingAsUserWithReturn();
+          $course = $this->createCourse();
+  
+          $response = $this->get('/course/course-detail/'.$course->id.'/'.$user->id.'/signout');
+          $response->assertRedirect('/course/course-detail/'.$course->id);
+      }
+    /** @test*/
+    public function check_if_course_create_gives_200_status()
+    {
+        $this->actingAsUser();
+        $response = $this->get('/course/create');
+        $response->assertStatus(200);
+    }
+    /** @test*/
+    public function check_if_course_edit_gives_200_status()
+    {
+        $this->actingAsUser();
+        $course = $this->createCourse();
+        $response = $this->get('/course/edit/'.$course->id);
+        $response->assertStatus(200);
+    }
+     /** @test*/
+     public function check_if_course_upload_gives_200_status()
+     {
+         $this->actingAsUser();
+         $course = $this->createCourse();
+         $response = $this->get('/course/upload-overview/'.$course->id);
+         $response->assertStatus(200);
+     }
+      /** @test*/
+      public function check_if_course_upload_detail_gives_200_status()
+      {
+          $this->actingAsUser();
+          $course = $this->createCourse();
+          $upload = $this->createCourseUpload($course);
+          $response = $this->get('/course/upload-overview/'.$course->id.'/upload/'.$upload->id);
+          $response->assertStatus(200);
+      }
+      /** @test*/
+      public function check_if_course_content_upload_gives_200_status()
+      {
+          $this->actingAsUser();
+          $course = $this->createCourse();
+          $response = $this->get('/course/'.$course->id.'/addcontent');
+          $response->assertStatus(200);
+      }
+      /** @test*/
+      public function check_if_course_content_edit_gives_200_status()
+      {
+          $this->actingAsUser();
+          $course = $this->createCourse();
+          $upload = $this->createCourseUpload($course);
+          $response = $this->get('/course/'.$course->id.'/editupload/'.$upload->id);
+          $response->assertStatus(200);
+      }
+      /** @test*/
+      public function check_if_course_files_gives_200_status()
+      {
+          $this->actingAsUser();
+          $course = $this->createCourse();
+          $response = $this->get('/course/files/'.$course->id);
+          $response->assertStatus(200);
+      }
+    /********************** PROFILE **********************/
+    /** @test*/
+    public function check_if_profile_gives_200_status()
+    {
+        $user = $this->actingAsUserWithReturn();
+        $response = $this->get('/profile/'.$user->id);
+        $response->assertStatus(200);
+    }
+    /** @test*/
+    public function check_if_profile_edi_gives_200_status()
+    {
+        $user = $this->actingAsUserWithReturn();
+        $response = $this->get('/profile/edit/'.$user->id);
+        $response->assertStatus(200);
+    }
+    /********************** STORAGE **********************/
+    /** @test*/
+    public function check_if_storage_gives_200_status()
+    {
+        $user = $this->actingAsUserWithReturn();
+        $response = $this->get('/storage/'.$user->id);
+        $response->assertStatus(200);
+    }
+    /********************** COMMENT **********************/
+    /** @test*/
+    public function check_if_comment_edit_200_status()
+    {
+        $this->withoutExceptionHandling();
+        $user = $this->actingAsUserWithReturn();
+        $thread = $this->createThread();
+        $comment = $this->createComment($thread,$user);
+        $response = $this->get('/edit-comment/'.$comment->id);
+        $response->assertStatus(200);
+    }
+    /********************** CALENDER **********************/
+    /** @test*/
+    public function check_if_calender_gives_200_status()
+    {
+        $user = $this->actingAsUserWithReturn();
+        $response = $this->get('/calender/'.$user->id);
+        $response->assertStatus(200);
+    }
+   /********************** PASSRESET **********************/
+    /** @test*/
+    public function check_if_pass_reset_gives_200_status()
+    {
+        $response = $this->get('/password/reset-password');
+        $response->assertStatus(200);
+    }
+    /********************** LOGOUT **********************/
+    /** @test*/
+    public function check_if_logout_returns_to_home()
+    {
+        $user = $this->actingAsUserWithReturn();
+        $response = $this->get('/logout/'.$user->id);
+        $response->assertRedirect('/');
+    }
 
 
     private function actingAsUser(){
@@ -307,5 +431,13 @@ class StatusTest extends TestCase
     private function createCourse(){
         $course = Course::factory()->create();
         return $course;
+    }
+    private function createCourseUpload($course){
+        $courseupload = CourseUpload::factory()->create(['course_id' => $course->id]);
+        return $courseupload;
+    }
+    private function createComment($thread, $user){
+        $comment = Comment::factory()->create(['author_id' => $user->id, 'thread_id' => $thread->id]);
+        return $comment;
     }
 }
