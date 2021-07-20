@@ -234,7 +234,7 @@ class EventController extends Controller
          EventSigns::where('user_id', $user_id)
          ->where('event_id', $event_id)
          ->delete();
-         return redirect()->back()->with('succes', 'U bent uitgeschreven');
+         return redirect()->route('event-detail', $event_id)->with('succes', 'U bent uitgeschreven');
       }else{
          return redirect()->route('event-detail', $event_id)->with('fail', 'Er liep iets mis');
       }
