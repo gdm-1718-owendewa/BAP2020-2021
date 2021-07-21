@@ -98,7 +98,7 @@ class StatusTest extends TestCase
     /** @test*/
     public function check_if_article_detail_gives_200_status()
     {
-        $this->withoutExceptionHandling();
+        
         $this->actingAsUser();
         $article = $this->createArticle();
         $response = $this->get('/article/article-detail/'.$article->id);
