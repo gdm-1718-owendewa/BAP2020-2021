@@ -15,7 +15,6 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-// dd($event->end_date, Carbon::parse($event->end_date)->gt(Carbon::now()));
 
 class DashbordController extends Controller
 {
