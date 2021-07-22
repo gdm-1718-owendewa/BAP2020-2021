@@ -1,6 +1,5 @@
-@include('layouts.header');
+@include('layouts.header')
 <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-
 @include('Chatify::layouts.headLinks')
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
