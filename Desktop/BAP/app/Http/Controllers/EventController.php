@@ -218,7 +218,7 @@ class EventController extends Controller
                'event_id' => $event_id,
             ];
             EventSigns::create($data);
-            return redirect()->route('event-detail', $event_id);
+            return redirect()->route('event-detail', $event_id)->with('succes', 'U bent ingeschreven bekijk dit nu op uw kalender');
          }else{
             return redirect()->route('event-detail', $event_id)->with('fail', 'Er zijn geen plaatsen meer');
          }

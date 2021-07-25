@@ -184,12 +184,18 @@ div#course-detail-container div#course-detail-container-content div#course-detai
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info h4 {
   padding-bottom: 0.5rem;
 }
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-info p {
+  overflow-wrap: break-word;
+}
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content h4 {
   padding-bottom: 0.5rem;
+}
+div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#course-content p {
+  overflow-wrap: break-word;
 }
 @media screen and (max-width: 1000px) {
   div#course-detail-container div#course-detail-container-content div#course-detail-container-info div#right-side div#file-list {
