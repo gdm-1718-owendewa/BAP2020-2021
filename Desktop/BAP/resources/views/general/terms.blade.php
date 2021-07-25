@@ -50,7 +50,7 @@
     </p>
     <h2>Contacteer ons</h2>
     <p>Als u contact met ons wilt opnemen om meer te weten te komen over deze Overeenkomst of contact met ons wilt opnemen over enige aangelegenheid die ermee verband houdt, kunt u dat doen via het
-        <a target="_blank" rel="nofollow" href="http://tattoo-ease.owendewaele.com/public/contact.php">contact formulier</a></p>
+        <a target="_blank" rel="nofollow" href="{{route('contact')}}">contact formulier</a></p>
     <p>Dit document is voor het laatst bijgewerkt op
         November 16, 2020</p>
     </div>
