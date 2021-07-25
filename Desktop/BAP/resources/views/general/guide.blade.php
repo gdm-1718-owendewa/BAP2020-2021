@@ -3,7 +3,7 @@
 @section('content')
 <div class="general-container">
     <div id="guide-content-container">
-        <h1>Guide</h1> 
+        <h1>Gids</h1> 
         <div>
             @if(auth()->user()->role == 0)
             <h2>Dashboard</h2>
