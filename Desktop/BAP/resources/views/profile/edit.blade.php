@@ -46,7 +46,7 @@
                 <div class="control-div">
                     <p>Kies Profiel Foto<span id="imageSpan" style="margin-left:5px;"></span></p>
                     <label for="user-image" class="file-label"><i class="far fa-file-image"></i>Upload Nieuwe Foto</label>
-                    <input type="file" name="user-image" id="user-image" >
+                    <input type="file" name="user-image" id="user-image" accept="image/png, image/jpeg, image/jpg, image/svg">
                     <img id="user-edit-main-image" src="">
                 </div>
                 <div class="control-div">

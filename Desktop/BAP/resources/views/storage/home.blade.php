@@ -56,7 +56,7 @@
                     <form action="{{route('storage-design-add', $user->id)}}" method="POST" enctype="multipart/form-data" id="design-form">
                         @csrf
                             <label for="design-files" class="file-label"><i class="far fa-file-image"></i>Voeg Bestand toe</label>
-                            <input type="file" name="design-files[]" id="design-files" multiple accept="image/png, image/jpeg">
+                            <input type="file" name="design-files[]" id="design-files" multiple accept="image/png, image/jpeg, video/mp4">
                     </form> 
                     
                 @endif
