@@ -1,0 +1,256 @@
+/* Notitie div */
+div#notes-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Delete notities modal */
+  /* Notitie div */
+  /* Voeg notitie toe div */
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container {
+    flex-direction: column-reverse;
+  }
+}
+div#notes-container div#notes-delete-all-modal-div {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content {
+  position: relative;
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content {
+    height: 300px;
+    width: 300px;
+  }
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links {
+  display: flex;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a {
+  flex: 1;
+  color: #fff;
+  background-color: #cb0000;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a + a {
+  margin-left: 2rem;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div#delete-all-modal-links a#confirm-delete-all {
+  background-color: green;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div {
+  width: 90%;
+  text-align: center;
+}
+div#notes-container div#notes-delete-all-modal-div div#delete-all-modal-content div h1 {
+  font-size: 1.5em;
+}
+div#notes-container div#show-notes-container {
+  flex: 1.5;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+div#notes-container div#show-notes-container div#notes-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+div#notes-container div#show-notes-container div#notes-header h3 {
+  flex: 3;
+  width: 40%;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header h3 {
+    width: 100%;
+  }
+}
+div#notes-container div#show-notes-container div#notes-header h3:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#notes-container div#show-notes-container div#notes-header a {
+  flex: 2;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  color: #fff;
+  text-decoration: none;
+  background: #cb0000;
+}
+@media screen and (max-width: 600px) {
+  div#notes-container div#show-notes-container div#notes-header a {
+    margin-top: 1rem;
+    padding: 0.3rem 0.3rem;
+  }
+}
+div#notes-container div#show-notes-container div#display-notes-container {
+  flex: 1;
+}
+div#notes-container div#show-notes-container div#display-notes-container textarea#notes-field {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid grey;
+  resize: none;
+}
+div#notes-container div#show-notes-container div#display-notes-container textarea#notes-field:focus {
+  outline: none;
+}
+div#notes-container div#add-notes-container {
+  flex: 1;
+}
+div#notes-container div#add-notes-container h3 {
+  margin-left: 5%;
+}
+div#notes-container div#add-notes-container h3:after {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #cb0000;
+  bottom: 0;
+  left: 0;
+}
+div#notes-container div#add-notes-container form {
+  width: 100%;
+}
+div#notes-container div#add-notes-container form textarea {
+  width: 90%;
+  margin: 5%;
+  resize: none;
+  height: 30rem;
+}
+@media screen and (max-width: 1000px) {
+  div#notes-container div#add-notes-container form textarea {
+    height: 15rem;
+  }
+}
+div#notes-container div#add-notes-container form textarea:focus {
+  outline: none;
+}
+div#notes-container div#add-notes-container form button {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: 3rem;
+  border: 2px solid #cb0000;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+  color: #cb0000;
+}
+div#notes-container div#add-notes-container form button:hover {
+  background-position: left;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Notitie edit modal*/
+#notes-modal-div {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#notes-modal-div div#modal {
+  position: relative;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal {
+    max-width: 350px;
+  }
+}
+#notes-modal-div div#modal div#modal-close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+#notes-modal-div div#modal div#modal-close-button a {
+  color: black;
+}
+#notes-modal-div div#modal div#modal-close-button a:hover {
+  text-decoration: none;
+  color: black;
+}
+#notes-modal-div div#modal div#modal-close-button a i {
+  font-size: 1.5rem;
+}
+#notes-modal-div div#modal h3 {
+  margin: 2rem;
+}
+#notes-modal-div div#modal textarea {
+  width: 500px;
+  height: 400px;
+  margin-left: 50px;
+  resize: none;
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal textarea {
+    max-width: 300px;
+    margin-left: 25px;
+  }
+}
+#notes-modal-div div#modal a#note-edit-submit {
+  margin-top: 30px;
+  display: block;
+  background-color: orange;
+  width: 500px;
+  margin-left: 50px;
+  padding: 0.5rem;
+  color: #fff;
+  border: none;
+}
+@media screen and (max-width: 600px) {
+  #notes-modal-div div#modal a#note-edit-submit {
+    max-width: 300px;
+    margin-left: 25px;
+  }
+}
+#notes-modal-div div#modal a#note-edit-submit:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+/* Guide container */
+#guide-content-container h1 {
+  margin-bottom: 1.5rem;
+}
+#guide-content-container div {
+  width: 90%;
+  margin-left: 10%;
+}
+#guide-content-container div h2, #guide-content-container div h3, #guide-content-container div h4 {
+  margin: 1rem 0rem;
+}

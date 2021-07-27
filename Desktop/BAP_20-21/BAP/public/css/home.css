@@ -1,0 +1,553 @@
+/* Home container*/
+div#home-container {
+  width: 100%;
+  /* Home banner */
+  /* What we do div*/
+  /* Video div*/
+  /* Quote div */
+  /* Event-tut div */
+  /* Event-tut small div */
+}
+div#home-container div#home-banner-div {
+  background-image: url(/images/background-banner2.png?87ed4aa0d8a600a4a48d602196a6c7ed);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 75vh;
+  top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#home-banner-div {
+    height: 85vh;
+    background-image: url(/images/background-banner2_uitgesneden.png?9ade6bca4a9fadaf430966f83d54f2d7);
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#home-banner-div {
+    background-image: url(/images/background-banner2_uitgesneden2.png?cca061ab2bab918491b8b328afe6f2d0);
+    background-size: 100% auto;
+    height: 80vh;
+  }
+}
+div#home-container div#home-banner-div div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+@media screen and (max-width: 1100px) {
+  div#home-container div#home-banner-div div {
+    align-items: start;
+  }
+}
+div#home-container div#home-banner-div div h1 {
+  color: white;
+  font-size: 4em;
+  width: 50%;
+  text-align: center;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #000;
+  margin-top: 8rem;
+}
+@media screen and (max-width: 1400px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#home-banner-div div h1 {
+    font-size: 1.5em;
+    margin-top: 4rem;
+  }
+}
+div#home-container div#home-banner-div div button {
+  color: #fff;
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#home-banner-div div button {
+    margin-top: 3rem;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#home-banner-div div button {
+    margin-top: 3rem;
+    width: 80%;
+  }
+}
+div#home-container div#home-banner-div div button:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#home-banner-div div button:focus {
+  outline: none;
+}
+div#home-container div#what-we-do-div {
+  background-color: #fff;
+}
+div#home-container div#what-we-do-div div#what-we-do-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container {
+    flex-direction: column;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1 .content {
+  background-image: url(/images/our-goals-1.jpg?ef115cde19d270c56f7480a9d72409fe);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-1 .content .our-goals-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2 .content {
+  background-image: url(/images/our-goals-2.jpg?74932c0c75070e4a7874b3983880442d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-2 .content .our-goals-background {
+  background-color: rgba(203, 0, 0, 0.5);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover {
+  position: relative;
+  z-index: 5;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover .content {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3:hover .content {
+    transform: scale(1.05);
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3 .content {
+  background-image: url(/images/our-goals-3.jpg?ed848fe572be87650fa3d525f3b67145);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container #our-goal-3 .content .our-goals-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  z-index: 1;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div {
+    min-height: 200px;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content {
+  color: #fff;
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content i {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content i {
+    margin-left: 12.5%;
+    margin-top: 5%;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container {
+  width: 75%;
+  margin-left: 12.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container h2 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 700px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container h2 {
+    font-size: 2em;
+  }
+}
+div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container p {
+  margin-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#what-we-do-div div#what-we-do-container #divs-content-what-we-do-container div .content div.divs-text-content-our-goals-container p {
+    margin-bottom: 20px;
+  }
+}
+div#home-container div#home-video-div {
+  background-color: #000;
+  height: 90vh;
+}
+div#home-container div#home-video-div video {
+  width: 100%;
+  height: 100%;
+}
+div#home-container div#quote-div {
+  position: relative;
+}
+div#home-container div#quote-div div#quote {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 50px;
+  padding-bottom: 40px;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#quote-div div#quote {
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#quote {
+    font-size: 1rem;
+  }
+}
+div#home-container div#quote-div div#quote span {
+  color: red;
+}
+div#home-container div#quote-div div#image {
+  width: 50%;
+  margin: 0px auto;
+}
+div#home-container div#quote-div div#image img {
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 50%;
+  border: 10px solid #cb0000;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#quote-div div#image img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+div#home-container div#quote-div div#image p {
+  text-align: center;
+}
+div#home-container div#quote-div div#image #artist-name {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#image #artist-name {
+    font-size: 1.5rem;
+  }
+}
+div#home-container div#quote-div div#image #shop-name {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#quote-div div#image #shop-name {
+    font-size: 1rem;
+  }
+}
+div#home-container div#event-tut-div {
+  z-index: 0;
+  position: relative;
+}
+div#home-container div#event-tut-div div#event-tut-text-div {
+  -webkit-clip-path: polygon(100% 0, 100% 39%, 10% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 39%, 10% 100%, 0 100%, 0 0);
+  background-image: url(/images/home-banner-greyscale-blur2.jpg?9e9b2079e7e0b281ddab89c2078e985c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 90vh;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div {
+    display: none;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div {
+  color: #fff;
+  width: 50vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div {
+    width: 100vw;
+    height: 40vh;
+    justify-content: start;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+  margin-left: 50px;
+  margin-top: 9vh;
+  width: 25vw;
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+    margin-top: 8vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 1vh;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div h1 {
+  font-size: 3em;
+}
+@media screen and (max-width: 1200px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#h1-div h1 {
+    font-size: 2em;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div {
+  margin-left: 50px;
+  width: 25vw;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 1vh;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a {
+  display: block;
+  float: left;
+  width: 45%;
+  text-align: center;
+  padding: 1rem 0rem;
+  color: #fff;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+  border: 3px solid #cb0000;
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#event-tut-div div#event-tut-text-div div#content-div div#button-div a + a {
+  margin-left: 5%;
+}
+div#home-container div#event-tut-div div#event-tut-show-div {
+  height: 10vh;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  height: 90vh;
+  left: 47vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div div#event-tut-show-div {
+    display: none;
+  }
+}
+div#home-container div#event-tut-div div#event-tut-show-div div {
+  flex: 1;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div img {
+  max-width: 97.5%;
+  margin-left: 1.25%;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#event-image-1 {
+  margin-top: 8rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#event-image-2 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#tut-image-1 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div div#event-tut-show-div div div#tut-image-2 {
+  margin-top: 3rem;
+}
+div#home-container div#event-tut-div-small {
+  background-image: url(/images/home-banner-greyscale.jpg?3bd26ad162016eb8ca5414642076603c);
+  padding-bottom: 5rem;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1000px) {
+  div#home-container div#event-tut-div-small {
+    display: block;
+  }
+}
+div#home-container div#event-tut-div-small div {
+  width: 100%;
+  display: block;
+}
+div#home-container div#event-tut-div-small div h1 {
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #000;
+  padding-top: 3rem;
+  text-align: center;
+  color: #fff;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 3em;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div h1 {
+    width: 100%;
+    font-size: 2em;
+    margin-left: 0%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div {
+  width: 60%;
+  margin-left: 20%;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 3rem;
+    padding-left: 18%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div div#button-div {
+    padding-left: 2%;
+    padding-right: 5%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div a {
+  display: inline-block;
+  width: 45%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1rem 0rem;
+  border: 3px solid #cb0000;
+  background: linear-gradient(to right, #cb0000 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 300% 100%;
+  background-position: right;
+  transition: all 0.6s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div a {
+    width: 33.5%;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div div#button-div a {
+    width: 45%;
+  }
+}
+div#home-container div#event-tut-div-small div div#button-div a:hover {
+  text-decoration: none;
+  background-position: left;
+}
+div#home-container div#event-tut-div-small div div#button-div a + a {
+  margin-left: 9%;
+}
+@media screen and (max-width: 800px) {
+  div#home-container div#event-tut-div-small div div#button-div a + a {
+    margin-left: 5%;
+  }
+}
+div#home-container div#event-tut-div-small div img {
+  max-width: 100%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  float: right;
+}
+@media screen and (max-width: 600px) {
+  div#home-container div#event-tut-div-small div img {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

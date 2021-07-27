@@ -1,0 +1,90 @@
+input.datepicker-input {
+  width: 100%;
+}
+
+div#datepicker-blackout {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+div#datepicker-container {
+  position: fixed;
+  height: 90%;
+  width: 80%;
+  margin: 2.5% 10%;
+  z-index: 11;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  background-color: #fff;
+  padding-top: 30px;
+}
+div#datepicker-container a#date-picker-close-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+}
+div#datepicker-container div#datepicker {
+  min-width: 100%;
+}
+div#datepicker-container div#datepicker h4 {
+  width: 100%;
+  text-align: center;
+}
+div#datepicker-container div#datepicker div#year-div {
+  text-align: center;
+  min-width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem !important;
+}
+div#datepicker-container div#datepicker div#year-div div {
+  flex: 1;
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#year-div div i {
+  color: #cb0000;
+}
+div#datepicker-container div#datepicker #dt-able {
+  min-width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+}
+div#datepicker-container div#datepicker #dt-able tr td {
+  padding: 2%;
+}
+div#datepicker-container div#datepicker #dt-able tr td input {
+  color: #cb0000;
+  border: none;
+  background: none;
+}
+div#datepicker-container div#datepicker div#month-div {
+  text-align: center;
+  min-width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div {
+  flex: 1;
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div p {
+  margin-bottom: 0rem !important;
+}
+div#datepicker-container div#datepicker div#month-div div i {
+  color: #cb0000;
+}
