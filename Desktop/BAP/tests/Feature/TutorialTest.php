@@ -81,12 +81,10 @@ class TutorialTest extends TestCase
     private function actingAsUserWithReturn(){
         $user = User::factory()->create();
         $this->actingAs($user);
-        File::makeDirectory('images/users/'.$user->id.'/profile-image', 0777, true, true);
         return $user;
     }
     private function createTutorial(){
         $tutorial = Tutorial::factory()->create();
-        File::makeDirectory('images/tutorials/'.$tutorial->id.'/thumbnail', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/tutorials/'.$tutorial->id.'/thumbnail/image.jpg');
         File::copy($oldpath, $newpath);
@@ -94,7 +92,6 @@ class TutorialTest extends TestCase
     }
     private function createTutorialWithUser($user){
         $tutorial = Tutorial::factory()->create(['author_id' => $user->id]);
-        File::makeDirectory('images/tutorials/'.$tutorial->id.'/thumbnail', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/tutorials/'.$tutorial->id.'/thumbnail/image.jpg');
         File::copy($oldpath, $newpath);

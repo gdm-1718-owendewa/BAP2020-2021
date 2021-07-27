@@ -402,7 +402,6 @@ class StatusTest extends TestCase
     }
     private function createArticle(){
         $article = Article::factory()->create();
-        File::makeDirectory('images/articles/'.$article->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/articles/'.$article->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
@@ -410,7 +409,6 @@ class StatusTest extends TestCase
     }
     private function createTutorial(){
         $tutorial = Tutorial::factory()->create();
-        File::makeDirectory('images/tutorials/'.$tutorial->id.'/thumbnail', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/tutorials/'.$tutorial->id.'/thumbnail/image.jpg');
         File::copy($oldpath, $newpath);
@@ -418,7 +416,6 @@ class StatusTest extends TestCase
     }
     private function createEvent(){
         $event = Event::factory()->create();
-        File::makeDirectory('images/events/'.$event->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/events/'.$event->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);

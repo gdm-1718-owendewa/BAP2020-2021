@@ -77,12 +77,10 @@ class ArticleTest extends TestCase
     private function actingAsUserWithReturn(){
         $user = User::factory()->create();
         $this->actingAs($user);
-        File::makeDirectory('images/users/'.$user->id.'/profile-image', 0777, true, true);
         return $user;
     }
     private function createArticle(){
         $article = Article::factory()->create();
-        File::makeDirectory('images/articles/'.$article->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/articles/'.$article->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
@@ -90,7 +88,6 @@ class ArticleTest extends TestCase
     }
     private function createArticleWithUser($user){
         $article = Article::factory()->create(['author_id' => $user->id]);
-        File::makeDirectory('images/articles/'.$article->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/articles/'.$article->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);

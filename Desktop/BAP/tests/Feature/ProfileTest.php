@@ -106,7 +106,6 @@ class ProfileTest extends TestCase
     private function actingAsUserWithReturn(){
         $user = User::factory()->create();
         $this->actingAs($user);
-        File::makeDirectory('images/users/'.$user->id.'/profile-image', 0777, true, true);
         return $user;
     }
     private function userdata(){

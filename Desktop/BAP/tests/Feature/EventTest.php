@@ -169,18 +169,15 @@ class EventTest extends TestCase
     private function actingAsUserWithReturn(){
         $user = User::factory()->create();
         $this->actingAs($user);
-        File::makeDirectory('images/users/'.$user->id.'/profile-image', 0777, true, true);
         return $user;
     }
     private function addImage($event){
-        File::makeDirectory('images/events/'.$event->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/events/'.$event->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
     }
     private function createEvent(){
         $event = Event::factory()->create();
-        File::makeDirectory('images/events/'.$event->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/events/'.$event->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
@@ -188,7 +185,6 @@ class EventTest extends TestCase
     }
     private function createEventWithUser($user){
         $event = Event::factory()->create(['author_id' => $user->id]);
-        File::makeDirectory('images/events/'.$event->id.'/main-image', 0777, true, true);   
         $oldpath = public_path('/images/dummy.jpg');
         $newpath = public_path('/images/events/'.$event->id.'/main-image/image.jpg');
         File::copy($oldpath, $newpath);
