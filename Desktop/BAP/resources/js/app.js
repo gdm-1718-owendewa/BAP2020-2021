@@ -491,7 +491,7 @@ function doneTypingSmall () {
                         let articles = response['articles'];
                         let articlesResultContentDiv = document.getElementById('articles-results-content-div');
                         for(let i =0; i < articles.length; i++){
-                            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[i].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[i].title + '<br>Door: '+articles[i].author+'</p></div></a>'
+                            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[i].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[i].title + ' - '+articles[i].author+'</p></div></a>'
                         }
                     }
                     //Events
@@ -501,7 +501,7 @@ function doneTypingSmall () {
                         let events = response['events'];
                         for(let i =0; i < events.length; i++){
     
-                            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[i].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[i].title + '<br>Door: '+events[i].author+'</p></div></a>'
+                            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[i].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[i].title + ' - '+events[i].author+'</p></div></a>'
                         }
                     }
                     //Tutorials
@@ -511,7 +511,7 @@ function doneTypingSmall () {
                         let tutorialResultContentDiv = document.getElementById('tutorials-results-content-div');
                         for(let i =0; i < tutorials.length; i++){
                         
-                            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[i].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[i].title + '<br>Door: '+tutorials[i].author+'</p></div></a>'
+                            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[i].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[i].title + ' - '+tutorials[i].author+'</p></div></a>'
                         }
                     }
                     //Discussies
@@ -520,7 +520,7 @@ function doneTypingSmall () {
                         let threads = response['threads'];
                         let threadsResultContentDiv = document.getElementById('threads-results-content-div');
                         for(let i =0; i < threads.length; i++){
-                            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[i].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[i].title + '<br>Door: '+threads[i].author+'</p></div></a>'
+                            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[i].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[i].title + ' - '+threads[i].author+'</p></div></a>'
                         }
                     }
                     //Cursussen
@@ -529,7 +529,7 @@ function doneTypingSmall () {
                         let coursesResultContentDiv = document.getElementById('courses-results-content-div');
                         let courses = response['course'];
                         for(let i =0; i < courses.length; i++){
-                            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[i].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[i].title + '<br>Door: '+courses[i].author+'</p></div></a>'
+                            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[i].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[i].title + ' - '+courses[i].author+'</p></div></a>'
                         }
                     }
                     //Gebruikers
@@ -542,7 +542,7 @@ function doneTypingSmall () {
                             let usersResultContentDiv = document.getElementById('users-results-content-div');
                             for(let i =0; i < users.length; i++){
                                 if(users[i].name !='Admin' || users[i].email !='admin@email.be'){
-                                    usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[i].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[i].name + '<br><em>'+ users[i].shopname +'</em></p> </div></div></a>'
+                                    usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[i].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[i].name + ' - <em>'+ users[i].shopname +'</em></p> </div></div></a>'
                                 }
                             }
                         }
