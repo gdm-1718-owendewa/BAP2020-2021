@@ -133,7 +133,7 @@
     @endif
     {{-- Url routes --}}
     <div class="general-button-div">
-        <div id="url-route-button">
+        <div id="url-route-button" class="general-url-route">
             <p><a id="calender-return-button" href="{{route('dashbord', auth()->user()->id)}}">Dashboard</a> <span>/</span> Kalender</p>
         </div>
     </div>
