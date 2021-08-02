@@ -3,8 +3,8 @@
 @section('content')
 <div class="general-container">
     <div id="guide-content-container">
-        <h1>Gids</h1> 
         <div>
+            <h1>Gids</h1> 
             @if(auth()->user()->role == 0)
             <h2>Dashboard</h2>
             <p>U zult na het inloggen en/of registreren terecht gekomen zijn op uw dashboard hier zult u verschillende dingen zien. Aan de linker kant van uw scherm zult u de sidebar zien waar de functionaliteiten staan en waar u verder op kan door klikken.</p>
