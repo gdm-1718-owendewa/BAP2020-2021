@@ -1903,7 +1903,6 @@ var storageDeleteButtons = document.querySelectorAll('.delete-design-button');
 
 var _loop = function _loop(i) {
   storageDeleteButtons[i].addEventListener('click', function (e) {
-    console.log(storageDeleteButtons[i]);
     window.scrollTo(0, 0);
     window.addEventListener('scroll', noScroll);
     var baseURL = window.location.origin;
@@ -1962,7 +1961,6 @@ var adminDeleteButtons = document.querySelectorAll('.admin-delete-project-button
 
 var _loop2 = function _loop2(_i) {
   adminDeleteButtons[_i].addEventListener('click', function (e) {
-    console.log('test');
     e.preventDefault();
     window.scrollTo(0, 0);
     window.addEventListener('scroll', noScroll);
@@ -2177,8 +2175,6 @@ if (homescrolldownbutton != null) {
 
 
 if (document.getElementById("design-files") != null) {
-  console.log('test');
-
   document.getElementById("design-files").onchange = function () {
     document.getElementById("design-form").submit();
   };
@@ -2360,7 +2356,7 @@ function doneTypingSmall() {
           var articlesResultContentDiv = document.getElementById('articles-results-content-div');
 
           for (var _i8 = 0; _i8 < articles.length; _i8++) {
-            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[_i8].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[_i8].title + '<br>Door: ' + articles[_i8].author + '</p></div></a>';
+            articlesResultContentDiv.innerHTML += '<a href="' + baseURL + '/article/article-detail/' + articles[_i8].id + '"><div class="articles-results-item"><i class="far fa-newspaper"></i><p>' + articles[_i8].title + ' - ' + articles[_i8].author + '</p></div></a>';
           }
         } //Events
 
@@ -2371,7 +2367,7 @@ function doneTypingSmall() {
           var events = response['events'];
 
           for (var _i9 = 0; _i9 < events.length; _i9++) {
-            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[_i9].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[_i9].title + '<br>Door: ' + events[_i9].author + '</p></div></a>';
+            eventsResultContentDiv.innerHTML += '<a href="' + baseURL + '/event-detail/' + events[_i9].id + '"><div class="events-results-item"><i class="far fa-handshake"></i><p>' + events[_i9].title + ' - ' + events[_i9].author + '</p></div></a>';
           }
         } //Tutorials
 
@@ -2382,7 +2378,7 @@ function doneTypingSmall() {
           var tutorialResultContentDiv = document.getElementById('tutorials-results-content-div');
 
           for (var _i10 = 0; _i10 < tutorials.length; _i10++) {
-            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[_i10].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[_i10].title + '<br>Door: ' + tutorials[_i10].author + '</p></div></a>';
+            tutorialResultContentDiv.innerHTML += '<a href="' + baseURL + '/tutorial-detail/' + tutorials[_i10].id + '"><div class="tutorials-results-item"><i class="fas fa-photo-video"></i><p>' + tutorials[_i10].title + ' - ' + tutorials[_i10].author + '</p></div></a>';
           }
         } //Discussies
 
@@ -2393,7 +2389,7 @@ function doneTypingSmall() {
           var threadsResultContentDiv = document.getElementById('threads-results-content-div');
 
           for (var _i11 = 0; _i11 < threads.length; _i11++) {
-            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[_i11].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[_i11].title + '<br>Door: ' + threads[_i11].author + '</p></div></a>';
+            threadsResultContentDiv.innerHTML += '<a href="' + baseURL + '/thread-detail/' + threads[_i11].id + '"><div class="threads-results-item"><i class="fas fa-bullhorn"></i><p>' + threads[_i11].title + ' - ' + threads[_i11].author + '</p></div></a>';
           }
         } //Cursussen
 
@@ -2404,7 +2400,7 @@ function doneTypingSmall() {
           var courses = response['course'];
 
           for (var _i12 = 0; _i12 < courses.length; _i12++) {
-            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[_i12].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[_i12].title + '<br>Door: ' + courses[_i12].author + '</p></div></a>';
+            coursesResultContentDiv.innerHTML += '<a href="' + baseURL + '/course-detail/' + courses[_i12].id + '"><div class="courses-results-item"> <i class="fas fa-book"></i><p>' + courses[_i12].title + ' - ' + courses[_i12].author + '</p></div></a>';
           }
         } //Gebruikers
 
@@ -2420,7 +2416,7 @@ function doneTypingSmall() {
 
             for (var _i13 = 0; _i13 < users.length; _i13++) {
               if (users[_i13].name != 'Admin' || users[_i13].email != 'admin@email.be') {
-                usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[_i13].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[_i13].name + '<br><em>' + users[_i13].shopname + '</em></p> </div></div></a>';
+                usersResultContentDiv.innerHTML += '<a href="' + baseURL + '/profile/' + users[_i13].id + '"><div class="users-results-item"> <i class="fas fa-user-circle"></i><div id="user-info" ><p>' + users[_i13].name + ' - <em>' + users[_i13].shopname + '</em></p> </div></div></a>';
               }
             }
           }
@@ -2619,7 +2615,6 @@ function adminDoneTyping() {
 
         var _loop4 = function _loop4(_i22) {
           adminDeleteButtons[_i22].addEventListener('click', function (e) {
-            console.log(adminDeleteButtons[_i22]);
             e.preventDefault();
             window.scrollTo(0, 0);
             window.addEventListener('scroll', noScroll);
