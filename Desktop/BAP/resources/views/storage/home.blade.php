@@ -25,7 +25,7 @@
 {{-- URL Routes --}}
 <div class="general-container">
     <div class="general-button-div">
-        <div id="url-route-button">
+        <div id="url-route-button" class="general-url-route">
             <p><a href="{{route('dashbord', auth()->user()->id)}}">Dashboard</a> <span>/</span> Storage</p>
         </div>
     </div>
