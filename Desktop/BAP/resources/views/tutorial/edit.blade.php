@@ -144,7 +144,9 @@
                         <div id="imagedropdown-close-button"> <p>&times;</p> </div>
                         <div id="imagedropdown-results">
                             @foreach ($files as $file)
-                                <img class="tutorial-dropdown-image" src="{{URL::to('/'.$file["path"].''.$file["filename"].'.'.$file["extension"].'')}}">
+                                @if($file["extension"] != 'mp4')
+                                    <img class="tutorial-dropdown-image" src="{{URL::to('/'.$file["path"].''.$file["filename"].'.'.$file["extension"].'')}}">
+                                @endif
                             @endforeach
                         </div>
                     </div>
