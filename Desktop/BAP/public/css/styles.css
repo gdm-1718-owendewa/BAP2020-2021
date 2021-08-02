@@ -3504,7 +3504,9 @@ body {
   overflow-x: hidden;
   overflow-anchor: none;
 }
-
+.general-url-route {
+  padding-top: 5px;
+}
 .resetpass-container #reset-form-div {
   margin-top: 10rem;
   margin-bottom: 10rem;
