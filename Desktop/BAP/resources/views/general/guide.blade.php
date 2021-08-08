@@ -64,6 +64,10 @@
             <p>Cursussen zijn er om mensen op lange tijd iets bij te leren, dit is voor personen die zichzelf de tijd wilt nemen om diep in te gaan in een onderwerp en andere mensen hierover wilt bijleren deze bestaan uit drie dingen een overzicht pagina waar u kunt kijken of de cursus iets voor u is en u zich kan inschrijven na u in te schrijven kunt u naar de uploads en files pagina gaan. Op deze 2 pagina's zult u de mogelijkheid hebben om 1. Verschillende teksten te lezen waar een bepaald deel van de cursus word uitgelegd en 2. de bestanden die bij de cursus horen te bekijken of downloaden. </p>
             <p>Om dieper in te gaan over de verschillende teksten voor een cursus deze teksten kunnen over verschillende delen van het onderwerp uit de cursus gaan. Laten we "Tribal" als onderwerp nemen dan zou één van de teksten kunnen zijn "Historie van tribal" of "Verschillende betekenissen van tribal tattoos".</p>
             <h2>Extra</h2>
+            <h3>Notities</h3>
+            <p>Op dit platform is het ook mogelijk om notities bij te houden in een kladblok stijl, deze blijven altijd staan op de site en u kan hier oneindig gebruik van maken.</p>
+            <h3>Storage</h3>
+            <p>Op dit platform kan u ook gebruik maken van het backup systeem onder storage hier kan u images en mp4 bestanden kleiner dan 100mb uploaden en op de site bewaren met een download optie.</p>
             <h3>Zoekbalk</h3>
             <p>Dit webplatform beschikt over een zoekbalk die u kunt open door op het vergroot glas te klikken bovenaan in de hoofding.</p>
             <p>Na op dit icoon te klikken zal de zoekbalk open gaan en kunt u beginnen met typen. Zoekt u een discussie een bepaalde tattoo stijl geef dan de naam van deze stijl op bijvoorbeeld "Tribal" en kijk of u enige resultaten te zien krijgt. Op deze manier kan u: Artikelen, Cursussen, Discussies, Evenementen, Tutorials en Gebruikers vinden. De gebruikers worden ook getoond op studio naam dus m.a.w zoekt u een bepaalde studio of tattoo shop dan kan u ook die naam ingeven en kijken of deze persoon op het platform zit. </p>
