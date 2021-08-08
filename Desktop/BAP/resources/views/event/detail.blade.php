@@ -81,7 +81,7 @@
             </div>
         </div>
         @auth
-        @if(Auth::user()->id == $event->author_id)
+        @if(Auth::user()->id == $event->author_id || Auth::user()->role == 2)
         
 
     {{-- <button id="download-list-button">PDF DOWNLOAD</button> --}}
