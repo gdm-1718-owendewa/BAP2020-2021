@@ -39,11 +39,11 @@ class EventController extends Controller
          $eventSigns = EventSigns::leftjoin('events', 'events.id', '=', 'event-signs.event_id')->leftjoin('users', 'users.id', '=', 'event-signs.user_id')->where('event-signs.event_id' ,'=', $event->id)->orderBy('event-signs.event_id')->get();
          $totalEventSigns = count(EventSigns::where('event_id',$event->id)->get());
          $event->freeSpaces = $event->capacity - $totalEventSigns;
-         if($event->author_id != auth()->user()->id){
+         if($event->author_id == auth()->user()->id || auth()->user()->role == 2){
+            return view('event.detail')->with(compact('page','id', 'event', 'eventSigns'));
+         }else{
             $signedIn = EventSigns::where('user_id', auth()->user()->id)->where('event_id', $id)->first();
             return view('event.detail')->with(compact('page','id', 'event','signedIn'));
-         }else{
-            return view('event.detail')->with(compact('page','id', 'event', 'eventSigns'));
          }
       }else{
          return redirect()->back();
