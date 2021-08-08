@@ -9,7 +9,6 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Nummer</th>
         <th scope="col">Naam</th>
         <th scope="col">Email</th>
       </tr>
@@ -17,7 +16,6 @@
     <tbody>
       @foreach ($rows as $item)
       <tr>
-        <td>{{$item["id"]}}</td>
         <td>{{$item["name"]}}</td>
         <td>{{$item["email"]}}</td>
       </tr>  
