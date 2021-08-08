@@ -38,7 +38,7 @@
                 <div>
                     <ul id="sidebar-upload">
                         <li><a href="{{route('course-detail', $id)}}">Overview</a></li>
-                        @if($signed != null || $course->author_id == auth()->user()->id)
+                        @if($signed != null || $course->author_id == auth()->user()->id || auth()->user()->role == 2)
                         <li><a href="{{route('course-upload-overview', $id)}}">Uploads</a></li>
                         <li><a href="{{route('course-files', $id)}}">Bestanden</a></li>
                         @endif
