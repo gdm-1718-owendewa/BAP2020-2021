@@ -332,13 +332,22 @@ function IDinfo(id, type) {
        
         let baseUrl = window.location.origin;
         // avatar photo
-        $(".messenger-infoView")
+        if(data.fetch.profile_image !== null){
+          $(".messenger-infoView")
+            .find(".avatar")
+            .css("background-image", 'url("' + baseUrl + '/images/users/' + data.fetch.id + '/profile-image/' + data.fetch.profile_image+ '")');
+          $(".header-avatar").css(
+            "background-image",
+            'url("' + baseUrl + '/images/users/' + data.fetch.id + '/profile-image/' + data.fetch.profile_image+ '")'
+          );
+        }else{
+          $(".messenger-infoView")
           .find(".avatar")
-          .css("background-image", 'url("' + baseUrl + '/images/users/' + data.fetch.id + '/profile-image/' + data.fetch.profile_image+ '")');
-        $(".header-avatar").css(
-          "background-image",
-          'url("' + baseUrl + '/images/users/' + data.fetch.id + '/profile-image/' + data.fetch.profile_image+ '")'
-        );
+          .css("background-image", 'url("' + baseUrl + '/images/user.svg');
+          $(".header-avatar").css(
+            "background-image",
+            'url("' + baseUrl + '/images/user.svg');
+        } 
         // Show shared and actions
         $(".messenger-infoView-btns .delete-conversation").show();
         $(".messenger-infoView-shared").show();
