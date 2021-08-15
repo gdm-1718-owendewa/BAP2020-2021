@@ -127,7 +127,7 @@ if (document.getElementById('tutorial-create-div')) {
   document.getElementById('titleSpan').innerHTML = '<i class="fas fa-times"></i>';
   document.getElementById('titleSpan').style.color = "red";
   title.addEventListener('input', function (e) {
-    if (title.value.length > 0 && title.value.length < 200) {
+    if (title.value.length > 0 && title.value.length < 100) {
       titleCheck = true;
       document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
       document.getElementById('titleSpan').style.color = "green";
@@ -382,7 +382,7 @@ if (document.getElementById('tutorial-edit-div')) {
   document.getElementById('titleSpan').style.color = "green";
 
   _title.addEventListener('input', function (e) {
-    if (_title.value.length > 0 && _title.value.length < 200) {
+    if (_title.value.length > 0 && _title.value.length < 100) {
       _titleCheck = true;
       document.getElementById('titleSpan').innerHTML = '<i class="fas fa-check"></i>';
       document.getElementById('titleSpan').style.color = "green";
