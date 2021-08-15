@@ -105,7 +105,7 @@ class TutorialController extends Controller
       
          $validator = Validator::make(
             $request->all(),[
-            'title' => 'required|max:200',
+            'title' => 'required|max:100',
             'description' => 'required|min:100',
             'content-type' => 'required',
             'main-video' => 'file|mimes:mp4|max:100000000',
@@ -246,7 +246,7 @@ class TutorialController extends Controller
        if($tutorial->author_id == auth()->user()->id || auth()->user()->role == 2){
          $validator = Validator::make(
             $request->all(),[
-            'title' => 'required|max:200',
+            'title' => 'required|max:100',
             'description' => 'required|min:100',
             'content-type' => 'required',
             'main-video' => 'file|mimes:mp4|max:100000000',
