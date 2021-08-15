@@ -27,7 +27,7 @@
                 <span class="activeStatus"></span>
             @endif
         <div class="avatar av-m" 
-        style="background-image: url('{{ '/images/users/'.$user->id.'/profile-image/'.$user->profile_image }}');">
+       @if($user->profile_image) style="background-image: url('{{ '/images/users/'.$user->id.'/profile-image/'.$user->profile_image }}');" @else style="background-image: url('{{ '/images/user.svg' }}');" @endif
         </div>
         </td>
         {{-- center side --}}
@@ -68,7 +68,7 @@
         {{-- Avatar side --}}
         <td>
         <div class="avatar av-m"
-        style="background-image: url('{{'/images/users/'.$user->id.'/profile-image/'.$user->profile_image  }}');">
+        @if($user->profile_image) style="background-image: url('{{ '/images/users/'.$user->id.'/profile-image/'.$user->profile_image }}');" @else style="background-image: url('{{ '/images/user.svg' }}');" @endif>
         </div>
         </td>
         {{-- center side --}}
